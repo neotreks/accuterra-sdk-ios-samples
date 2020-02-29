@@ -5,9 +5,9 @@
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<true/>
 	<key>AccuTerraClientToken</key>
-	<string>&lt;AccuTerra Client Token Goes Here&gt;</string>
+	<string>&lt;Your AccuTerra Client Token goes here&gt;</string>
 	<key>AccuTerraMapToken</key>
-	<string>&lt;AccuTerra Map Token Goes Here&gt;</string>
+	<string>&lt;Your AccuTerra Map Token goes here&gt;</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
