@@ -14,6 +14,6 @@ pod install
 4. Open the workspace file (not the project file)
 5. Obtain access tokens from NeoTreks to run the sample applications
 5. Replace the values for the AccuTerraClientToken and the AccuTerraMapToken in the info.plist file
-6. Lauch the target application and you should see the demostrated functionality.
+6. Launch the target application and you should see the demostrated functionality.
 
 Access tokens to run the apps are required and maybe be obtained from [NeoTreks.com](mailto:austin@neotreks.com) and more information is available at the [AccuTerra Maps SDK website](http://sdk.accuterra.com).
