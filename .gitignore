@@ -7,8 +7,6 @@ build/
 DerivedData/
 */Pods
 */Podfile.lock
-AccuTerra.bundle
-AccuTerraSDK.podspec
 
 ## Various settings
 *.pbxuser
