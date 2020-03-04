@@ -2,12 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>The AccuTerra Demo App needs your location to display this on the map.</string>
 	<key>AccuTerraServiceUrl</key>
-	<string><Service Token Url goes here></string>
+	<string><NeoTreks url does here></string>
 	<key>AccuTerraClientToken</key>
-	<string><Client token goes here></string>
+	<string>><NeoTreks client token does here></string>
 	<key>AccuTerraMapToken</key>
-	<string><Map token goes here></string>
+	<string><NeoTreks map token does here></string>
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>

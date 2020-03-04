@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RFCNf/XcV7tmWX/alyCCQKWjllE=
+		wHqnnerikJ8kvd8QR2UEAAvsa/U=
 		</data>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		TZcqZTOR4Fh/NeT4kdP44EcL7IU=
+		J3dsddeTUFIS+yOvB+6P4ZPT3OM=
 		</data>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		3hlfMmuuVj8NK4I6VKVAm6FZMdg=
+		h60+eE+4yBlHq6W6CTouhSvGPes=
 		</data>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		UGcRZ5cyE6vOr7aNO8W6LS59yVU=
+		RSkSHOfQ518xG10eftOZL4WXMzM=
 		</data>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		kk7sXFWJRdxuSEC6+x4neBWSNi4=
+		xLLHs1rCZSFiNQujixkzuGEr3qA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,44 +65,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TZcqZTOR4Fh/NeT4kdP44EcL7IU=
+			J3dsddeTUFIS+yOvB+6P4ZPT3OM=
 			</data>
 			<key>hash2</key>
 			<data>
-			XrUzAmYbmtx4QmTuoGMqHOZ1vd5DS42cI9Tp6N4Y0cg=
+			bBGph+hUSZ8ePafklEZYOim+b8ynO3onUEgpuuMKeco=
 			</data>
 		</dict>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3hlfMmuuVj8NK4I6VKVAm6FZMdg=
+			h60+eE+4yBlHq6W6CTouhSvGPes=
 			</data>
 			<key>hash2</key>
 			<data>
-			v8uNPS2cbHgqhCgUL7MqdauIZDjGFEaLtX7A9gIOTsE=
+			JWyU69HS4N7+blDRTeD7G/hOWu8NjozoRY/Q7t4yAIU=
 			</data>
 		</dict>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UGcRZ5cyE6vOr7aNO8W6LS59yVU=
+			RSkSHOfQ518xG10eftOZL4WXMzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZGIKpvyqCTO4Jt1dIDqnMLGAWfB3jHnCrTUMIJ5mQsc=
+			QqDlyz/l1xOM3k3+Rv9+cAk2wt7y/8VKYTv1YUS9JKI=
 			</data>
 		</dict>
 		<key>Modules/AccuTerraSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kk7sXFWJRdxuSEC6+x4neBWSNi4=
+			xLLHs1rCZSFiNQujixkzuGEr3qA=
 			</data>
 			<key>hash2</key>
 			<data>
-			8AsU2RV6OzIg3Gtc9m19MzU6G6zllUoTUXAPH/rcQDo=
+			w17aji8SZq6I2ApAB+g/SwSoRBbFkoO/neSyDJsyaB8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

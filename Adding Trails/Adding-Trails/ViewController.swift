@@ -18,32 +18,29 @@ class ViewController: UIViewController {
     
     var isBaseMapLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
-    
     var isTrailsLayerManagersLoaded = false
     var trailService: ITrailService?
     var trails: Array<TrailBasicInfo>?
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-////        showSimpleAlert()
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("version: \(SdkInfo.version) - \(SdkInfo.versionName)")
+        
+        // Trails DB is installed - init SDK only
         if SdkManager.shared.isTrailDbInitialized {
-            self.trailService = ServiceFactory.getTrailService()
+            self.setButtons(true)
+            initSdk()
+        }
+        else {
+            self.setButtons(false)
         }
         
-        // Initialize map
-        self.mapView?.initialize()
-        self.mapView.isRotateEnabled = false //makes map interaction easier
-        self.mapView.isPitchEnabled = false //makes map interaction easier
-        setButtons(true)
+        initMap()
     }
     
     @IBAction func downloadTapped(_ sender: Any) {
+        // Init & download DB
         initSdk()
     }
     
@@ -70,6 +67,20 @@ class ViewController: UIViewController {
         }
         self.percentCompleteLabel.text = initial ? "DB Installed" : "Download Successfully Completed!"
         self.downloadButton.isEnabled = false
+    }
+
+    func initMap() {
+        if SdkManager.shared.isTrailDbInitialized {
+            self.trailService = ServiceFactory.getTrailService()
+        }
+
+        // Initialize map
+        self.mapView.initialize()
+
+        self.mapView.setUserTrackingMode(.follow, animated: true, completionHandler: {
+        })
+        self.mapView.isRotateEnabled = false //makes map interaction easier
+        self.mapView.isPitchEnabled = false //makes map interaction easier
     }
 }
 
@@ -123,10 +134,16 @@ extension ViewController : SdkInitDelegate {
         DispatchQueue.main.async {
             switch state {
             case .COMPLETED:
-                self.setButtons(false)
-                self.addTrailLayers()
-            case .FAILED:
-                let alert = UIAlertController(title: "Error", message: "Download Failed", preferredStyle: .alert)
+                self.setButtons(true)
+                if self.isBaseMapLayerManagersLoaded {
+                    self.trailService = ServiceFactory.getTrailService()
+                    self.addTrailLayers()
+                }
+                else {
+                    self.initMap()
+                }
+             case .FAILED(let error):
+                let alert = UIAlertController(title: "Error", message: "Download Failed. Error: \(String(describing: error))", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                     // 
                 }))

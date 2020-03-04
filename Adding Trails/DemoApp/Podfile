@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+use_frameworks!
+
+def shared_pods
+  pod 'AccuTerra-Mapbox-iOS-SDK', :podspec => 'https://accuterra-builds.s3.amazonaws.com/map-sdk/ios/5.7.0.5/AccuTerra-Mapbox-iOS-SDK.podspec'
+  pod 'AccuTerraSDK', :path => '../AccuTerraSDK.podspec'
+end
+
+target 'DemoApp(Develop)' do
+    shared_pods
+end
+
+target 'DemoApp(Test)' do
+    shared_pods
+end
