@@ -6,11 +6,11 @@
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>The AccuTerra Demo App needs your location to display this on the map.</string>
 	<key>AccuTerraServiceUrl</key>
-	<string><NeoTreks url does here></string>
+	<string>https://dev.accuterra.com:443/api/</string>
 	<key>AccuTerraClientToken</key>
-	<string>><NeoTreks client token does here></string>
+	<string>gwsgyllhpe4EAhSAALlk8ABoZpbp37HgfEI3ek30</string>
 	<key>AccuTerraMapToken</key>
-	<string><NeoTreks map token does here></string>
+	<string>KaTZ_ff1AMf-QBZq0GvVzBO4mtwikRRoNWtYxqYnrP0AzmeIPYL8KooywKxybFqT</string>
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
