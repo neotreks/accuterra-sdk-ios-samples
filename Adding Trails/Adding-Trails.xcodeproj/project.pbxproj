@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3D2AFF0295ACA8455C25ED90 /* Pods_Adding_Trails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A1E67F91484B4D8EE8428F /* Pods_Adding_Trails.framework */; };
 		D3134C0C240A345600827BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3134C0B240A345600827BCA /* AppDelegate.swift */; };
 		D3134C0E240A345600827BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3134C0D240A345600827BCA /* SceneDelegate.swift */; };
-		D3134C10240A345600827BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3134C0F240A345600827BCA /* ViewController.swift */; };
+		D3134C10240A345600827BCA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3134C0F240A345600827BCA /* MapViewController.swift */; };
 		D3134C13240A345600827BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3134C11240A345600827BCA /* Main.storyboard */; };
 		D3134C15240A345800827BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3134C14240A345800827BCA /* Assets.xcassets */; };
 		D3134C18240A345800827BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3134C16240A345800827BCA /* LaunchScreen.storyboard */; };
@@ -20,6 +20,7 @@
 		D3134C41240A350F00827BCA /* AccuTerraSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D3134C3E240A350E00827BCA /* AccuTerraSDK.podspec */; };
 		D3134C42240A350F00827BCA /* AccuTerra.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3134C3F240A350F00827BCA /* AccuTerra.bundle */; };
 		D3134C43240A350F00827BCA /* SDK in Resources */ = {isa = PBXBuildFile; fileRef = D3134C40240A350F00827BCA /* SDK */; };
+		D32D91D024119F3500BF19F8 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32D91CF24119F3500BF19F8 /* DownloadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 		D3134C08240A345600827BCA /* Adding-Trails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adding-Trails.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3134C0B240A345600827BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3134C0D240A345600827BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3134C0F240A345600827BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3134C0F240A345600827BCA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D3134C12240A345600827BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3134C14240A345800827BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3134C17240A345800827BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,9 +59,10 @@
 		D3134C2D240A345800827BCA /* Adding_TrailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adding_TrailsUITests.swift; sourceTree = "<group>"; };
 		D3134C2F240A345800827BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3134C3B240A348D00827BCA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		D3134C3E240A350E00827BCA /* AccuTerraSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccuTerraSDK.podspec; sourceTree = "<group>"; };
+		D3134C3E240A350E00827BCA /* AccuTerraSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccuTerraSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D3134C3F240A350F00827BCA /* AccuTerra.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccuTerra.bundle; sourceTree = "<group>"; };
 		D3134C40240A350F00827BCA /* SDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SDK; sourceTree = "<group>"; };
+		D32D91CF24119F3500BF19F8 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,8 @@
 			children = (
 				D3134C0B240A345600827BCA /* AppDelegate.swift */,
 				D3134C0D240A345600827BCA /* SceneDelegate.swift */,
-				D3134C0F240A345600827BCA /* ViewController.swift */,
+				D3134C0F240A345600827BCA /* MapViewController.swift */,
+				D32D91CF24119F3500BF19F8 /* DownloadViewController.swift */,
 				D3134C11240A345600827BCA /* Main.storyboard */,
 				D3134C14240A345800827BCA /* Assets.xcassets */,
 				D3134C16240A345800827BCA /* LaunchScreen.storyboard */,
@@ -161,7 +164,6 @@
 				54CB88A4C7EEA210BEC0E73A /* Pods-Adding-Trails.debug.xcconfig */,
 				0B733EAE5654FA7A6343CBC4 /* Pods-Adding-Trails.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -344,8 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3134C10240A345600827BCA /* ViewController.swift in Sources */,
+				D3134C10240A345600827BCA /* MapViewController.swift in Sources */,
 				D3134C0C240A345600827BCA /* AppDelegate.swift in Sources */,
+				D32D91D024119F3500BF19F8 /* DownloadViewController.swift in Sources */,
 				D3134C0E240A345600827BCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,8 +523,8 @@
 			baseConfigurationReference = 54CB88A4C7EEA210BEC0E73A /* Pods-Adding-Trails.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PK2TWU892A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Adding-Trails/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,6 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.neotreks.Adding-Trails";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -539,8 +543,8 @@
 			baseConfigurationReference = 0B733EAE5654FA7A6343CBC4 /* Pods-Adding-Trails.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PK2TWU892A;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Adding-Trails/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -548,6 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.neotreks.Adding-Trails";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
