@@ -1,80 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="16E-yI-RZq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Accu Terra Delegate-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Map View Controller-->
+        <scene sceneID="RWI-nE-yq4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Adding_Trails" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MapViewController" id="8cs-i4-u8F" userLabel="Map View Controller" customClass="MapViewController" customModule="Adding_Trails" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahL-g5-MUY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6On-Nj-KhE" userLabel="Map View" customClass="AccuTerraMapView" customModule="AccuTerraSDK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmn-JD-aCM" userLabel="Map View" customClass="AccuTerraMapView" customModule="AccuTerraSDK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <outlet property="accuTerraDelegate" destination="BYZ-38-t0r" id="5Fe-aF-vZv"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SpS-B8-Co0"/>
+                                    <outlet property="accuTerraDelegate" destination="8cs-i4-u8F" id="uf4-XW-AHq"/>
+                                    <outlet property="delegate" destination="8cs-i4-u8F" id="6mb-kT-7QA"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5j-Si-IKI" userLabel="Download View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3is-p6-uXl" userLabel="Message View">
                                 <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sRe-On-jvI" userLabel="Download Horiz Stack View">
-                                        <rect key="frame" x="140.5" y="17.5" width="133" height="65.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnU-Va-RMX">
-                                                <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
-                                                <state key="normal" title="Download Trails DB"/>
-                                                <connections>
-                                                    <action selector="downloadTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fs4-SC-P8u"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 % Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qP-Fg-ycl" userLabel="Percent Complete">
-                                                <rect key="frame" x="13" y="45" width="107.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-qO-3c2">
+                                        <rect key="frame" x="107" y="39.5" width="200" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="aDy-QR-kJe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="sRe-On-jvI" firstAttribute="centerX" secondItem="j5j-Si-IKI" secondAttribute="centerX" id="3Dn-Jz-bZv"/>
-                                    <constraint firstAttribute="height" constant="100" id="AFb-or-eEF"/>
-                                    <constraint firstItem="sRe-On-jvI" firstAttribute="centerY" secondItem="j5j-Si-IKI" secondAttribute="centerY" id="MBL-1L-kho"/>
+                                    <constraint firstAttribute="height" constant="100" id="FXy-x6-rXr"/>
+                                    <constraint firstItem="EQH-qO-3c2" firstAttribute="centerX" secondItem="3is-p6-uXl" secondAttribute="centerX" id="cor-bO-CO0"/>
+                                    <constraint firstItem="EQH-qO-3c2" firstAttribute="centerY" secondItem="3is-p6-uXl" secondAttribute="centerY" id="oku-zG-ASY"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6On-Nj-KhE" firstAttribute="bottom" secondItem="j5j-Si-IKI" secondAttribute="top" id="9U1-ku-Qa9"/>
-                            <constraint firstItem="j5j-Si-IKI" firstAttribute="top" secondItem="6On-Nj-KhE" secondAttribute="bottom" id="CdT-ZT-S1J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6On-Nj-KhE" secondAttribute="trailing" id="KTT-ct-kUE"/>
-                            <constraint firstItem="6On-Nj-KhE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SAn-mN-M8k"/>
-                            <constraint firstItem="6On-Nj-KhE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SXS-ln-7hS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j5j-Si-IKI" secondAttribute="bottom" id="UAD-QN-u8e"/>
-                            <constraint firstItem="j5j-Si-IKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WC2-k5-NG5"/>
-                            <constraint firstItem="j5j-Si-IKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uRZ-bO-7UX"/>
+                            <constraint firstItem="xmn-JD-aCM" firstAttribute="leading" secondItem="WLg-7g-L3I" secondAttribute="leading" id="G07-jD-qcc"/>
+                            <constraint firstItem="3is-p6-uXl" firstAttribute="trailing" secondItem="WLg-7g-L3I" secondAttribute="trailing" id="MvU-Ub-8qr"/>
+                            <constraint firstItem="3is-p6-uXl" firstAttribute="leading" secondItem="WLg-7g-L3I" secondAttribute="leading" id="Q0u-CX-Zfc"/>
+                            <constraint firstItem="WLg-7g-L3I" firstAttribute="trailing" secondItem="xmn-JD-aCM" secondAttribute="trailing" id="Qah-Jd-cvH"/>
+                            <constraint firstItem="3is-p6-uXl" firstAttribute="top" secondItem="xmn-JD-aCM" secondAttribute="bottom" id="VXo-5f-qHb"/>
+                            <constraint firstItem="xmn-JD-aCM" firstAttribute="top" secondItem="WLg-7g-L3I" secondAttribute="top" id="XdW-by-hJE"/>
+                            <constraint firstItem="3is-p6-uXl" firstAttribute="bottom" secondItem="WLg-7g-L3I" secondAttribute="bottom" id="YDr-L5-zMX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="WLg-7g-L3I"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IGp-Bi-FYU"/>
                     <connections>
-                        <outlet property="downloadButton" destination="UnU-Va-RMX" id="Sle-c1-Kjb"/>
-                        <outlet property="mapView" destination="6On-Nj-KhE" id="mP2-UN-LGw"/>
-                        <outlet property="percentCompleteLabel" destination="8qP-Fg-ycl" id="ykf-Tt-cyX"/>
+                        <outlet property="mapView" destination="xmn-JD-aCM" id="qZu-y6-WHg"/>
+                        <outlet property="statusLabel" destination="EQH-qO-3c2" id="HXx-zL-sZI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wth-8h-hAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2095.6521739130435" y="143.97321428571428"/>
+        </scene>
+        <!--Download View Controller-->
+        <scene sceneID="9Yg-JC-q7f">
+            <objects>
+                <viewController storyboardIdentifier="DownloadViewController" id="HFt-Og-RBa" customClass="DownloadViewController" customModule="Adding_Trails" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ij3-Qq-ZL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yCs-kz-gC1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sez-CT-rDI"/>
+                    <connections>
+                        <segue destination="8cs-i4-u8F" kind="show" identifier="GoToMap" id="Cxm-H7-iCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNW-hc-FzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="143.97321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6LW-n6-hwp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="16E-yI-RZq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EoD-qN-vEz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HFt-Og-RBa" kind="relationship" relationship="rootViewController" id="M2q-Uc-J4l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBO-rq-nL2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="143.97321428571428"/>
         </scene>
     </scenes>
 </document>

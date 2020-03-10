@@ -1,6 +1,6 @@
 Pod::Spec.new do |m|
 
-  version = '1.0.15798'
+  version = '0.1.15967'
 
   m.name    = 'AccuTerraSDK'
   m.version = version
@@ -8,7 +8,6 @@ Pod::Spec.new do |m|
   m.summary           = 'AccuTerra iOS SDK.'
   m.description       = 'AccuTerra iOS SDK with map and trails features.'
   m.homepage          = 'https://sdk.accuterra.com/'
-  m.license           = { :type => 'BSD', :file => 'SDK/LICENSE.md' }
   m.author            = { 'NeoTreks' => 'info@neotreks.com' }
   m.documentation_url = 'https://sdk.accuterra.com/'
 
@@ -18,13 +17,13 @@ Pod::Spec.new do |m|
   }
 
   m.platform              = :ios
-  m.ios.deployment_target = '9.0'
+  m.ios.deployment_target = '10.0'
 
-  m.dependency 'Alamofire', '4.9.0'
-  m.dependency 'AlamofireObjectMapper', '5.2.0'
-  m.dependency 'ObjectMapper', '3.4.2'
-  m.dependency 'ReachabilitySwift', '4.3.1'
-  m.dependency 'GRDB.swift', '4.7.0'
+  m.dependency 'Alamofire', '~> 4.9.0'
+  m.dependency 'AlamofireObjectMapper', '~> 5.2.0'
+  m.dependency 'ObjectMapper', '~> 3.4.2'
+  m.dependency 'ReachabilitySwift', '~> 4.3.1'
+  m.dependency 'GRDB.swift', '~> 4.7.0'
   m.dependency 'AccuTerra-Mapbox-iOS-SDK', '5.7.0.5'
   m.dependency 'GzipSwift', '~> 5.1.1'
   
