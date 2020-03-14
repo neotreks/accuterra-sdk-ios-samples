@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E66B98DD04594CB8736336C /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A3678782CF3296CE835C44 /* Pods_AccuterraSampleApp.framework */; };
+		D3AE5B2C241C307200B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2B241C307200B166E2 /* AppDelegate.swift */; };
+		D3AE5B2E241C307200B166E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */; };
+		D3AE5B30241C307200B166E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2F241C307200B166E2 /* ContentView.swift */; };
+		D3AE5B32241C307400B166E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B31241C307400B166E2 /* Assets.xcassets */; };
+		D3AE5B35241C307400B166E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B34241C307400B166E2 /* Preview Assets.xcassets */; };
+		D3AE5B38241C307400B166E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B36241C307400B166E2 /* LaunchScreen.storyboard */; };
+		D3AE5B43241C307500B166E2 /* AccuterraSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B42241C307500B166E2 /* AccuterraSampleAppTests.swift */; };
+		D3AE5B4E241C307500B166E2 /* AccuterraSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B4D241C307500B166E2 /* AccuterraSampleAppUITests.swift */; };
+		D3AE5B5C241C310500B166E2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B5B241C310500B166E2 /* MapView.swift */; };
+		D3AE5B65241C336700B166E2 /* AccuTerra.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3AE5B3F241C307500B166E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3AE5B20241C307200B166E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE5B27241C307200B166E2;
+			remoteInfo = AccuterraSampleApp;
+		};
+		D3AE5B4A241C307500B166E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3AE5B20241C307200B166E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AE5B27241C307200B166E2;
+			remoteInfo = AccuterraSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A5A3A547B8803731CF81415 /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		79A3678782CF3296CE835C44 /* Pods_AccuterraSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB75CC74EF3BE595A1D7378 /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		D3AE5B28241C307200B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AE5B2B241C307200B166E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D3AE5B2F241C307200B166E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3AE5B31241C307400B166E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3AE5B34241C307400B166E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3AE5B37241C307400B166E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3AE5B39241C307400B166E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AE5B3E241C307500B166E2 /* AccuterraSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AE5B42241C307500B166E2 /* AccuterraSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppTests.swift; sourceTree = "<group>"; };
+		D3AE5B44241C307500B166E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AE5B49241C307500B166E2 /* AccuterraSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AE5B4D241C307500B166E2 /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
+		D3AE5B4F241C307500B166E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3AE5B5B241C310500B166E2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D3AE5B5F241C335C00B166E2 /* AccuTerraSDK.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AccuTerraSDK.framework.dSYM; sourceTree = "<group>"; };
+		D3AE5B60241C335C00B166E2 /* D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap"; sourceTree = "<group>"; };
+		D3AE5B61241C335C00B166E2 /* AccuTerraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccuTerraSDK.framework; sourceTree = "<group>"; };
+		D3AE5B62241C335C00B166E2 /* 39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap"; sourceTree = "<group>"; };
+		D3AE5B63241C335C00B166E2 /* AccuTerraSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccuTerraSDK.podspec; sourceTree = "<group>"; };
+		D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccuTerra.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3AE5B25241C307200B166E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E66B98DD04594CB8736336C /* Pods_AccuterraSampleApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B3B241C307500B166E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B46241C307500B166E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10FF085E2D5551217B879448 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A5A3A547B8803731CF81415 /* Pods-AccuterraSampleApp.debug.xcconfig */,
+				7CB75CC74EF3BE595A1D7378 /* Pods-AccuterraSampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D3AE5B1F241C307200B166E2 = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B5D241C315300B166E2 /* Frameworks */,
+				D3AE5B2A241C307200B166E2 /* AccuterraSampleApp */,
+				D3AE5B41241C307500B166E2 /* AccuterraSampleAppTests */,
+				D3AE5B4C241C307500B166E2 /* AccuterraSampleAppUITests */,
+				D3AE5B29241C307200B166E2 /* Products */,
+				10FF085E2D5551217B879448 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D3AE5B29241C307200B166E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B28241C307200B166E2 /* AccuterraSampleApp.app */,
+				D3AE5B3E241C307500B166E2 /* AccuterraSampleAppTests.xctest */,
+				D3AE5B49241C307500B166E2 /* AccuterraSampleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3AE5B2A241C307200B166E2 /* AccuterraSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B5B241C310500B166E2 /* MapView.swift */,
+				D3AE5B2B241C307200B166E2 /* AppDelegate.swift */,
+				D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */,
+				D3AE5B2F241C307200B166E2 /* ContentView.swift */,
+				D3AE5B31241C307400B166E2 /* Assets.xcassets */,
+				D3AE5B36241C307400B166E2 /* LaunchScreen.storyboard */,
+				D3AE5B39241C307400B166E2 /* Info.plist */,
+				D3AE5B33241C307400B166E2 /* Preview Content */,
+			);
+			path = AccuterraSampleApp;
+			sourceTree = "<group>";
+		};
+		D3AE5B33241C307400B166E2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B34241C307400B166E2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3AE5B41241C307500B166E2 /* AccuterraSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B42241C307500B166E2 /* AccuterraSampleAppTests.swift */,
+				D3AE5B44241C307500B166E2 /* Info.plist */,
+			);
+			path = AccuterraSampleAppTests;
+			sourceTree = "<group>";
+		};
+		D3AE5B4C241C307500B166E2 /* AccuterraSampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B4D241C307500B166E2 /* AccuterraSampleAppUITests.swift */,
+				D3AE5B4F241C307500B166E2 /* Info.plist */,
+			);
+			path = AccuterraSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		D3AE5B5D241C315300B166E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */,
+				D3AE5B63241C335C00B166E2 /* AccuTerraSDK.podspec */,
+				D3AE5B5E241C335C00B166E2 /* SDK */,
+				79A3678782CF3296CE835C44 /* Pods_AccuterraSampleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3AE5B5E241C335C00B166E2 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				D3AE5B5F241C335C00B166E2 /* AccuTerraSDK.framework.dSYM */,
+				D3AE5B60241C335C00B166E2 /* D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap */,
+				D3AE5B61241C335C00B166E2 /* AccuTerraSDK.framework */,
+				D3AE5B62241C335C00B166E2 /* 39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3AE5B27241C307200B166E2 /* AccuterraSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AE5B52241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp" */;
+			buildPhases = (
+				047A39928170FC40E6739CD2 /* [CP] Check Pods Manifest.lock */,
+				D3AE5B24241C307200B166E2 /* Sources */,
+				D3AE5B25241C307200B166E2 /* Frameworks */,
+				D3AE5B26241C307200B166E2 /* Resources */,
+				37A23DE8C60C6AD20FD68972 /* [CP] Embed Pods Frameworks */,
+				D3AE5B66241D18B600B166E2 /* Insert AccuTerra Access Tokens */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccuterraSampleApp;
+			productName = AccuterraSampleApp;
+			productReference = D3AE5B28241C307200B166E2 /* AccuterraSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3AE5B3D241C307500B166E2 /* AccuterraSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AE5B55241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleAppTests" */;
+			buildPhases = (
+				D3AE5B3A241C307500B166E2 /* Sources */,
+				D3AE5B3B241C307500B166E2 /* Frameworks */,
+				D3AE5B3C241C307500B166E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3AE5B40241C307500B166E2 /* PBXTargetDependency */,
+			);
+			name = AccuterraSampleAppTests;
+			productName = AccuterraSampleAppTests;
+			productReference = D3AE5B3E241C307500B166E2 /* AccuterraSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D3AE5B48241C307500B166E2 /* AccuterraSampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AE5B58241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleAppUITests" */;
+			buildPhases = (
+				D3AE5B45241C307500B166E2 /* Sources */,
+				D3AE5B46241C307500B166E2 /* Frameworks */,
+				D3AE5B47241C307500B166E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3AE5B4B241C307500B166E2 /* PBXTargetDependency */,
+			);
+			name = AccuterraSampleAppUITests;
+			productName = AccuterraSampleAppUITests;
+			productReference = D3AE5B49241C307500B166E2 /* AccuterraSampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3AE5B20241C307200B166E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = BaseMap;
+				TargetAttributes = {
+					D3AE5B27241C307200B166E2 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					D3AE5B3D241C307500B166E2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D3AE5B27241C307200B166E2;
+					};
+					D3AE5B48241C307500B166E2 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D3AE5B27241C307200B166E2;
+					};
+				};
+			};
+			buildConfigurationList = D3AE5B23241C307200B166E2 /* Build configuration list for PBXProject "AccuterraSampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3AE5B1F241C307200B166E2;
+			productRefGroup = D3AE5B29241C307200B166E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3AE5B27241C307200B166E2 /* AccuterraSampleApp */,
+				D3AE5B3D241C307500B166E2 /* AccuterraSampleAppTests */,
+				D3AE5B48241C307500B166E2 /* AccuterraSampleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3AE5B26241C307200B166E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AE5B38241C307400B166E2 /* LaunchScreen.storyboard in Resources */,
+				D3AE5B35241C307400B166E2 /* Preview Assets.xcassets in Resources */,
+				D3AE5B65241C336700B166E2 /* AccuTerra.bundle in Resources */,
+				D3AE5B32241C307400B166E2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B3C241C307500B166E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B47241C307500B166E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		047A39928170FC40E6739CD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AccuterraSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37A23DE8C60C6AD20FD68972 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3AE5B66241D18B600B166E2 /* Insert AccuTerra Access Tokens */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert AccuTerra Access Tokens";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_accuterra_access_tokens.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3AE5B24241C307200B166E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AE5B2C241C307200B166E2 /* AppDelegate.swift in Sources */,
+				D3AE5B5C241C310500B166E2 /* MapView.swift in Sources */,
+				D3AE5B2E241C307200B166E2 /* SceneDelegate.swift in Sources */,
+				D3AE5B30241C307200B166E2 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B3A241C307500B166E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AE5B43241C307500B166E2 /* AccuterraSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AE5B45241C307500B166E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AE5B4E241C307500B166E2 /* AccuterraSampleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3AE5B40241C307500B166E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3AE5B27241C307200B166E2 /* AccuterraSampleApp */;
+			targetProxy = D3AE5B3F241C307500B166E2 /* PBXContainerItemProxy */;
+		};
+		D3AE5B4B241C307500B166E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3AE5B27241C307200B166E2 /* AccuterraSampleApp */;
+			targetProxy = D3AE5B4A241C307500B166E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3AE5B36241C307400B166E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3AE5B37241C307400B166E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3AE5B50241C307500B166E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3AE5B51241C307500B166E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3AE5B53241C307500B166E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A5A3A547B8803731CF81415 /* Pods-AccuterraSampleApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AccuterraSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3AE5B54241C307500B166E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CB75CC74EF3BE595A1D7378 /* Pods-AccuterraSampleApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AccuterraSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3AE5B56241C307500B166E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccuterraSampleApp.app/AccuterraSampleApp";
+			};
+			name = Debug;
+		};
+		D3AE5B57241C307500B166E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccuterraSampleApp.app/AccuterraSampleApp";
+			};
+			name = Release;
+		};
+		D3AE5B59241C307500B166E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AccuterraSampleApp;
+			};
+			name = Debug;
+		};
+		D3AE5B5A241C307500B166E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AccuterraSampleApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3AE5B23241C307200B166E2 /* Build configuration list for PBXProject "AccuterraSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AE5B50241C307500B166E2 /* Debug */,
+				D3AE5B51241C307500B166E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AE5B52241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AE5B53241C307500B166E2 /* Debug */,
+				D3AE5B54241C307500B166E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AE5B55241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AE5B56241C307500B166E2 /* Debug */,
+				D3AE5B57241C307500B166E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3AE5B58241C307500B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AE5B59241C307500B166E2 /* Debug */,
+				D3AE5B5A241C307500B166E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3AE5B20241C307200B166E2 /* Project object */;
+}
