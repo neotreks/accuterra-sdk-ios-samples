@@ -10,14 +10,17 @@
 		7E66B98DD04594CB8736336C /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A3678782CF3296CE835C44 /* Pods_AccuterraSampleApp.framework */; };
 		D3AE5B2C241C307200B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2B241C307200B166E2 /* AppDelegate.swift */; };
 		D3AE5B2E241C307200B166E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */; };
-		D3AE5B30241C307200B166E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B2F241C307200B166E2 /* ContentView.swift */; };
 		D3AE5B32241C307400B166E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B31241C307400B166E2 /* Assets.xcassets */; };
 		D3AE5B35241C307400B166E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B34241C307400B166E2 /* Preview Assets.xcassets */; };
 		D3AE5B38241C307400B166E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B36241C307400B166E2 /* LaunchScreen.storyboard */; };
 		D3AE5B43241C307500B166E2 /* AccuterraSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B42241C307500B166E2 /* AccuterraSampleAppTests.swift */; };
 		D3AE5B4E241C307500B166E2 /* AccuterraSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B4D241C307500B166E2 /* AccuterraSampleAppUITests.swift */; };
 		D3AE5B5C241C310500B166E2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B5B241C310500B166E2 /* MapView.swift */; };
-		D3AE5B65241C336700B166E2 /* AccuTerra.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */; };
+		D3AE5BA4241E7C1600B166E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BA3241E7C1600B166E2 /* HomeView.swift */; };
+		D3AE5BE424216F0500B166E2 /* MapInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BE324216F0400B166E2 /* MapInteraction.swift */; };
+		D3AE5BEE2424361900B166E2 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BED2424361800B166E2 /* DownloadView.swift */; };
+		D3AE5BF024246ACA00B166E2 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BEF24246ACA00B166E2 /* DownloadService.swift */; };
+		D3AE5BF224246D5500B166E2 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF124246D5500B166E2 /* DownloadViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		D3AE5B28241C307200B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AE5B2B241C307200B166E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3AE5B2F241C307200B166E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3AE5B31241C307400B166E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AE5B34241C307400B166E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3AE5B37241C307400B166E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,12 +58,11 @@
 		D3AE5B4D241C307500B166E2 /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
 		D3AE5B4F241C307500B166E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3AE5B5B241C310500B166E2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		D3AE5B5F241C335C00B166E2 /* AccuTerraSDK.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AccuTerraSDK.framework.dSYM; sourceTree = "<group>"; };
-		D3AE5B60241C335C00B166E2 /* D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap"; sourceTree = "<group>"; };
-		D3AE5B61241C335C00B166E2 /* AccuTerraSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccuTerraSDK.framework; sourceTree = "<group>"; };
-		D3AE5B62241C335C00B166E2 /* 39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap"; sourceTree = "<group>"; };
-		D3AE5B63241C335C00B166E2 /* AccuTerraSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AccuTerraSDK.podspec; sourceTree = "<group>"; };
-		D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccuTerra.bundle; sourceTree = "<group>"; };
+		D3AE5BA3241E7C1600B166E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D3AE5BE324216F0400B166E2 /* MapInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteraction.swift; sourceTree = "<group>"; };
+		D3AE5BED2424361800B166E2 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
+		D3AE5BEF24246ACA00B166E2 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		D3AE5BF124246D5500B166E2 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +125,16 @@
 		D3AE5B2A241C307200B166E2 /* AccuterraSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				D3AE5B5B241C310500B166E2 /* MapView.swift */,
 				D3AE5B2B241C307200B166E2 /* AppDelegate.swift */,
-				D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */,
-				D3AE5B2F241C307200B166E2 /* ContentView.swift */,
-				D3AE5B31241C307400B166E2 /* Assets.xcassets */,
+				D3AE5BEF24246ACA00B166E2 /* DownloadService.swift */,
+				D3AE5BED2424361800B166E2 /* DownloadView.swift */,
+				D3AE5BF124246D5500B166E2 /* DownloadViewModel.swift */,
+				D3AE5BA3241E7C1600B166E2 /* HomeView.swift */,
 				D3AE5B36241C307400B166E2 /* LaunchScreen.storyboard */,
+				D3AE5BE324216F0400B166E2 /* MapInteraction.swift */,
+				D3AE5B5B241C310500B166E2 /* MapView.swift */,
+				D3AE5B2D241C307200B166E2 /* SceneDelegate.swift */,
+				D3AE5B31241C307400B166E2 /* Assets.xcassets */,
 				D3AE5B39241C307400B166E2 /* Info.plist */,
 				D3AE5B33241C307400B166E2 /* Preview Content */,
 			);
@@ -165,23 +170,9 @@
 		D3AE5B5D241C315300B166E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3AE5B64241C335D00B166E2 /* AccuTerra.bundle */,
-				D3AE5B63241C335C00B166E2 /* AccuTerraSDK.podspec */,
-				D3AE5B5E241C335C00B166E2 /* SDK */,
 				79A3678782CF3296CE835C44 /* Pods_AccuterraSampleApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D3AE5B5E241C335C00B166E2 /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				D3AE5B5F241C335C00B166E2 /* AccuTerraSDK.framework.dSYM */,
-				D3AE5B60241C335C00B166E2 /* D668DEB6-4735-38EF-8D2C-59396D72B222.bcsymbolmap */,
-				D3AE5B61241C335C00B166E2 /* AccuTerraSDK.framework */,
-				D3AE5B62241C335C00B166E2 /* 39797CE5-F2CC-3626-BB92-F81998532316.bcsymbolmap */,
-			);
-			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +188,7 @@
 				D3AE5B26241C307200B166E2 /* Resources */,
 				37A23DE8C60C6AD20FD68972 /* [CP] Embed Pods Frameworks */,
 				D3AE5B66241D18B600B166E2 /* Insert AccuTerra Access Tokens */,
+				F9020EC906357548A8CE8DFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,7 +285,6 @@
 			files = (
 				D3AE5B38241C307400B166E2 /* LaunchScreen.storyboard in Resources */,
 				D3AE5B35241C307400B166E2 /* Preview Assets.xcassets in Resources */,
-				D3AE5B65241C336700B166E2 /* AccuTerra.bundle in Resources */,
 				D3AE5B32241C307400B166E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +364,23 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/insert_accuterra_access_tokens.sh\n";
 		};
+		F9020EC906357548A8CE8DFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -381,9 +389,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AE5B2C241C307200B166E2 /* AppDelegate.swift in Sources */,
+				D3AE5BF024246ACA00B166E2 /* DownloadService.swift in Sources */,
 				D3AE5B5C241C310500B166E2 /* MapView.swift in Sources */,
 				D3AE5B2E241C307200B166E2 /* SceneDelegate.swift in Sources */,
-				D3AE5B30241C307200B166E2 /* ContentView.swift in Sources */,
+				D3AE5BF224246D5500B166E2 /* DownloadViewModel.swift in Sources */,
+				D3AE5BEE2424361900B166E2 /* DownloadView.swift in Sources */,
+				D3AE5BA4241E7C1600B166E2 /* HomeView.swift in Sources */,
+				D3AE5BE424216F0500B166E2 /* MapInteraction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

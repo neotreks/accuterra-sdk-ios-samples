@@ -11,6 +11,11 @@ import AccuTerraSDK
 import Mapbox
 
 struct MapView: UIViewRepresentable {
+    
+    // var mapCenter = CLLocationCoordinate2D(latitude: 37.7666, longitude: -122.427290)
+    var mapCenter: CLLocationCoordinate2D?
+    var mapBounds: MGLCoordinateBounds?
+    var zoomAnimation: Bool = false
  
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero)
     
@@ -23,7 +28,21 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
-        // updateAnnotations()
+        if let bounds = mapBounds {
+            uiView.zoomToExtent(bounds: bounds, animated: true)
+        }
+        else if let location = mapCenter {
+            if zoomAnimation {
+                let camera = MGLMapCamera(lookingAtCenter: location, altitude: 4500, pitch: 0, heading: 0)
+
+                // Animate the camera movement over 5 seconds.
+                uiView.setCamera(camera, withDuration: 5, animationTimingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut))
+            }
+            else {
+                uiView.zoomLevel = 10
+                uiView.setCenter(location, animated: true)
+            }
+        }
     }
     
     func makeCoordinator() -> MapView.Coordinator {
@@ -49,6 +68,7 @@ struct MapView: UIViewRepresentable {
 }
 
 extension MapView {
+    
     class Coordinator: NSObject, AccuTerraMapViewDelegate, BaseMapLayersManagerDelegate, TrailLayersManagerDelegate, MGLMapViewDelegate {
         
         var controlView: MapView
@@ -119,12 +139,8 @@ extension MapView {
         }
         
         private func zoomToDefaultExtent() {
-            // Colorado’s bounds
-            let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
-            let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
-            let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
-            
-            controlView.mapView.zoomToExtent(bounds: colorado, animated: true)
+            let bounds = MapInteraction.getColoradoBounds()
+            controlView.mapView.zoomToExtent(bounds: bounds, animated: true)
         }
         
         func onLayerAdded(baseMapLayer: BaseLayerType) {
