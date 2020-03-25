@@ -37,12 +37,10 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("numberOfSectionsInTableView: \(self.sections.count)")
         return self.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection: \(self.itemsInSections[section].count)")
         return self.itemsInSections[section].count
     }
     

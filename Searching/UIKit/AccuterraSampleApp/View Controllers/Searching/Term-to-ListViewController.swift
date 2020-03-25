@@ -17,11 +17,8 @@ class Term_to_ListViewController: BaseViewController {
     private let appTitle = "AccuTerra Search"
     
     var trails: Array<TrailBasicInfo>?
-        //= ["Trail 1", "Trail 2", "Trail 3", "Trail 4"]
-    
     var searchController: UISearchController?
     var trailsFilter = TrailsFilter()
-    
     var trailsService: ITrailService?
     
     override func viewDidLoad() {
@@ -29,8 +26,6 @@ class Term_to_ListViewController: BaseViewController {
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-                definesPresentationContext = true
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         

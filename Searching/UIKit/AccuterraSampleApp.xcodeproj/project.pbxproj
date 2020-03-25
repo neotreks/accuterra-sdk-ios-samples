@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		75E45602494C233E5DD186ED /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
+		D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
 		D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */; };
 		D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */; };
-		D3AE5AE124196A3C00B166E2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5AE024196A3C00B166E2 /* MapViewController.swift */; };
 		D3AE5AE424196A3C00B166E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE224196A3C00B166E2 /* Main.storyboard */; };
 		D3AE5AE624196A3F00B166E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE524196A3F00B166E2 /* Assets.xcassets */; };
 		D3AE5AE924196A3F00B166E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE724196A3F00B166E2 /* LaunchScreen.storyboard */; };
@@ -52,10 +52,10 @@
 		1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListViewController.swift; path = AccuterraSampleApp/Resources/TrailListViewController.swift; sourceTree = SOURCE_ROOT; };
 		D3AE5AD924196A3C00B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3AE5AE024196A3C00B166E2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D3AE5AE324196A3C00B166E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3AE5AE524196A3F00B166E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AE5AE824196A3F00B166E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		D3AE5AFA24196A3F00B166E2 /* AccuterraSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AE5AFE24196A3F00B166E2 /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
 		D3AE5B0024196A3F00B166E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3AE5B0C24196A8300B166E2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D3AE5B0C24196A8300B166E2 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D3AE5B1424196E1800B166E2 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		D3AE5B1924199A8100B166E2 /* TrailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetails.swift; sourceTree = "<group>"; };
 		D3AE5BF4242572C300B166E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 		D3AE5BF32425724D00B166E2 /* Searching */ = {
 			isa = PBXGroup;
 			children = (
+				D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */,
 				D3AE5BFC2425756800B166E2 /* List-to-MapViewController.swift */,
 				D3AE5BFA2425753C00B166E2 /* Map-to-ListViewController.swift */,
 				D3AE5BF82425750D00B166E2 /* Term-to-MapViewController.swift */,
@@ -203,7 +204,6 @@
 				D3AE5C0C2426959400B166E2 /* BaseViewController.swift */,
 				D3AE5B1424196E1800B166E2 /* DownloadViewController.swift */,
 				D3AE5BF4242572C300B166E2 /* HomeViewController.swift */,
-				D3AE5AE024196A3C00B166E2 /* MapViewController.swift */,
 				D3AE5BFE24257B1500B166E2 /* Filtering */,
 				D3AE5BF32425724D00B166E2 /* Searching */,
 			);
@@ -247,6 +247,7 @@
 				79543595038E4E0C38EA026B /* [CP] Embed Pods Frameworks */,
 				D3AE5B162419759D00B166E2 /* Insert AccuTerra Access Tokens */,
 				7D1C90B67EA6D1698A0E0FD2 /* [CP] Copy Pods Resources */,
+				D38165C9242AB53C00F4F3D7 /* Insert Mapbox Access Token */,
 			);
 			buildRules = (
 			);
@@ -420,6 +421,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D38165C9242AB53C00F4F3D7 /* Insert Mapbox Access Token */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert Mapbox Access Token";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_mapbox_access_token.sh\n";
+		};
 		D3AE5B162419759D00B166E2 /* Insert AccuTerra Access Tokens */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,7 +467,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AE5B1A24199A8100B166E2 /* TrailDetails.swift in Sources */,
-				D3AE5AE124196A3C00B166E2 /* MapViewController.swift in Sources */,
 				D3AE5C0B2426951000B166E2 /* UIColor.swift in Sources */,
 				D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */,
 				D3AE5C052425B8F900B166E2 /* Filter-to-MapViewController.swift in Sources */,
@@ -462,6 +481,7 @@
 				D3AE5C0D2426959400B166E2 /* BaseViewController.swift in Sources */,
 				D3AE5BF92425750D00B166E2 /* Term-to-MapViewController.swift in Sources */,
 				D3AE5C092426937F00B166E2 /* UIImage.swift in Sources */,
+				D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -107,7 +107,7 @@ extension SceneDelegate : SdkInitDelegate {
                 self.goToViewController(HomeViewController.self)
              case .FAILED(let error):
                 self.showDownloadErrors(error: String(describing: error))
-                self.goToViewController(MapViewController.self)
+                self.goToViewController(HomeViewController.self)
             default:
                 break
             }

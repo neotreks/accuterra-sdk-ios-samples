@@ -4,8 +4,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 def shared_pods
-  pod 'AccuTerraSDK', '~> 0.2-snapshot'
-  # pod 'AccuTerraSDK', :path => '../SDK/AccuTerraSDK.podspec'
+  pod 'AccuTerraSDK', '~> 0.3-snapshot'
 end
 
 target 'AccuterraSampleApp' do
