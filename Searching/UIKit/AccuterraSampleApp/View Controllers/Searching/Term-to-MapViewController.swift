@@ -234,7 +234,6 @@ extension Term_to_MapViewController : AccuTerraMapViewDelegate {
     func onStyleChanged() {}
     
     func handleTrailMapClick(trailId: Int64?) {
-        print("handleTrailMapClick called")
         if let id = trailId {
             self.didSelectTrail(trailId: id)
         }
