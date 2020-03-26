@@ -11,7 +11,8 @@ import UIKit
 class BaseViewController: UIViewController {
 
     weak var homeNavItem: UINavigationItem?
-
+    private let appTitle = "AccuTerra Search"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,8 +23,16 @@ class BaseViewController: UIViewController {
     }
     
     func setNavBar() {
-        self.homeNavItem?.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: nil, action: nil)
-        self.homeNavItem?.setRightBarButtonItems(nil, animated: false)
-        self.homeNavItem?.titleView = nil
+        self.navigationItem.setLeftBarButtonItems([
+            UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(backTapped))
+        ], animated: false)
+        
+        self.navigationItem.title = appTitle
+        self.navigationItem.titleView = nil
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+    }
+    
+    @objc func backTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

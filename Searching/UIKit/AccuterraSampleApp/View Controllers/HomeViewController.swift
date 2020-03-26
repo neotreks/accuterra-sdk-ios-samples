@@ -20,17 +20,27 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "AccuTerra Searching"
-
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavBar()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? BaseViewController {
             viewController.homeNavItem = navigationItem
         }
+    }
+    
+    func setNavBar() {
+        self.navigationItem.title = "AccuTerra Searching"
+        self.navigationItem.setLeftBarButtonItems(nil, animated: false)
+        self.navigationItem.setRightBarButtonItems(nil, animated: false)
+        self.navigationItem.titleView = nil
     }
 }
 

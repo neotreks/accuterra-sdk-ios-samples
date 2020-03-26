@@ -11,7 +11,9 @@ import UIKit
 import AccuTerraSDK
 
 class TrailListViewController: BaseViewController {
+    
     @IBOutlet weak var tableView: UITableView!
+    
     var trails: Array<TrailBasicInfo>?
     private let cellReuseIdentifier: String = "Cell"
     private let appTitle = "AccuTerra Search"
@@ -24,10 +26,6 @@ class TrailListViewController: BaseViewController {
         self.tableView.delegate = self
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-    }
-    
-    @objc func backTapped() {
-        self.navigationController?.popViewController(animated: true)
     }
 }
 

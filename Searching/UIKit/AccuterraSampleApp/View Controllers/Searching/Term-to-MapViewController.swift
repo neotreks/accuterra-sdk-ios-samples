@@ -198,10 +198,6 @@ class Term_to_MapViewController: BaseViewController {
             viewController.trails = self.trails
         }
     }
-    
-    @objc func backTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
 }
 
 extension Term_to_MapViewController: UISearchBarDelegate {

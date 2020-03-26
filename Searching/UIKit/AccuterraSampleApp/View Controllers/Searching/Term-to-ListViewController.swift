@@ -28,7 +28,6 @@ class Term_to_ListViewController: BaseViewController {
         self.tableView.delegate = self
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
-        
         self.searchTrails(searchText: nil)
     }
     
@@ -110,9 +109,6 @@ class Term_to_ListViewController: BaseViewController {
         }
     }
     
-    @objc func backTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
 }
 
 extension Term_to_ListViewController: UISearchBarDelegate {

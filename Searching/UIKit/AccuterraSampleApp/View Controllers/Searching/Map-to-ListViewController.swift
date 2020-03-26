@@ -15,8 +15,6 @@ class Map_to_ListViewController: BaseViewController {
     @IBOutlet weak var mapView: AccuTerraMapView!
     @IBOutlet weak var tableView: UITableView!
     
-    private let appTitle = "AccuTerra Search"
-    var isBaseMapLayerManagersLoaded = false
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
     var trailsFilter = TrailsFilter()
@@ -49,7 +47,7 @@ class Map_to_ListViewController: BaseViewController {
         self.mapView.isRotateEnabled = false //makes map interaction easier
         self.mapView.isPitchEnabled = false //makes map interaction easier
     }
-
+    
     private func zoomToMapExtents() {
         // Colorado’s bounds
         let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
@@ -57,10 +55,6 @@ class Map_to_ListViewController: BaseViewController {
         let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
 
         mapView.zoomToExtent(bounds: colorado, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
     func getMapBounds() throws -> MapBounds {
@@ -109,10 +103,6 @@ class Map_to_ListViewController: BaseViewController {
             return Set<Int64>()
         }
     }
-        
-    @objc func backTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     func didSelectTrail(trailId: Int64) {
         mapView.trailLayersManager.highLightTrail(trailId: trailId)
@@ -135,7 +125,6 @@ class Map_to_ListViewController: BaseViewController {
         self.present(alert, animated: false, completion: nil)
     }
 }
-
 
 extension Map_to_ListViewController : TrailLayersManagerDelegate {
     func onLayersAdded(trailLayers: Array<TrailLayerType>) {
