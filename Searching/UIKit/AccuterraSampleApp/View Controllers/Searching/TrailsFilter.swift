@@ -1,6 +1,6 @@
 //
 //  TrailsFilter.swift
-//  DemoApp
+//  AccuterraSampleApp
 //
 //  Created by Rudolf Kopřiva on 03/03/2020.
 //  Copyright © 2020 NeoTreks. All rights reserved.
@@ -18,5 +18,6 @@ struct TrailsFilter {
     var maxDifficulty: TechnicalRating?
     var minUserRating: Int?
     var maxTripDistance: Int?
+    var mapCenter: MapLocation?
 }
 

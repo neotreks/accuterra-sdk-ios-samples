@@ -1,6 +1,6 @@
 //
 //  TrailDetails.swift
-//  DemoApp
+//  AccuterraSampleApp
 //
 //  Created by Rudolf Kopřiva on 20/02/2020.
 //  Copyright © 2020 NeoTreks. All rights reserved.

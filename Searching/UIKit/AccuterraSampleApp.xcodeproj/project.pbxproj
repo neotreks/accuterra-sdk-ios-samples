@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75E45602494C233E5DD186ED /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
+		D339755224316AA200B5A83D /* FilterResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */; };
 		D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
 		D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */; };
 		D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */; };
@@ -23,12 +24,16 @@
 		D3AE5BF92425750D00B166E2 /* Term-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF82425750D00B166E2 /* Term-to-MapViewController.swift */; };
 		D3AE5BFB2425753C00B166E2 /* Map-to-ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BFA2425753C00B166E2 /* Map-to-ListViewController.swift */; };
 		D3AE5BFD2425756800B166E2 /* List-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BFC2425756800B166E2 /* List-to-MapViewController.swift */; };
-		D3AE5C052425B8F900B166E2 /* Filter-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C042425B8F900B166E2 /* Filter-to-MapViewController.swift */; };
+		D3AE5C052425B8F900B166E2 /* Filter-MapBoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C042425B8F900B166E2 /* Filter-MapBoundsViewController.swift */; };
 		D3AE5C092426937F00B166E2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C082426937E00B166E2 /* UIImage.swift */; };
 		D3AE5C0B2426951000B166E2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0A2426951000B166E2 /* UIColor.swift */; };
 		D3AE5C0D2426959400B166E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0C2426959400B166E2 /* BaseViewController.swift */; };
 		D3AE5C0F242697D000B166E2 /* TrailsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */; };
-		D3AE5C1124271B6E00B166E2 /* Filter-toListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C1024271B6E00B166E2 /* Filter-toListViewController.swift */; };
+		D3AE5C1124271B6E00B166E2 /* Filter-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */; };
+		D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */; };
+		D3C0F7BC242E778F00BD397C /* FilterCriteriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */; };
+		D3C0F7BE242FE54C00BD397C /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */; };
+		D3C0F7C0242FE5EE00BD397C /* Synchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BF242FE5EE00BD397C /* Synchronize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,7 @@
 		1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListViewController.swift; path = AccuterraSampleApp/Resources/TrailListViewController.swift; sourceTree = SOURCE_ROOT; };
 		D3AE5AD924196A3C00B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,12 +80,16 @@
 		D3AE5BF82425750D00B166E2 /* Term-to-MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Term-to-MapViewController.swift"; sourceTree = "<group>"; };
 		D3AE5BFA2425753C00B166E2 /* Map-to-ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Map-to-ListViewController.swift"; sourceTree = "<group>"; };
 		D3AE5BFC2425756800B166E2 /* List-to-MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List-to-MapViewController.swift"; sourceTree = "<group>"; };
-		D3AE5C042425B8F900B166E2 /* Filter-to-MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filter-to-MapViewController.swift"; sourceTree = "<group>"; };
+		D3AE5C042425B8F900B166E2 /* Filter-MapBoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filter-MapBoundsViewController.swift"; sourceTree = "<group>"; };
 		D3AE5C082426937E00B166E2 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = AccuterraSampleApp/Resources/UIImage.swift; sourceTree = SOURCE_ROOT; };
 		D3AE5C0A2426951000B166E2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = "AccuterraSampleApp/View Controllers/Searching/UIColor.swift"; sourceTree = SOURCE_ROOT; };
 		D3AE5C0C2426959400B166E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Searching/BaseViewController.swift; sourceTree = "<group>"; };
 		D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailsFilter.swift; path = "AccuterraSampleApp/View Controllers/Searching/TrailsFilter.swift"; sourceTree = SOURCE_ROOT; };
-		D3AE5C1024271B6E00B166E2 /* Filter-toListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filter-toListViewController.swift"; sourceTree = "<group>"; };
+		D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filter-MapViewController.swift"; sourceTree = "<group>"; };
+		D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filter-CriteriaViewController.swift"; sourceTree = "<group>"; };
+		D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterCriteriaTableViewCell.swift; path = AccuterraSampleApp/Resources/FilterCriteriaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtil.swift; sourceTree = "<group>"; };
+		D3C0F7BF242FE5EE00BD397C /* Synchronize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +202,9 @@
 		D3AE5BFE24257B1500B166E2 /* Filtering */ = {
 			isa = PBXGroup;
 			children = (
-				D3AE5C1024271B6E00B166E2 /* Filter-toListViewController.swift */,
-				D3AE5C042425B8F900B166E2 /* Filter-to-MapViewController.swift */,
+				D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */,
+				D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */,
+				D3AE5C042425B8F900B166E2 /* Filter-MapBoundsViewController.swift */,
 			);
 			path = Filtering;
 			sourceTree = "<group>";
@@ -225,10 +236,14 @@
 		D3AE5C0124257B9A00B166E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */,
+				D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */,
+				D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */,
+				D3AE5B1924199A8100B166E2 /* TrailDetails.swift */,
 				D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */,
 				D3AE5C0A2426951000B166E2 /* UIColor.swift */,
 				D3AE5C082426937E00B166E2 /* UIImage.swift */,
-				D3AE5B1924199A8100B166E2 /* TrailDetails.swift */,
+				D3C0F7BF242FE5EE00BD397C /* Synchronize.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -466,19 +481,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C0F7BE242FE54C00BD397C /* EnumUtil.swift in Sources */,
+				D339755224316AA200B5A83D /* FilterResultsTableViewCell.swift in Sources */,
 				D3AE5B1A24199A8100B166E2 /* TrailDetails.swift in Sources */,
 				D3AE5C0B2426951000B166E2 /* UIColor.swift in Sources */,
 				D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */,
-				D3AE5C052425B8F900B166E2 /* Filter-to-MapViewController.swift in Sources */,
+				D3AE5C052425B8F900B166E2 /* Filter-MapBoundsViewController.swift in Sources */,
 				D3AE5B1524196E1800B166E2 /* DownloadViewController.swift in Sources */,
 				D3AE5BF5242572C300B166E2 /* HomeViewController.swift in Sources */,
-				D3AE5C1124271B6E00B166E2 /* Filter-toListViewController.swift in Sources */,
+				D3AE5C1124271B6E00B166E2 /* Filter-MapViewController.swift in Sources */,
 				D3AE5C0F242697D000B166E2 /* TrailsFilter.swift in Sources */,
+				D3C0F7BC242E778F00BD397C /* FilterCriteriaTableViewCell.swift in Sources */,
+				D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */,
 				D3AE5BF7242574DD00B166E2 /* Term-to-ListViewController.swift in Sources */,
 				D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */,
 				D3AE5BFB2425753C00B166E2 /* Map-to-ListViewController.swift in Sources */,
 				D3AE5BFD2425756800B166E2 /* List-to-MapViewController.swift in Sources */,
 				D3AE5C0D2426959400B166E2 /* BaseViewController.swift in Sources */,
+				D3C0F7C0242FE5EE00BD397C /* Synchronize.swift in Sources */,
 				D3AE5BF92425750D00B166E2 /* Term-to-MapViewController.swift in Sources */,
 				D3AE5C092426937F00B166E2 /* UIImage.swift in Sources */,
 				D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */,

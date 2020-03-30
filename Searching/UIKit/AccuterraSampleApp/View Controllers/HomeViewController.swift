@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     private let cellReuseIdentifier: String = "Cell"
     
-    var itemsInSections: Array<Array<String>> = [["List to Map", "Map to List", "Search Term to Map", "Search Term to List"], ["Filter to Map Display", "Filter to List Display"]]
+    var itemsInSections: Array<Array<String>> = [["List to Map", "Map to List", "Search Term to Map", "Search Term to List"], ["Difficulty Filter Criteria", "Map Filtering", "Map Bounds Filtering"]]
     var sections: Array<String> = ["Searching", "Filtering"]
     
     override func viewDidLoad() {
