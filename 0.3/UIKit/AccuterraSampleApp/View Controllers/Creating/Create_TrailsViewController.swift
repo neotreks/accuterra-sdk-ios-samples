@@ -21,6 +21,7 @@ class Create_TrailsViewController: UIViewController {
     var trailsService: ITrailService?
     var trails: Array<TrailBasicInfo>?
     var currentBounds:MapBounds? = try? MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
+    let releaseFeatureToggle_0_3 = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,14 +157,16 @@ extension Create_TrailsViewController : AccuTerraMapViewDelegate {
 extension Create_TrailsViewController : MGLMapViewDelegate {
     
     func mapViewDidBecomeIdle(_ mapView: MGLMapView) {
-        if let newBounds = try? getMapBounds() {
-            if let previousBounds = self.currentBounds {
-                if previousBounds.equals(bounds: newBounds) {
-                    return
+        if releaseFeatureToggle_0_3 {
+            if let newBounds = try? getMapBounds() {
+                if let previousBounds = self.currentBounds {
+                    if previousBounds.equals(bounds: newBounds) {
+                        return
+                    }
+                    self.currentBounds = newBounds
+                    let visibleTrails = self.searchTrails()
+                    self.mapView.trailLayersManager.setVisibleTrails(trailIds: visibleTrails)
                 }
-                self.currentBounds = newBounds
-                let visibleTrails = self.searchTrails()
-                self.mapView.trailLayersManager.setVisibleTrails(trailIds: visibleTrails)
             }
         }
     }
