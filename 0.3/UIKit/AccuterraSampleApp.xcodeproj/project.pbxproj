@@ -14,6 +14,37 @@
 		D3227CDC24327DA0001FDC30 /* Create_POIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDB24327DA0001FDC30 /* Create_POIsViewController.swift */; };
 		D3227CDE24327DC0001FDC30 /* Controling_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDD24327DC0001FDC30 /* Controling_MapViewController.swift */; };
 		D3227CE024327DDA001FDC30 /* Interacting_WithMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDF24327DDA001FDC30 /* Interacting_WithMapViewController.swift */; };
+		D3227CE42433D75A001FDC30 /* Interacting_WithMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDF24327DDA001FDC30 /* Interacting_WithMapViewController.swift */; };
+		D3227CE52433D75A001FDC30 /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */; };
+		D3227CE62433D75A001FDC30 /* FilterResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */; };
+		D3227CE72433D75A001FDC30 /* Create_POIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDB24327DA0001FDC30 /* Create_POIsViewController.swift */; };
+		D3227CE82433D75A001FDC30 /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B1924199A8100B166E2 /* TrailDetails.swift */; };
+		D3227CE92433D75A001FDC30 /* Create_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD524327D67001FDC30 /* Create_MapViewController.swift */; };
+		D3227CEA2433D75A001FDC30 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0A2426951000B166E2 /* UIColor.swift */; };
+		D3227CEB2433D75A001FDC30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */; };
+		D3227CEC2433D75A001FDC30 /* Filter-MapBoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C042425B8F900B166E2 /* Filter-MapBoundsViewController.swift */; };
+		D3227CED2433D75A001FDC30 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5B1424196E1800B166E2 /* DownloadViewController.swift */; };
+		D3227CEE2433D75A001FDC30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF4242572C300B166E2 /* HomeViewController.swift */; };
+		D3227CEF2433D75A001FDC30 /* Create_DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */; };
+		D3227CF02433D75A001FDC30 /* Filter-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */; };
+		D3227CF12433D75A001FDC30 /* Create_TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */; };
+		D3227CF22433D75A001FDC30 /* TrailsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */; };
+		D3227CF32433D75A001FDC30 /* FilterCriteriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */; };
+		D3227CF42433D75A001FDC30 /* Filter-CriteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */; };
+		D3227CF52433D75A001FDC30 /* Term-to-ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF6242574DD00B166E2 /* Term-to-ListViewController.swift */; };
+		D3227CF62433D75A001FDC30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */; };
+		D3227CF72433D75A001FDC30 /* Map-to-ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BFA2425753C00B166E2 /* Map-to-ListViewController.swift */; };
+		D3227CF82433D75A001FDC30 /* List-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BFC2425756800B166E2 /* List-to-MapViewController.swift */; };
+		D3227CF92433D75A001FDC30 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0C2426959400B166E2 /* BaseViewController.swift */; };
+		D3227CFA2433D75A001FDC30 /* Synchronize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BF242FE5EE00BD397C /* Synchronize.swift */; };
+		D3227CFB2433D75A001FDC30 /* Controling_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CDD24327DC0001FDC30 /* Controling_MapViewController.swift */; };
+		D3227CFC2433D75A001FDC30 /* Term-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF82425750D00B166E2 /* Term-to-MapViewController.swift */; };
+		D3227CFD2433D75A001FDC30 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C082426937E00B166E2 /* UIImage.swift */; };
+		D3227CFE2433D75A001FDC30 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
+		D3227D002433D75A001FDC30 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
+		D3227D022433D75A001FDC30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE724196A3F00B166E2 /* LaunchScreen.storyboard */; };
+		D3227D032433D75A001FDC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE524196A3F00B166E2 /* Assets.xcassets */; };
+		D3227D042433D75A001FDC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE224196A3C00B166E2 /* Main.storyboard */; };
 		D339755224316AA200B5A83D /* FilterResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */; };
 		D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
 		D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */; };
@@ -69,6 +100,8 @@
 		D3227CDB24327DA0001FDC30 /* Create_POIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_POIsViewController.swift; sourceTree = "<group>"; };
 		D3227CDD24327DC0001FDC30 /* Controling_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controling_MapViewController.swift; path = "AccuterraSampleApp/View Controllers/Creating/Controling_MapViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D3227CDF24327DDA001FDC30 /* Interacting_WithMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interacting_WithMapViewController.swift; sourceTree = "<group>"; };
+		D3227D0C2433D75A001FDC30 /* AccuterraSampleApp (Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp (Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3227D0D2433D75B001FDC30 /* AccuterraSampleApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AccuterraSampleApp copy-Info.plist"; path = "/Users/brian/Projects/Ford/iOS/documentation-stage/github-repo/accuterra-ios-samples/0.3/UIKit/AccuterraSampleApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListViewController.swift; path = AccuterraSampleApp/Resources/TrailListViewController.swift; sourceTree = SOURCE_ROOT; };
 		D3AE5AD924196A3C00B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +138,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D3227CFF2433D75A001FDC30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3227D002433D75A001FDC30 /* Pods_AccuterraSampleApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3AE5AD624196A3C00B166E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +210,7 @@
 				D3AE5AFD24196A3F00B166E2 /* AccuterraSampleAppUITests */,
 				D3AE5ADA24196A3C00B166E2 /* Products */,
 				B6ED8B9349DBA69F481648D2 /* Pods */,
+				D3227D0D2433D75B001FDC30 /* AccuterraSampleApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +220,7 @@
 				D3AE5AD924196A3C00B166E2 /* AccuterraSampleApp.app */,
 				D3AE5AEF24196A3F00B166E2 /* AccuterraSampleAppTests.xctest */,
 				D3AE5AFA24196A3F00B166E2 /* AccuterraSampleAppUITests.xctest */,
+				D3227D0C2433D75A001FDC30 /* AccuterraSampleApp (Develop).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +328,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D3227CE12433D75A001FDC30 /* AccuterraSampleApp (Develop) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3227D092433D75A001FDC30 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp (Develop)" */;
+			buildPhases = (
+				D3227CE22433D75A001FDC30 /* [CP] Check Pods Manifest.lock */,
+				D3227CE32433D75A001FDC30 /* Sources */,
+				D3227CFF2433D75A001FDC30 /* Frameworks */,
+				D3227D012433D75A001FDC30 /* Resources */,
+				D3227D052433D75A001FDC30 /* [CP] Embed Pods Frameworks */,
+				D3227D062433D75A001FDC30 /* Insert AccuTerra Access Tokens */,
+				D3227D072433D75A001FDC30 /* [CP] Copy Pods Resources */,
+				D3227D082433D75A001FDC30 /* Insert Mapbox Access Token */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AccuterraSampleApp (Develop)";
+			productName = AccuterraSampleApp;
+			productReference = D3227D0C2433D75A001FDC30 /* AccuterraSampleApp (Develop).app */;
+			productType = "com.apple.product-type.application";
+		};
 		D3AE5AD824196A3C00B166E2 /* AccuterraSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3AE5B0324196A3F00B166E2 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp" */;
@@ -382,11 +447,22 @@
 				D3AE5AD824196A3C00B166E2 /* AccuterraSampleApp */,
 				D3AE5AEE24196A3F00B166E2 /* AccuterraSampleAppTests */,
 				D3AE5AF924196A3F00B166E2 /* AccuterraSampleAppUITests */,
+				D3227CE12433D75A001FDC30 /* AccuterraSampleApp (Develop) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D3227D012433D75A001FDC30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3227D022433D75A001FDC30 /* LaunchScreen.storyboard in Resources */,
+				D3227D032433D75A001FDC30 /* Assets.xcassets in Resources */,
+				D3227D042433D75A001FDC30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3AE5AD724196A3C00B166E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,7 +546,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D38165C9242AB53C00F4F3D7 /* Insert Mapbox Access Token */ = {
+		D3227CE22433D75A001FDC30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AccuterraSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3227D052433D75A001FDC30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3227D062433D75A001FDC30 /* Insert AccuTerra Access Tokens */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,6 +594,61 @@
 			);
 			inputPaths = (
 				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert AccuTerra Access Tokens";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_accuterra_access_tokens.sh\n";
+		};
+		D3227D072433D75A001FDC30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3227D082433D75A001FDC30 /* Insert Mapbox Access Token */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$SRCROOT/insert_mapbox_access_token.sh,
+			);
+			name = "Insert Mapbox Access Token";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_mapbox_access_token.sh\n";
+		};
+		D38165C9242AB53C00F4F3D7 /* Insert Mapbox Access Token */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$SRCROOT/insert_mapbox_access_token.sh,
 			);
 			name = "Insert Mapbox Access Token";
 			outputFileListPaths = (
@@ -511,6 +681,40 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D3227CE32433D75A001FDC30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3227CE42433D75A001FDC30 /* Interacting_WithMapViewController.swift in Sources */,
+				D3227CE52433D75A001FDC30 /* EnumUtil.swift in Sources */,
+				D3227CE62433D75A001FDC30 /* FilterResultsTableViewCell.swift in Sources */,
+				D3227CE72433D75A001FDC30 /* Create_POIsViewController.swift in Sources */,
+				D3227CE82433D75A001FDC30 /* TrailDetails.swift in Sources */,
+				D3227CE92433D75A001FDC30 /* Create_MapViewController.swift in Sources */,
+				D3227CEA2433D75A001FDC30 /* UIColor.swift in Sources */,
+				D3227CEB2433D75A001FDC30 /* AppDelegate.swift in Sources */,
+				D3227CEC2433D75A001FDC30 /* Filter-MapBoundsViewController.swift in Sources */,
+				D3227CED2433D75A001FDC30 /* DownloadViewController.swift in Sources */,
+				D3227CEE2433D75A001FDC30 /* HomeViewController.swift in Sources */,
+				D3227CEF2433D75A001FDC30 /* Create_DetailsViewController.swift in Sources */,
+				D3227CF02433D75A001FDC30 /* Filter-MapViewController.swift in Sources */,
+				D3227CF12433D75A001FDC30 /* Create_TrailsViewController.swift in Sources */,
+				D3227CF22433D75A001FDC30 /* TrailsFilter.swift in Sources */,
+				D3227CF32433D75A001FDC30 /* FilterCriteriaTableViewCell.swift in Sources */,
+				D3227CF42433D75A001FDC30 /* Filter-CriteriaViewController.swift in Sources */,
+				D3227CF52433D75A001FDC30 /* Term-to-ListViewController.swift in Sources */,
+				D3227CF62433D75A001FDC30 /* SceneDelegate.swift in Sources */,
+				D3227CF72433D75A001FDC30 /* Map-to-ListViewController.swift in Sources */,
+				D3227CF82433D75A001FDC30 /* List-to-MapViewController.swift in Sources */,
+				D3227CF92433D75A001FDC30 /* BaseViewController.swift in Sources */,
+				D3227CFA2433D75A001FDC30 /* Synchronize.swift in Sources */,
+				D3227CFB2433D75A001FDC30 /* Controling_MapViewController.swift in Sources */,
+				D3227CFC2433D75A001FDC30 /* Term-to-MapViewController.swift in Sources */,
+				D3227CFD2433D75A001FDC30 /* UIImage.swift in Sources */,
+				D3227CFE2433D75A001FDC30 /* TrailListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3AE5AD524196A3C00B166E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,6 +800,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D3227D0A2433D75A001FDC30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3227D0B2433D75A001FDC30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D3AE5B0124196A3F00B166E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -835,6 +1077,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D3227D092433D75A001FDC30 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp (Develop)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3227D0A2433D75A001FDC30 /* Debug */,
+				D3227D0B2433D75A001FDC30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D3AE5AD424196A3C00B166E2 /* Build configuration list for PBXProject "AccuterraSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
