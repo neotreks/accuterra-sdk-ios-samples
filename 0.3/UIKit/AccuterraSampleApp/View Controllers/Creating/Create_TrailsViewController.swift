@@ -21,7 +21,7 @@ class Create_TrailsViewController: UIViewController {
     var trailsService: ITrailService?
     var trails: Array<TrailBasicInfo>?
     var currentBounds:MapBounds? = try? MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
-    let releaseFeatureToggle_0_3 = true
+    let releaseFeatureToggle_0_3 = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,6 +133,9 @@ extension Create_TrailsViewController : TrailLayersManagerDelegate {
 }
 
 extension Create_TrailsViewController : AccuTerraMapViewDelegate {
+    
+    func onSignificantMapBoundsChange() {}
+    
     func onStyleChanged() {}
     
     func didTapOnMap(coordinate: CLLocationCoordinate2D) {}

@@ -227,6 +227,8 @@ extension Term_to_MapViewController : TrailLayersManagerDelegate {
 
 extension Term_to_MapViewController : AccuTerraMapViewDelegate {
     
+    func onSignificantMapBoundsChange() {}
+    
     func onStyleChanged() {}
     
     func handleTrailMapClick(trailId: Int64?) {

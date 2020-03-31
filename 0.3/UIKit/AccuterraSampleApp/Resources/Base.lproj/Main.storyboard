@@ -19,7 +19,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cri-aK-oQS"/>
                     <connections>
-                        <segue destination="gZn-Bk-p8Y" kind="show" id="8JS-BA-Lvm"/>
+                        <segue destination="gZn-Bk-p8Y" kind="show" identifier="GoToHome" id="8JS-BA-Lvm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

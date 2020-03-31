@@ -134,6 +134,8 @@ extension Map_to_ListViewController : TrailLayersManagerDelegate {
 
 extension Map_to_ListViewController : AccuTerraMapViewDelegate {
     
+    func onSignificantMapBoundsChange() {}
+    
     func onStyleChanged() {}
     
     func handleTrailMapClick(trailId: Int64?) {

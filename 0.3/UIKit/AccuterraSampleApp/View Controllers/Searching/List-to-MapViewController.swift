@@ -114,6 +114,8 @@ extension List_to_MapViewController : TrailLayersManagerDelegate {
 
 extension List_to_MapViewController : AccuTerraMapViewDelegate {
     
+    func onSignificantMapBoundsChange() {}
+    
     func didTapOnMap(coordinate: CLLocationCoordinate2D) {}
     
     func onStyleChanged() {}
