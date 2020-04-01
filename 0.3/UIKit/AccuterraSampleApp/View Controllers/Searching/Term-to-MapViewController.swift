@@ -167,7 +167,8 @@ class Term_to_MapViewController: BaseViewController {
                         listButton.isEnabled = true
                     }
                     else {
-                        seachResultsLabel.text = defaultNoTrails
+                        self.showAlert(title: "Search Results", message: "No Trails Found")
+                        seachResultsLabel.text = "Trails Found: 0"
                         listButton.isEnabled = false
                     }
                 }

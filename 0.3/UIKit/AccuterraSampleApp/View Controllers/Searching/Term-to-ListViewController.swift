@@ -83,6 +83,12 @@ class Term_to_ListViewController: BaseViewController {
         self.searchTrails(searchText: nil)
     }
     
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: false, completion: nil)
+    }
+    
     func searchTrails(searchText:String?) {
         
         guard SdkManager.shared.isTrailDbInitialized else {
@@ -97,10 +103,11 @@ class Term_to_ListViewController: BaseViewController {
             if let trailManager = self.trailsService {
                 let criteria = try TrailBasicSearchCriteria(searchString: searchText, limit: 20)
                 let trails = try trailManager.findTrails(byBasicCriteria: criteria)
-                if trails.count > 0 {
-                    self.trails = trails
-                    self.navigationItem.title = searchText
-                    self.tableView.reloadData()
+                self.trails = trails
+                self.navigationItem.title = searchText
+                self.tableView.reloadData()
+                if trails.count == 0 {
+                    self.showAlert(title: "Search Results", message: "No Trails Found")
                 }
             }
         }
