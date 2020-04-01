@@ -13,18 +13,19 @@ import Mapbox
 class Create_TrailsViewController: UIViewController {
 
     @IBOutlet weak var mapView: AccuTerraMapView!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     private let appTitle = "Adding Trails"
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
-    var trailsService: ITrailService?
+    var trailService: ITrailService?
     var trails: Array<TrailBasicInfo>?
-    var currentBounds:MapBounds? = try? MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
-    let releaseFeatureToggle_0_3 = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Adding Trails"
         initMap()
     }
     
@@ -39,82 +40,30 @@ class Create_TrailsViewController: UIViewController {
         self.mapView.isPitchEnabled = false //makes map interaction easier
     }
     
-    private func zoomToMapExtents() {
+    private func zoomToDefaultExtent() {
         // Colorado’s bounds
         let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
         let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
         let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
-
+        
         mapView.zoomToExtent(bounds: colorado, animated: true)
     }
     
-    func searchTrails(searchText:String?) {
-        
-        guard SdkManager.shared.isTrailDbInitialized else {
-            return
-        }
-        
+    func doTrailsSearch() {
         do {
-            if self.trailsService == nil {
-                trailsService = ServiceFactory.getTrailService()
+            if self.trailService == nil {
+                self.trailService = ServiceFactory.getTrailService()
             }
             
-            if let trailManager = self.trailsService {
-                let criteria = try TrailBasicSearchCriteria(searchString: searchText, limit: 20)
-                let trails = try trailManager.findTrails(byBasicCriteria: criteria)
-                if trails.count > 0 {
-                    self.trails = trails
-                }
+            let searchCriteria = try? TrailBasicSearchCriteria(
+                searchString: nil,
+                limit: Int(INT32_MAX))
+            if let service = trailService, let criteria = searchCriteria {
+                self.trails = try service.findTrails(byBasicCriteria: criteria)
             }
         }
         catch {
             debugPrint("\(error)")
-        }
-    }
-    
-    func getMapBounds() throws -> MapBounds {
-        let visibleRegion = self.mapView.visibleCoordinateBounds
-        
-        return try MapBounds(
-            minLat: max(visibleRegion.sw.latitude, -90),
-            minLon: max(visibleRegion.sw.longitude, -180),
-            maxLat: min(visibleRegion.ne.latitude, 90),
-            maxLon: min(visibleRegion.ne.longitude, 180))
-    }
-    
-    func searchTrails() -> Set<Int64> {
-        
-        guard SdkManager.shared.isTrailDbInitialized else {
-            return Set<Int64>()
-        }
-        
-        do {
-        
-            if self.trailsService == nil {
-                trailsService = ServiceFactory.getTrailService()
-            }
-            
-            if let bounds = try? getMapBounds() {
-                let searchCriteria = TrailMapBoundsSearchCriteria(
-                    mapBounds: bounds,
-                    nameSearchString: nil,
-                    techRating: nil,
-                    userRating: nil,
-                    length: nil,
-                    orderBy: OrderBy(),
-                    limit: Int(INT32_MAX))
-                trails = try trailsService!.findTrails(byMapBoundsCriteria: searchCriteria)
-            }
-        } catch {
-            debugPrint("\(error)")
-        }
-        
-        if let filteredTrailIds = trails?.map({ (trail) -> Int64 in
-            return trail.id
-        }) {
-            return Set<Int64>(filteredTrailIds)
-        } else {
-            return Set<Int64>()
         }
     }
 }
@@ -122,13 +71,6 @@ class Create_TrailsViewController: UIViewController {
 extension Create_TrailsViewController : TrailLayersManagerDelegate {
     func onLayersAdded(trailLayers: Array<TrailLayerType>) {
         isTrailsLayerManagersLoaded = true
-        if let trails = self.trails, trails.count > 0 {
-            var trailIds:Array<Int64> = []
-            for trail in trails {
-                trailIds.append(trail.id)
-            }
-            mapView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>(trailIds))
-        }
     }
 }
 
@@ -142,7 +84,7 @@ extension Create_TrailsViewController : AccuTerraMapViewDelegate {
         
     func onMapLoaded() {
         self.mapWasLoaded = true
-        self.zoomToMapExtents()
+        self.zoomToDefaultExtent()
         self.addTrailLayers()
     }
     
@@ -154,27 +96,10 @@ extension Create_TrailsViewController : AccuTerraMapViewDelegate {
 
         trailLayersManager.delegate = self
         trailLayersManager.addStandardLayers()
-    }
-}
-
-extension Create_TrailsViewController : MGLMapViewDelegate {
-    
-    func mapViewDidBecomeIdle(_ mapView: MGLMapView) {
-        if releaseFeatureToggle_0_3 {
-            if let newBounds = try? getMapBounds() {
-                if let previousBounds = self.currentBounds {
-                    if previousBounds.equals(bounds: newBounds) {
-                        return
-                    }
-                    self.currentBounds = newBounds
-                    let visibleTrails = self.searchTrails()
-                    self.mapView.trailLayersManager.setVisibleTrails(trailIds: visibleTrails)
-                }
-            }
+        
+        self.doTrailsSearch()
+        if let count = self.trails?.count {
+            statusLabel.text = "Trail Count: \(count)"
         }
-    }
-    
-    func mapViewDidFailLoadingMap(_ mapView: MGLMapView, withError error: Error) {
-        debugPrint("Map Loading Error: \(error)")
     }
 }

@@ -14,7 +14,6 @@ class Create_MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: AccuTerraMapView!
     
-    private let appTitle = "Create a Map"
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
@@ -22,6 +21,7 @@ class Create_MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Create a Map"
         // Initialize map
         initMap()
     }

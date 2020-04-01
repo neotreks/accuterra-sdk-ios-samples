@@ -47,6 +47,8 @@
 		D3227D042433D75A001FDC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE224196A3C00B166E2 /* Main.storyboard */; };
 		D339755224316AA200B5A83D /* FilterResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */; };
 		D38165CB242ABFC600F4F3D7 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
+		D3940EB924342FF60068C703 /* TrailDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3940EB824342FF60068C703 /* TrailDetailsViewController.swift */; };
+		D3940EBA243430440068C703 /* TrailDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3940EB824342FF60068C703 /* TrailDetailsViewController.swift */; };
 		D3AE5ADD24196A3C00B166E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */; };
 		D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */; };
 		D3AE5AE424196A3C00B166E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE224196A3C00B166E2 /* Main.storyboard */; };
@@ -104,6 +106,7 @@
 		D3227D0D2433D75B001FDC30 /* AccuterraSampleApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AccuterraSampleApp copy-Info.plist"; path = "/Users/brian/Projects/Ford/iOS/documentation-stage/github-repo/accuterra-ios-samples/0.3/UIKit/AccuterraSampleApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		D339755124316AA200B5A83D /* FilterResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultsTableViewCell.swift; sourceTree = "<group>"; };
 		D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListViewController.swift; path = AccuterraSampleApp/Resources/TrailListViewController.swift; sourceTree = SOURCE_ROOT; };
+		D3940EB824342FF60068C703 /* TrailDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		D3AE5AD924196A3C00B166E2 /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AE5ADC24196A3C00B166E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3AE5ADE24196A3C00B166E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 				D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */,
 				D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */,
 				D3227CDB24327DA0001FDC30 /* Create_POIsViewController.swift */,
+				D3940EB824342FF60068C703 /* TrailDetailsViewController.swift */,
 			);
 			path = Creating;
 			sourceTree = "<group>";
@@ -701,6 +705,7 @@
 				D3227CF12433D75A001FDC30 /* Create_TrailsViewController.swift in Sources */,
 				D3227CF22433D75A001FDC30 /* TrailsFilter.swift in Sources */,
 				D3227CF32433D75A001FDC30 /* FilterCriteriaTableViewCell.swift in Sources */,
+				D3940EBA243430440068C703 /* TrailDetailsViewController.swift in Sources */,
 				D3227CF42433D75A001FDC30 /* Filter-CriteriaViewController.swift in Sources */,
 				D3227CF52433D75A001FDC30 /* Term-to-ListViewController.swift in Sources */,
 				D3227CF62433D75A001FDC30 /* SceneDelegate.swift in Sources */,
@@ -735,6 +740,7 @@
 				D3227CD824327D81001FDC30 /* Create_TrailsViewController.swift in Sources */,
 				D3AE5C0F242697D000B166E2 /* TrailsFilter.swift in Sources */,
 				D3C0F7BC242E778F00BD397C /* FilterCriteriaTableViewCell.swift in Sources */,
+				D3940EB924342FF60068C703 /* TrailDetailsViewController.swift in Sources */,
 				D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */,
 				D3AE5BF7242574DD00B166E2 /* Term-to-ListViewController.swift in Sources */,
 				D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */,
