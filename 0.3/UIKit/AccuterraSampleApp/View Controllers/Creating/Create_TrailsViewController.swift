@@ -15,7 +15,6 @@ class Create_TrailsViewController: UIViewController {
     @IBOutlet weak var mapView: AccuTerraMapView!
     @IBOutlet weak var statusLabel: UILabel!
     
-    private let appTitle = "Adding Trails"
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]

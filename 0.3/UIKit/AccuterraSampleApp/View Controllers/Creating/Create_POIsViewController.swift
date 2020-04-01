@@ -14,7 +14,6 @@ class Create_POIsViewController: UIViewController {
     
     @IBOutlet weak var mapView:AccuTerraMapView!
 
-    private let appTitle = "Adding POIs"
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
@@ -24,7 +23,7 @@ class Create_POIsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Adding Trails"
+        self.navigationItem.title = "Adding POIs"
         initMap()
     }
     
