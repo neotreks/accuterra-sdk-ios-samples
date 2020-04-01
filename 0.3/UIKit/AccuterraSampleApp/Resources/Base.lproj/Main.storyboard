@@ -67,6 +67,7 @@
                         <segue destination="pGx-Oj-LVq" kind="show" identifier="Displaying Trail Details" id="hcD-dp-bzM"/>
                         <segue destination="4MW-OV-Ldn" kind="show" identifier="Adding POIs" id="dF4-Yu-YdK"/>
                         <segue destination="gUt-Lj-RgV" kind="show" identifier="Interacting with the Map" id="sty-Uq-RMZ"/>
+                        <segue destination="osr-0B-a41" kind="show" identifier="Controlling the Map" id="LW6-H6-IDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dtu-3u-iBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -854,18 +855,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyV-Z4-Ps2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7077" y="1213"/>
+            <point key="canvasLocation" x="8058" y="1262"/>
         </scene>
         <!--Controlling Map View Controller-->
         <scene sceneID="XlW-sG-f0E">
             <objects>
-                <viewController id="osr-0B-a41" userLabel="Controlling Map View Controller" sceneMemberID="viewController">
+                <viewController id="osr-0B-a41" userLabel="Controlling Map View Controller" customClass="Controling_MapViewController" customModule="AccuterraSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ttw-lx-8FI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-VY-e9W" customClass="AccuTerraMapView" customModule="AccuTerraSDK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="accuTerraDelegate" destination="osr-0B-a41" id="7vb-Ls-ziY"/>
+                                    <outlet property="delegate" destination="osr-0B-a41" id="ohH-t6-Nw6"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i84-MF-UcK" userLabel="Status View">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="u1m-Di-owu">
+                                        <rect key="frame" x="76.5" y="17.5" width="261" height="65.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go To Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVa-mM-VBy">
+                                                <rect key="frame" x="71" y="0.0" width="119.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FAU-KY-foD">
+                                                <rect key="frame" x="0.0" y="35.5" width="261" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55x-Oe-4zE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <state key="normal" title="CO"/>
+                                                        <connections>
+                                                            <action selector="coloradoButtonTapped:" destination="osr-0B-a41" eventType="touchUpInside" id="e7T-aE-IP5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW9-DG-pG0">
+                                                        <rect key="frame" x="80" y="0.0" width="49" height="30"/>
+                                                        <state key="normal" title="Denver"/>
+                                                        <connections>
+                                                            <action selector="denverButtonTapped:" destination="osr-0B-a41" eventType="touchUpInside" id="dhQ-3S-gra"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQj-50-8ws">
+                                                        <rect key="frame" x="179" y="0.0" width="82" height="30"/>
+                                                        <state key="normal" title="Castle Rock"/>
+                                                        <connections>
+                                                            <action selector="castleRockButtonTapped:" destination="osr-0B-a41" eventType="touchUpInside" id="dW2-Uw-wNP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="u1m-Di-owu" firstAttribute="centerY" secondItem="i84-MF-UcK" secondAttribute="centerY" id="Kiv-q0-DWt"/>
+                                    <constraint firstAttribute="height" constant="100" id="kB9-Jk-9k3"/>
+                                    <constraint firstItem="u1m-Di-owu" firstAttribute="centerX" secondItem="i84-MF-UcK" secondAttribute="centerX" id="yij-8x-k9f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i84-MF-UcK" firstAttribute="top" secondItem="Xbf-VY-e9W" secondAttribute="bottom" id="Fas-fJ-dhG"/>
+                            <constraint firstItem="dLZ-SC-X1V" firstAttribute="bottom" secondItem="i84-MF-UcK" secondAttribute="bottom" id="O8d-JR-eXi"/>
+                            <constraint firstItem="dLZ-SC-X1V" firstAttribute="trailing" secondItem="i84-MF-UcK" secondAttribute="trailing" id="W1D-SI-JGm"/>
+                            <constraint firstItem="Xbf-VY-e9W" firstAttribute="leading" secondItem="dLZ-SC-X1V" secondAttribute="leading" id="abh-P7-5S8"/>
+                            <constraint firstItem="Xbf-VY-e9W" firstAttribute="top" secondItem="dLZ-SC-X1V" secondAttribute="top" id="m3S-g4-lSF"/>
+                            <constraint firstItem="dLZ-SC-X1V" firstAttribute="trailing" secondItem="Xbf-VY-e9W" secondAttribute="trailing" id="otl-Dp-0GI"/>
+                            <constraint firstItem="i84-MF-UcK" firstAttribute="leading" secondItem="dLZ-SC-X1V" secondAttribute="leading" id="xr8-t8-SrV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dLZ-SC-X1V"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uDA-XJ-3BI"/>
+                    <connections>
+                        <outlet property="mapView" destination="Xbf-VY-e9W" id="2SH-FA-qTv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baa-Jo-uAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
