@@ -231,6 +231,12 @@ class Filter_MapViewController: BaseViewController {
     
     //MARK: Filter Query Methods
     
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: false, completion: nil)
+    }
+    
     func searchTrails() {
         
         guard SdkManager.shared.isTrailDbInitialized else {
@@ -274,8 +280,13 @@ class Filter_MapViewController: BaseViewController {
                 limit: Int(INT32_MAX))
             
             trails = try trailsService!.findTrails(byMapCriteria: searchCriteria)
-            if let results = trails, results.count > 0 {
-                self.tableView.reloadData()
+            if let results = trails {
+                if results.count > 0 {
+                    self.tableView.reloadData()
+                }
+                else {
+                    self.showAlert(title: "Search Results", message: "No Trails Found")
+                }
             }
         } catch {
             debugPrint("\(error)")
