@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		556AF5D5A90C412330AE76A1 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
 		75E45602494C233E5DD186ED /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
 		D3227CD624327D67001FDC30 /* Create_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD524327D67001FDC30 /* Create_MapViewController.swift */; };
 		D3227CD824327D81001FDC30 /* Create_TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */; };
@@ -41,7 +42,6 @@
 		D3227CFC2433D75A001FDC30 /* Term-to-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5BF82425750D00B166E2 /* Term-to-MapViewController.swift */; };
 		D3227CFD2433D75A001FDC30 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C082426937E00B166E2 /* UIImage.swift */; };
 		D3227CFE2433D75A001FDC30 /* TrailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38165CA242ABFC600F4F3D7 /* TrailListViewController.swift */; };
-		D3227D002433D75A001FDC30 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
 		D3227D022433D75A001FDC30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE724196A3F00B166E2 /* LaunchScreen.storyboard */; };
 		D3227D032433D75A001FDC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE524196A3F00B166E2 /* Assets.xcassets */; };
 		D3227D042433D75A001FDC30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AE5AE224196A3C00B166E2 /* Main.storyboard */; };
@@ -93,9 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		A46A225A873A225E835BE3F7 /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC835A43379611151A720D01 /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D3227CD524327D67001FDC30 /* Create_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_MapViewController.swift; sourceTree = "<group>"; };
 		D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_TrailsViewController.swift; sourceTree = "<group>"; };
 		D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_DetailsViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3227D002433D75A001FDC30 /* Pods_AccuterraSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E45602494C233E5DD186ED /* Pods_AccuterraSampleApp.framework in Frameworks */,
+				556AF5D5A90C412330AE76A1 /* Pods_AccuterraSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +177,8 @@
 		B6ED8B9349DBA69F481648D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */,
-				4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */,
+				AC835A43379611151A720D01 /* Pods-AccuterraSampleApp.debug.xcconfig */,
+				A46A225A873A225E835BE3F7 /* Pods-AccuterraSampleApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -336,13 +336,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3227D092433D75A001FDC30 /* Build configuration list for PBXNativeTarget "AccuterraSampleApp (Develop)" */;
 			buildPhases = (
-				D3227CE22433D75A001FDC30 /* [CP] Check Pods Manifest.lock */,
 				D3227CE32433D75A001FDC30 /* Sources */,
 				D3227CFF2433D75A001FDC30 /* Frameworks */,
 				D3227D012433D75A001FDC30 /* Resources */,
-				D3227D052433D75A001FDC30 /* [CP] Embed Pods Frameworks */,
 				D3227D062433D75A001FDC30 /* Insert AccuTerra Access Tokens */,
-				D3227D072433D75A001FDC30 /* [CP] Copy Pods Resources */,
 				D3227D082433D75A001FDC30 /* Insert Mapbox Access Token */,
 			);
 			buildRules = (
@@ -550,45 +547,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3227CE22433D75A001FDC30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AccuterraSampleApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3227D052433D75A001FDC30 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D3227D062433D75A001FDC30 /* Insert AccuTerra Access Tokens */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,23 +566,6 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/insert_accuterra_access_tokens.sh\n";
 		};
-		D3227D072433D75A001FDC30 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D3227D082433D75A001FDC30 /* Insert Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,7 +574,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				$SRCROOT/insert_mapbox_access_token.sh,
+				"$SRCROOT/insert_mapbox_access_token.sh",
 			);
 			name = "Insert Mapbox Access Token";
 			outputFileListPaths = (
@@ -652,7 +593,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				$SRCROOT/insert_mapbox_access_token.sh,
+				"$SRCROOT/insert_mapbox_access_token.sh",
 			);
 			name = "Insert Mapbox Access Token";
 			outputFileListPaths = (
@@ -808,7 +749,6 @@
 /* Begin XCBuildConfiguration section */
 		D3227D0A2433D75A001FDC30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -827,7 +767,6 @@
 		};
 		D3227D0B2433D75A001FDC30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -960,7 +899,7 @@
 		};
 		D3AE5B0424196A3F00B166E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E069CF6B72EA9401D32D4AE /* Pods-AccuterraSampleApp.debug.xcconfig */;
+			baseConfigurationReference = AC835A43379611151A720D01 /* Pods-AccuterraSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -979,7 +918,7 @@
 		};
 		D3AE5B0524196A3F00B166E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A15AC73FF2FE28060320BFE /* Pods-AccuterraSampleApp.release.xcconfig */;
+			baseConfigurationReference = A46A225A873A225E835BE3F7 /* Pods-AccuterraSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

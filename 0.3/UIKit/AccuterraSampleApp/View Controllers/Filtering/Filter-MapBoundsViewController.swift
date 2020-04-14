@@ -191,9 +191,11 @@ class Filter_MapBoundsViewController: BaseViewController {
     //MARK: Control Interactions
     
     @IBAction func didTapApplyButton() {
+        trailNameTextField.resignFirstResponder()
         searchTrails()
     }
     @IBAction func didTapClearButton(_ sender: Any) {
+        trailNameTextField.resignFirstResponder()
         clearFiters()
     }
     
