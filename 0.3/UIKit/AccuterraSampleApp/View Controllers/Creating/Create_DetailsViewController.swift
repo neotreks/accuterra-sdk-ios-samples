@@ -43,7 +43,7 @@ class Create_DetailsViewController: UIViewController {
         self.mapView.isPitchEnabled = false //makes map interaction easier
     }
     
-    private func zoomToDefaultExtent() {
+    func zoomToDefaultExtent() {
         // Colorado’s bounds
         let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
         let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)

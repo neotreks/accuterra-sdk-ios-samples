@@ -1,8 +1,8 @@
 //
-//  Create_POIsViewController.swift
+//  CustomStylesViewController.swift
 //  AccuterraSampleApp
 //
-//  Created by Brian Elliott on 3/30/20.
+//  Created by Brian Elliott on 4/14/20.
 //  Copyright © 2020 BaseMap. All rights reserved.
 //
 
@@ -10,20 +10,23 @@ import UIKit
 import AccuTerraSDK
 import Mapbox
 
-class Create_POIsViewController: UIViewController {
-    
-    @IBOutlet weak var mapView:AccuTerraMapView!
+class CustomStylesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var mapView: AccuTerraMapView!
+    @IBOutlet weak var baseMapPickerView: UIPickerView!
+    
     var isTrailsLayerManagersLoaded = false
     var mapWasLoaded : Bool = false
-    var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
     var trailService: ITrailService?
     var trails: Array<TrailBasicInfo>?
-
+    var baseMapTypes = ["Mapbox Outdoors", "Mapbox Satellite", "Mapbox Streets", "AccuTerra"]
+    var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Adding POIs"
+        self.navigationItem.title = "Custom Trail & POI Styles"
+        // Initialize map
         initMap()
     }
     
@@ -43,7 +46,7 @@ class Create_POIsViewController: UIViewController {
         let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
         let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
         let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
-        
+            
         mapView.zoomToExtent(bounds: colorado, animated: true)
     }
     
@@ -64,19 +67,61 @@ class Create_POIsViewController: UIViewController {
             debugPrint("\(error)")
         }
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        baseMapTypes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return baseMapTypes[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row >= 0 && row < styles.count {
+            setMapStyle(style: styles[row], provider:getStyleProvider(style: styles[row]))
+        }
+    }
+    
+    func setMapStyle(style: URL, provider: IAccuTerraStyleProvider?) {
+        self.mapView.setStyle(styleURL: style, styleProvider:provider)
+    }
+    
+    func getStyleProvider(style: URL) -> IAccuTerraStyleProvider? {
+        if isSatellite(style: style) {
+            return AccuTerraSatelliteStyleProvider(mapStyle:style)
+        }
+        else {
+            return AccuTerraStyleProvider(mapStyle:style)
+        }
+    }
+    
+    func isSatellite(style:URL) -> Bool {
+        if let _ = style.absoluteString.range(of: "satellite-streets", options: .caseInsensitive) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
 }
 
-extension Create_POIsViewController : TrailLayersManagerDelegate {
+extension CustomStylesViewController : TrailLayersManagerDelegate {
     func onLayersAdded(trailLayers: Array<TrailLayerType>) {
         isTrailsLayerManagersLoaded = true
     }
 }
 
-extension Create_POIsViewController : AccuTerraMapViewDelegate {
+extension CustomStylesViewController : AccuTerraMapViewDelegate {
     
     func onSignificantMapBoundsChange() {}
     
-    func onStyleChanged() {}
+    func onStyleChanged() {
+        
+    }
     
     func didTapOnMap(coordinate: CLLocationCoordinate2D) {
         guard self.isTrailsLayerManagersLoaded else {

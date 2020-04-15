@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     private let cellReuseIdentifier: String = "Cell"
     
-    var itemsInSections: Array<Array<String>> = [["Creating a Map", "Adding Trails", "Displaying Trail Details", "Adding POIs"],["Controlling the Map", "Interacting with the Map"],["List to Map", "Map to List", "Search Term to Map", "Search Term to List"], ["Difficulty Filter Criteria", "Map Filtering", "Map Bounds Filtering"]]
+    var itemsInSections: Array<Array<String>> = [["Creating a Map", "Adding Trails", "Displaying Trail Details", "Adding POIs", "Custom Trail & POI Styles"],["Controlling the Map", "Interacting with the Map"],["List to Map", "Map to List", "Search Term to Map", "Search Term to List"], ["Difficulty Filter Criteria", "Map Filtering", "Map Bounds Filtering"]]
     var sections: Array<String> = ["Creating/Displaying", "Controls", "Searching", "Filtering"]
     
     override func viewDidLoad() {

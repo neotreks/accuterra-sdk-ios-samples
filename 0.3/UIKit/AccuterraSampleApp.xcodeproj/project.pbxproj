@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		556AF5D5A90C412330AE76A1 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
 		75E45602494C233E5DD186ED /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */; };
+		D31C2136244651DF00B0E74E /* CustomStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2135244651DF00B0E74E /* CustomStylesViewController.swift */; };
+		D31C213824479DC300B0E74E /* AccuTerraSatelliteStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C213724479DC300B0E74E /* AccuTerraSatelliteStyleProvider.swift */; };
 		D3227CD624327D67001FDC30 /* Create_MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD524327D67001FDC30 /* Create_MapViewController.swift */; };
 		D3227CD824327D81001FDC30 /* Create_TrailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */; };
 		D3227CDA24327D93001FDC30 /* Create_DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */; };
@@ -96,6 +98,8 @@
 		A46A225A873A225E835BE3F7 /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A7D33F1A18FF85DF042F48C5 /* Pods_AccuterraSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC835A43379611151A720D01 /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D31C2135244651DF00B0E74E /* CustomStylesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomStylesViewController.swift; path = "AccuterraSampleApp/View Controllers/CustomStylesViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D31C213724479DC300B0E74E /* AccuTerraSatelliteStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuTerraSatelliteStyleProvider.swift; sourceTree = "<group>"; };
 		D3227CD524327D67001FDC30 /* Create_MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_MapViewController.swift; sourceTree = "<group>"; };
 		D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_TrailsViewController.swift; sourceTree = "<group>"; };
 		D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create_DetailsViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		D3227CD324327CB9001FDC30 /* Creating */ = {
 			isa = PBXGroup;
 			children = (
+				D31C2135244651DF00B0E74E /* CustomStylesViewController.swift */,
 				D3227CD524327D67001FDC30 /* Create_MapViewController.swift */,
 				D3227CD724327D81001FDC30 /* Create_TrailsViewController.swift */,
 				D3227CD924327D93001FDC30 /* Create_DetailsViewController.swift */,
@@ -325,6 +330,7 @@
 				D3AE5C0A2426951000B166E2 /* UIColor.swift */,
 				D3AE5C082426937E00B166E2 /* UIImage.swift */,
 				D3C0F7BF242FE5EE00BD397C /* Synchronize.swift */,
+				D31C213724479DC300B0E74E /* AccuTerraSatelliteStyleProvider.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -574,7 +580,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$SRCROOT/insert_mapbox_access_token.sh",
+				$SRCROOT/insert_mapbox_access_token.sh,
 			);
 			name = "Insert Mapbox Access Token";
 			outputFileListPaths = (
@@ -593,7 +599,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$SRCROOT/insert_mapbox_access_token.sh",
+				$SRCROOT/insert_mapbox_access_token.sh,
 			);
 			name = "Insert Mapbox Access Token";
 			outputFileListPaths = (
@@ -680,8 +686,10 @@
 				D3AE5C1124271B6E00B166E2 /* Filter-MapViewController.swift in Sources */,
 				D3227CD824327D81001FDC30 /* Create_TrailsViewController.swift in Sources */,
 				D3AE5C0F242697D000B166E2 /* TrailsFilter.swift in Sources */,
+				D31C213824479DC300B0E74E /* AccuTerraSatelliteStyleProvider.swift in Sources */,
 				D3C0F7BC242E778F00BD397C /* FilterCriteriaTableViewCell.swift in Sources */,
 				D3940EB924342FF60068C703 /* TrailDetailsViewController.swift in Sources */,
+				D31C2136244651DF00B0E74E /* CustomStylesViewController.swift in Sources */,
 				D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */,
 				D3AE5BF7242574DD00B166E2 /* Term-to-ListViewController.swift in Sources */,
 				D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */,
