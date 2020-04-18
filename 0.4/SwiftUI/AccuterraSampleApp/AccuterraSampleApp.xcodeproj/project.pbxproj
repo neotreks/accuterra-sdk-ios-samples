@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AD244A6F1400B0E74E /* AppDelegate.swift */; };
+		D31C21B0244A6F1400B0E74E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */; };
+		D31C21B4244A6F1600B0E74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31C21B3244A6F1600B0E74E /* Assets.xcassets */; };
+		D31C21B7244A6F1600B0E74E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31C21B6244A6F1600B0E74E /* Preview Assets.xcassets */; };
+		D31C21BA244A6F1600B0E74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31C21B8244A6F1600B0E74E /* LaunchScreen.storyboard */; };
+		D31C21C5244A6F1600B0E74E /* AccuterraSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21C4244A6F1600B0E74E /* AccuterraSampleAppTests.swift */; };
+		D31C21D0244A6F1600B0E74E /* AccuterraSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21CF244A6F1600B0E74E /* AccuterraSampleAppUITests.swift */; };
+		D31C21E6244A70B400B0E74E /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21E5244A70B400B0E74E /* DisplayItem.swift */; };
+		D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */; };
+		D31C21F9244A721800B0E74E /* SearchTermToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F5244A721700B0E74E /* SearchTermToList.swift */; };
+		D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
+		D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F7244A721800B0E74E /* SearchMapToList.swift */; };
+		D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F8244A721800B0E74E /* SearchListToMap.swift */; };
+		D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */; };
+		D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FF244A725300B0E74E /* FilteringMap.swift */; };
+		D31C2203244A725300B0E74E /* FilteringCritieria.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2200244A725300B0E74E /* FilteringCritieria.swift */; };
+		D31C2207244A72B200B0E74E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2206244A72B200B0E74E /* HomeView.swift */; };
+		D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */; };
+		D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C220E244A741900B0E74E /* CreateMap.swift */; };
+		D31C2213244A741A00B0E74E /* AddingPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C220F244A741900B0E74E /* AddingPOIs.swift */; };
+		D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
+		D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2211244A741A00B0E74E /* TrailDetails.swift */; };
+		D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2216244A781500B0E74E /* ControllingTheMap.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D31C21C1244A6F1600B0E74E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31C21A2244A6F1400B0E74E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D31C21A9244A6F1400B0E74E;
+			remoteInfo = AccuterraSampleApp;
+		};
+		D31C21CC244A6F1600B0E74E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31C21A2244A6F1400B0E74E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D31C21A9244A6F1400B0E74E;
+			remoteInfo = AccuterraSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C21AD244A6F1400B0E74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D31C21B3244A6F1600B0E74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D31C21B6244A6F1600B0E74E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D31C21B9244A6F1600B0E74E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D31C21BB244A6F1600B0E74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31C21C0244A6F1600B0E74E /* AccuterraSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C21C4244A6F1600B0E74E /* AccuterraSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppTests.swift; sourceTree = "<group>"; };
+		D31C21C6244A6F1600B0E74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31C21CB244A6F1600B0E74E /* AccuterraSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C21CF244A6F1600B0E74E /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
+		D31C21D1244A6F1600B0E74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31C21E5244A70B400B0E74E /* DisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItem.swift; sourceTree = "<group>"; };
+		D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractingWithMap.swift; sourceTree = "<group>"; };
+		D31C21F5244A721700B0E74E /* SearchTermToList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermToList.swift; sourceTree = "<group>"; };
+		D31C21F6244A721700B0E74E /* SearchTermToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermToMap.swift; sourceTree = "<group>"; };
+		D31C21F7244A721800B0E74E /* SearchMapToList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMapToList.swift; sourceTree = "<group>"; };
+		D31C21F8244A721800B0E74E /* SearchListToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListToMap.swift; sourceTree = "<group>"; };
+		D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringMapBounds.swift; sourceTree = "<group>"; };
+		D31C21FF244A725300B0E74E /* FilteringMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringMap.swift; sourceTree = "<group>"; };
+		D31C2200244A725300B0E74E /* FilteringCritieria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringCritieria.swift; sourceTree = "<group>"; };
+		D31C2206244A72B200B0E74E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizingTrailsAndPOIs.swift; sourceTree = "<group>"; };
+		D31C220E244A741900B0E74E /* CreateMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMap.swift; sourceTree = "<group>"; };
+		D31C220F244A741900B0E74E /* AddingPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingPOIs.swift; sourceTree = "<group>"; };
+		D31C2210244A741900B0E74E /* AddingTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingTrails.swift; sourceTree = "<group>"; };
+		D31C2211244A741A00B0E74E /* TrailDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailDetails.swift; sourceTree = "<group>"; };
+		D31C2216244A781500B0E74E /* ControllingTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingTheMap.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D31C21A7244A6F1400B0E74E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21BD244A6F1600B0E74E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21C8244A6F1600B0E74E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D31C21A1244A6F1400B0E74E = {
+			isa = PBXGroup;
+			children = (
+				D31C21AC244A6F1400B0E74E /* AccuterraSampleApp */,
+				D31C21C3244A6F1600B0E74E /* AccuterraSampleAppTests */,
+				D31C21CE244A6F1600B0E74E /* AccuterraSampleAppUITests */,
+				D31C21AB244A6F1400B0E74E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D31C21AB244A6F1400B0E74E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */,
+				D31C21C0244A6F1600B0E74E /* AccuterraSampleAppTests.xctest */,
+				D31C21CB244A6F1600B0E74E /* AccuterraSampleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D31C21AC244A6F1400B0E74E /* AccuterraSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21E2244A704500B0E74E /* Utils */,
+				D31C21E1244A703200B0E74E /* Resources */,
+				D31C21E9244A719100B0E74E /* Views */,
+				D31C21BB244A6F1600B0E74E /* Info.plist */,
+				D31C21B5244A6F1600B0E74E /* Preview Content */,
+			);
+			path = AccuterraSampleApp;
+			sourceTree = "<group>";
+		};
+		D31C21B5244A6F1600B0E74E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21B6244A6F1600B0E74E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D31C21C3244A6F1600B0E74E /* AccuterraSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21C4244A6F1600B0E74E /* AccuterraSampleAppTests.swift */,
+				D31C21C6244A6F1600B0E74E /* Info.plist */,
+			);
+			path = AccuterraSampleAppTests;
+			sourceTree = "<group>";
+		};
+		D31C21CE244A6F1600B0E74E /* AccuterraSampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21CF244A6F1600B0E74E /* AccuterraSampleAppUITests.swift */,
+				D31C21D1244A6F1600B0E74E /* Info.plist */,
+			);
+			path = AccuterraSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		D31C21E1244A703200B0E74E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21B8244A6F1600B0E74E /* LaunchScreen.storyboard */,
+				D31C21B3244A6F1600B0E74E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D31C21E2244A704500B0E74E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21E5244A70B400B0E74E /* DisplayItem.swift */,
+				D31C21AD244A6F1400B0E74E /* AppDelegate.swift */,
+				D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D31C21E9244A719100B0E74E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D31C2206244A72B200B0E74E /* HomeView.swift */,
+				D31C220D244A740000B0E74E /* Map Display */,
+				D31C220C244A732100B0E74E /* Customizing */,
+				D31C21FD244A723C00B0E74E /* Filtering */,
+				D31C21F4244A71FC00B0E74E /* Searching */,
+				D31C21EA244A71BB00B0E74E /* Controls */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D31C21EA244A71BB00B0E74E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */,
+				D31C2216244A781500B0E74E /* ControllingTheMap.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		D31C21F4244A71FC00B0E74E /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				D31C21F8244A721800B0E74E /* SearchListToMap.swift */,
+				D31C21F7244A721800B0E74E /* SearchMapToList.swift */,
+				D31C21F5244A721700B0E74E /* SearchTermToList.swift */,
+				D31C21F6244A721700B0E74E /* SearchTermToMap.swift */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		D31C21FD244A723C00B0E74E /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				D31C2200244A725300B0E74E /* FilteringCritieria.swift */,
+				D31C21FF244A725300B0E74E /* FilteringMap.swift */,
+				D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */,
+			);
+			path = Filtering;
+			sourceTree = "<group>";
+		};
+		D31C220C244A732100B0E74E /* Customizing */ = {
+			isa = PBXGroup;
+			children = (
+				D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */,
+			);
+			path = Customizing;
+			sourceTree = "<group>";
+		};
+		D31C220D244A740000B0E74E /* Map Display */ = {
+			isa = PBXGroup;
+			children = (
+				D31C220F244A741900B0E74E /* AddingPOIs.swift */,
+				D31C2210244A741900B0E74E /* AddingTrails.swift */,
+				D31C220E244A741900B0E74E /* CreateMap.swift */,
+				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
+			);
+			path = "Map Display";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D31C21A9244A6F1400B0E74E /* AccuterraSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D31C21D4244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleApp" */;
+			buildPhases = (
+				D31C21A6244A6F1400B0E74E /* Sources */,
+				D31C21A7244A6F1400B0E74E /* Frameworks */,
+				D31C21A8244A6F1400B0E74E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccuterraSampleApp;
+			productName = AccuterraSampleApp;
+			productReference = D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D31C21BF244A6F1600B0E74E /* AccuterraSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D31C21D7244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleAppTests" */;
+			buildPhases = (
+				D31C21BC244A6F1600B0E74E /* Sources */,
+				D31C21BD244A6F1600B0E74E /* Frameworks */,
+				D31C21BE244A6F1600B0E74E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D31C21C2244A6F1600B0E74E /* PBXTargetDependency */,
+			);
+			name = AccuterraSampleAppTests;
+			productName = AccuterraSampleAppTests;
+			productReference = D31C21C0244A6F1600B0E74E /* AccuterraSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D31C21CA244A6F1600B0E74E /* AccuterraSampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D31C21DA244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleAppUITests" */;
+			buildPhases = (
+				D31C21C7244A6F1600B0E74E /* Sources */,
+				D31C21C8244A6F1600B0E74E /* Frameworks */,
+				D31C21C9244A6F1600B0E74E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D31C21CD244A6F1600B0E74E /* PBXTargetDependency */,
+			);
+			name = AccuterraSampleAppUITests;
+			productName = AccuterraSampleAppUITests;
+			productReference = D31C21CB244A6F1600B0E74E /* AccuterraSampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D31C21A2244A6F1400B0E74E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "NeoTreks, Inc.";
+				TargetAttributes = {
+					D31C21A9244A6F1400B0E74E = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					D31C21BF244A6F1600B0E74E = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = D31C21A9244A6F1400B0E74E;
+					};
+					D31C21CA244A6F1600B0E74E = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = D31C21A9244A6F1400B0E74E;
+					};
+				};
+			};
+			buildConfigurationList = D31C21A5244A6F1400B0E74E /* Build configuration list for PBXProject "AccuterraSampleApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D31C21A1244A6F1400B0E74E;
+			productRefGroup = D31C21AB244A6F1400B0E74E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D31C21A9244A6F1400B0E74E /* AccuterraSampleApp */,
+				D31C21BF244A6F1600B0E74E /* AccuterraSampleAppTests */,
+				D31C21CA244A6F1600B0E74E /* AccuterraSampleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D31C21A8244A6F1400B0E74E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C21BA244A6F1600B0E74E /* LaunchScreen.storyboard in Resources */,
+				D31C21B7244A6F1600B0E74E /* Preview Assets.xcassets in Resources */,
+				D31C21B4244A6F1600B0E74E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21BE244A6F1600B0E74E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21C9244A6F1600B0E74E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D31C21A6244A6F1400B0E74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */,
+				D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */,
+				D31C2207244A72B200B0E74E /* HomeView.swift in Sources */,
+				D31C21F9244A721800B0E74E /* SearchTermToList.swift in Sources */,
+				D31C2213244A741A00B0E74E /* AddingPOIs.swift in Sources */,
+				D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */,
+				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
+				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
+				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
+				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
+				D31C21E6244A70B400B0E74E /* DisplayItem.swift in Sources */,
+				D31C21B0244A6F1400B0E74E /* SceneDelegate.swift in Sources */,
+				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
+				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
+				D31C2203244A725300B0E74E /* FilteringCritieria.swift in Sources */,
+				D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */,
+				D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */,
+				D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21BC244A6F1600B0E74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C21C5244A6F1600B0E74E /* AccuterraSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31C21C7244A6F1600B0E74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31C21D0244A6F1600B0E74E /* AccuterraSampleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D31C21C2244A6F1600B0E74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D31C21A9244A6F1400B0E74E /* AccuterraSampleApp */;
+			targetProxy = D31C21C1244A6F1600B0E74E /* PBXContainerItemProxy */;
+		};
+		D31C21CD244A6F1600B0E74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D31C21A9244A6F1400B0E74E /* AccuterraSampleApp */;
+			targetProxy = D31C21CC244A6F1600B0E74E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D31C21B8244A6F1600B0E74E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D31C21B9244A6F1600B0E74E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D31C21D2244A6F1600B0E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D31C21D3244A6F1600B0E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D31C21D5244A6F1600B0E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AccuterraSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D31C21D6244A6F1600B0E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AccuterraSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AccuterraSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D31C21D8244A6F1600B0E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccuterraSampleApp.app/AccuterraSampleApp";
+			};
+			name = Debug;
+		};
+		D31C21D9244A6F1600B0E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccuterraSampleApp.app/AccuterraSampleApp";
+			};
+			name = Release;
+		};
+		D31C21DB244A6F1600B0E74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AccuterraSampleApp;
+			};
+			name = Debug;
+		};
+		D31C21DC244A6F1600B0E74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK2TWU892A;
+				INFOPLIST_FILE = AccuterraSampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AccuterraSampleApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D31C21A5244A6F1400B0E74E /* Build configuration list for PBXProject "AccuterraSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C21D2244A6F1600B0E74E /* Debug */,
+				D31C21D3244A6F1600B0E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D31C21D4244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C21D5244A6F1600B0E74E /* Debug */,
+				D31C21D6244A6F1600B0E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D31C21D7244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C21D8244A6F1600B0E74E /* Debug */,
+				D31C21D9244A6F1600B0E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D31C21DA244A6F1600B0E74E /* Build configuration list for PBXNativeTarget "AccuterraSampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31C21DB244A6F1600B0E74E /* Debug */,
+				D31C21DC244A6F1600B0E74E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D31C21A2244A6F1400B0E74E /* Project object */;
+}
