@@ -8,28 +8,42 @@
 
 import UIKit
 import SwiftUI
+import AccuTerraSDK
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var scene: UIWindowScene?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = HomeView()
-
-        // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+            self.scene = windowScene
+            self.window = UIWindow(windowScene: windowScene)
+
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            if SdkManager.shared.isTrailDbInitialized {
+                // Init the SDK when the DB has already been downloaded
+                self.initSdk()
+            }
+            else {
+                // Download the trails DB
+                window.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: ViewRouter()))
+            }
+
             self.window = window
             window.makeKeyAndVisible()
         }
     }
+    
+    private func initSdk() {
+        guard let clientToken = Bundle.main.infoDictionary?["AccuTerraClientToken"] as? String,
+            let serviceUrl = Bundle.main.infoDictionary?["AccuTerraServiceUrl"] as? String else {
+                fatalError("AccuTerraClientToken and AccuTerraServiceUrl is missing in info.plist")
+        }
+        SdkManager.shared.initSdkAsync(config: SdkConfig(clientToken: clientToken, wsUrl: serviceUrl), delegate: self)
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -59,6 +73,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func showDownloadErrors(error: String){
+        let alertVC = UIAlertController(title: "SDK Init Error" , message: "Error: \(error)", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Okay", style: UIAlertAction.Style.cancel) { (alert) in }
+        alertVC.addAction(okAction)
+        DispatchQueue.main.async {
+            var presentVC = self.window?.rootViewController
+            while let next = presentVC?.presentedViewController {
+                presentVC = next
+            }
+            presentVC?.present(alertVC, animated: true, completion: nil)
+        }
+    }
+    
+    func gotoHomeView() {
+        let viewRouter = ViewRouter()
+        viewRouter.currentPage = "home"
+        self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter))
+        window?.makeKeyAndVisible()
+    }
 }
+
+extension SceneDelegate : SdkInitDelegate {
+    
+    func onProgressChanged(progress: Int) {}
+    
+    func onStateChanged(state: SdkInitState, detail: SdkInitStateDetail?) {
+        DispatchQueue.main.async {
+            switch state {
+            case .COMPLETED:
+                self.gotoHomeView()
+             case .FAILED(let error):
+                print("Download error: \(String(describing: error))")
+                self.showDownloadErrors(error: String(describing: error))
+            default:
+                break
+            }
+        }
+    }
+}
+
 

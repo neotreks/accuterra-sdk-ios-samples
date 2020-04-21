@@ -16,6 +16,8 @@ struct ListItems: Identifiable {
 
 struct HomeView: View {
     
+    @ObservedObject var viewRouter: ViewRouter
+    
     var itemArray = [
         ListItems(section:"Map Display", items:["Creating a Map", "Adding Trails", "Displaying Trail Details", "Adding POIs"]),
         ListItems(section:"Controls", items:["Controlling the Map", "Interacting with the Map"]),
@@ -28,7 +30,6 @@ struct HomeView: View {
     
     var body: some View {
         
-        NavigationView {
             List {
                 ForEach(itemArray.indices, id: \.self){ idx in
                     Section(header: Text(self.itemArray[idx].section)) {
@@ -41,12 +42,12 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitle(Text("AccuTerra SDK Samples"), displayMode: .inline)
-        }
+
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewRouter: ViewRouter())
     }
 }

@@ -56,6 +56,16 @@
 		D3B07E76244E65C000A39B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31C21B3244A6F1600B0E74E /* Assets.xcassets */; };
 		D3B07E7F244E688300A39B51 /* MapInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E7E244E688300A39B51 /* MapInteraction.swift */; };
 		D3B07E80244E688300A39B51 /* MapInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E7E244E688300A39B51 /* MapInteraction.swift */; };
+		D3B07E83244F75B000A39B51 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E82244F75B000A39B51 /* DownloadView.swift */; };
+		D3B07E84244F75B000A39B51 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E82244F75B000A39B51 /* DownloadView.swift */; };
+		D3B07E86244F75E900A39B51 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */; };
+		D3B07E87244F75E900A39B51 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */; };
+		D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E88244F761100A39B51 /* DownloadService.swift */; };
+		D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E88244F761100A39B51 /* DownloadService.swift */; };
+		D3B07E96244F9EF800A39B51 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E95244F9EF800A39B51 /* ViewRouter.swift */; };
+		D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E95244F9EF800A39B51 /* ViewRouter.swift */; };
+		D3B07E99244FAA1E00A39B51 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E98244FAA1E00A39B51 /* ControllerView.swift */; };
+		D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E98244FAA1E00A39B51 /* ControllerView.swift */; };
 		FCAD5228C4EE2DA8FBE107A2 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630C035D3FF0BB70E3BFCC1E /* Pods_AccuterraSampleApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +125,11 @@
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E7E244E688300A39B51 /* MapInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteraction.swift; sourceTree = "<group>"; };
+		D3B07E82244F75B000A39B51 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
+		D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
+		D3B07E88244F761100A39B51 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
+		D3B07E95244F9EF800A39B51 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		D3B07E98244FAA1E00A39B51 /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,11 +270,13 @@
 			isa = PBXGroup;
 			children = (
 				D31C2206244A72B200B0E74E /* HomeView.swift */,
+				D3B07E98244FAA1E00A39B51 /* ControllerView.swift */,
 				D31C220D244A740000B0E74E /* Map Display */,
+				D31C21EA244A71BB00B0E74E /* Controls */,
+				D31C21F4244A71FC00B0E74E /* Searching */,
 				D31C220C244A732100B0E74E /* Customizing */,
 				D31C21FD244A723C00B0E74E /* Filtering */,
-				D31C21F4244A71FC00B0E74E /* Searching */,
-				D31C21EA244A71BB00B0E74E /* Controls */,
+				D3B07E81244F74BA00A39B51 /* Download */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +330,17 @@
 				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
 			);
 			path = "Map Display";
+			sourceTree = "<group>";
+		};
+		D3B07E81244F74BA00A39B51 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				D3B07E82244F75B000A39B51 /* DownloadView.swift */,
+				D3B07E95244F9EF800A39B51 /* ViewRouter.swift */,
+				D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */,
+				D3B07E88244F761100A39B51 /* DownloadService.swift */,
+			);
+			path = Download;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +414,8 @@
 				D3B07E73244E65C000A39B51 /* Resources */,
 				ED3873712A8DA919359ACB1B /* [CP] Embed Pods Frameworks */,
 				BA4717ADDA6BAD420B932E4F /* [CP] Copy Pods Resources */,
+				D3B07E8B244F793D00A39B51 /* Insert AccuTerra Access Tokens */,
+				D3B07E8C244F798300A39B51 /* Insert Mapbox Access Token */,
 			);
 			buildRules = (
 			);
@@ -555,6 +585,44 @@
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/insert_mapbox_access_token.sh\n";
 		};
+		D3B07E8B244F793D00A39B51 /* Insert AccuTerra Access Tokens */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert AccuTerra Access Tokens";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_accuterra_access_tokens.sh\n";
+		};
+		D3B07E8C244F798300A39B51 /* Insert Mapbox Access Token */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Insert Mapbox Access Token";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/insert_mapbox_access_token.sh\n";
+		};
 		E5480F7161213D33DD726D1A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,14 +703,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B07E86244F75E900A39B51 /* DownloadViewModel.swift in Sources */,
 				D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */,
 				D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */,
+				D3B07E96244F9EF800A39B51 /* ViewRouter.swift in Sources */,
+				D3B07E99244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D31C2207244A72B200B0E74E /* HomeView.swift in Sources */,
 				D31C21F9244A721800B0E74E /* SearchTermToList.swift in Sources */,
 				D31C2213244A741A00B0E74E /* AddingPOIs.swift in Sources */,
 				D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */,
 				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
+				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
 				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
 				D3B07E7F244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
@@ -653,6 +725,7 @@
 				D31C2203244A725300B0E74E /* FilteringCritieria.swift in Sources */,
 				D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */,
 				D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */,
+				D3B07E83244F75B000A39B51 /* DownloadView.swift in Sources */,
 				D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */,
 				D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */,
 			);
@@ -678,14 +751,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B07E87244F75E900A39B51 /* DownloadViewModel.swift in Sources */,
 				D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */,
 				D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */,
+				D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */,
+				D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D3B07E61244E65C000A39B51 /* HomeView.swift in Sources */,
 				D3B07E62244E65C000A39B51 /* SearchTermToList.swift in Sources */,
 				D3B07E63244E65C000A39B51 /* AddingPOIs.swift in Sources */,
 				D3B07E64244E65C000A39B51 /* CreateMap.swift in Sources */,
 				D3B07E65244E65C000A39B51 /* SearchListToMap.swift in Sources */,
 				D3B07E66244E65C000A39B51 /* CustomizingTrailsAndPOIs.swift in Sources */,
+				D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */,
 				D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */,
 				D3B07E80244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */,
@@ -696,6 +773,7 @@
 				D3B07E6D244E65C000A39B51 /* FilteringCritieria.swift in Sources */,
 				D3B07E6E244E65C000A39B51 /* MapView.swift in Sources */,
 				D3B07E6F244E65C000A39B51 /* SearchMapToList.swift in Sources */,
+				D3B07E84244F75B000A39B51 /* DownloadView.swift in Sources */,
 				D3B07E70244E65C000A39B51 /* InteractingWithMap.swift in Sources */,
 				D3B07E71244E65C000A39B51 /* FilteringMap.swift in Sources */,
 			);
