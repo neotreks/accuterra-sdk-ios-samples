@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+    <true/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>The AccuTerra Demo App needs your location to display this on the map.</string>
 </dict>
 </plist>
