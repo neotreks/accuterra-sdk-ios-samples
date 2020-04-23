@@ -71,6 +71,7 @@
 		D3AE5C0D2426959400B166E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0C2426959400B166E2 /* BaseViewController.swift */; };
 		D3AE5C0F242697D000B166E2 /* TrailsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */; };
 		D3AE5C1124271B6E00B166E2 /* Filter-MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */; };
+		D3B07E8E244F925D00A39B51 /* HomeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E8D244F925D00A39B51 /* HomeContainerView.swift */; };
 		D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */; };
 		D3C0F7BC242E778F00BD397C /* FilterCriteriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */; };
 		D3C0F7BE242FE54C00BD397C /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */; };
@@ -138,6 +139,7 @@
 		D3AE5C0C2426959400B166E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Searching/BaseViewController.swift; sourceTree = "<group>"; };
 		D3AE5C0E242697D000B166E2 /* TrailsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailsFilter.swift; path = "AccuterraSampleApp/View Controllers/Searching/TrailsFilter.swift"; sourceTree = SOURCE_ROOT; };
 		D3AE5C1024271B6E00B166E2 /* Filter-MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Filter-MapViewController.swift"; sourceTree = "<group>"; };
+		D3B07E8D244F925D00A39B51 /* HomeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerView.swift; sourceTree = "<group>"; };
 		D3C0F7B9242E6D6000BD397C /* Filter-CriteriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filter-CriteriaViewController.swift"; sourceTree = "<group>"; };
 		D3C0F7BB242E778F00BD397C /* FilterCriteriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilterCriteriaTableViewCell.swift; path = AccuterraSampleApp/Resources/FilterCriteriaTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		D3C0F7BD242FE54B00BD397C /* EnumUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtil.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				D3AE5C0C2426959400B166E2 /* BaseViewController.swift */,
 				D3AE5B1424196E1800B166E2 /* DownloadViewController.swift */,
 				D3AE5BF4242572C300B166E2 /* HomeViewController.swift */,
+				D3B07E8D244F925D00A39B51 /* HomeContainerView.swift */,
 				D3227CD324327CB9001FDC30 /* Creating */,
 				D3227CD424327CC4001FDC30 /* Controlling */,
 				D3AE5BFE24257B1500B166E2 /* Filtering */,
@@ -423,7 +426,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = BaseMap;
+				ORGANIZATIONNAME = "NeoTreks, Inc.";
 				TargetAttributes = {
 					D3AE5AD824196A3C00B166E2 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -692,6 +695,7 @@
 				D31C2136244651DF00B0E74E /* CustomStylesViewController.swift in Sources */,
 				D3C0F7BA242E6D6000BD397C /* Filter-CriteriaViewController.swift in Sources */,
 				D3AE5BF7242574DD00B166E2 /* Term-to-ListViewController.swift in Sources */,
+				D3B07E8E244F925D00A39B51 /* HomeContainerView.swift in Sources */,
 				D3AE5ADF24196A3C00B166E2 /* SceneDelegate.swift in Sources */,
 				D3AE5BFB2425753C00B166E2 /* Map-to-ListViewController.swift in Sources */,
 				D3AE5BFD2425756800B166E2 /* List-to-MapViewController.swift in Sources */,

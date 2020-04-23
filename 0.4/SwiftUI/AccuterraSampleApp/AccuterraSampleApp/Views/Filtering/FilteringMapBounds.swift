@@ -6,4 +6,34 @@
 //  Copyright © 2020 NeoTreks, Inc. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+import AccuTerraSDK
+import Mapbox
+import Combine
+
+struct FilteringMapBounds: View {
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject var mapInteraction = MapInteraction()
+    
+    var body: some View {
+        ZStack(alignment: .top) {
+            MapView(mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
+        }
+        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image(systemName: "arrow.left")
+            })
+        .edgesIgnoringSafeArea([.bottom])
+    }
+    
+}
+
+struct FilteringMapBounds_Previews: PreviewProvider {
+    static var previews: some View {
+        return CreateMap()
+    }
+}
