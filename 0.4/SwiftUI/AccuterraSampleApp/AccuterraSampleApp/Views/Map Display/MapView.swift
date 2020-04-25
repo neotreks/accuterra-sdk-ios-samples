@@ -19,7 +19,7 @@ struct MapView: UIViewRepresentable {
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
  
-    let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero)
+    let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
     
     // MARK: - Configuring UIViewRepresentable protocol
     
@@ -47,6 +47,11 @@ struct MapView: UIViewRepresentable {
         }
     }
     
+    func styleURL(_ styleURL: URL) -> MapView {
+        mapView.styleURL = styleURL
+        return self
+    }
+    
     func makeCoordinator() -> MapView.Coordinator {
         Coordinator(self)
     }
@@ -72,24 +77,29 @@ struct MapView: UIViewRepresentable {
 extension MapView {
     
     class Coordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDelegate, MGLMapViewDelegate {
-        
-        func onStyleChanged() {}
-        
-        func onSignificantMapBoundsChange() {}
-        
+                
         var controlView: MapView
         var mapWasLoaded : Bool = false
         var isTrailsLayerManagersLoaded = false
+        var trailService: ITrailService?
+        var trails: Array<TrailBasicInfo>?
+        
+        @ObservedObject var vm = TrailsViewModel()
 
         init(_ mapView: MapView) {
             self.controlView = mapView
         }
+        
+        func onStyleChanged() {}
+        
+        func onSignificantMapBoundsChange() {}
         
         func didTapOnMap(coordinate: CLLocationCoordinate2D) {}
         
         func onMapLoaded() {
             self.mapWasLoaded = true
             self.zoomToDefaultExtent()
+            self.addTrailLayers()
         }
         
         func onLayersAdded(trailLayers: Array<TrailLayerType>) {
@@ -100,8 +110,21 @@ extension MapView {
             let bounds = MapInteraction.getColoradoBounds()
             controlView.mapView.zoomToExtent(bounds: bounds, animated: true)
         }
+        
+        private func addTrailLayers() {
+            guard SdkManager.shared.isTrailDbInitialized else {
+                return
+            }
+            let trailLayersManager = controlView.mapView.trailLayersManager
+
+            trailLayersManager.delegate = self
+            trailLayersManager.addStandardLayers()
+            
+        }
+        
     }
 }
+
 
 
 

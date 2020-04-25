@@ -15,7 +15,6 @@
 		D31C21BA244A6F1600B0E74E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31C21B8244A6F1600B0E74E /* LaunchScreen.storyboard */; };
 		D31C21C5244A6F1600B0E74E /* AccuterraSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21C4244A6F1600B0E74E /* AccuterraSampleAppTests.swift */; };
 		D31C21D0244A6F1600B0E74E /* AccuterraSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21CF244A6F1600B0E74E /* AccuterraSampleAppUITests.swift */; };
-		D31C21E6244A70B400B0E74E /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21E5244A70B400B0E74E /* DisplayItem.swift */; };
 		D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */; };
 		D31C21F9244A721800B0E74E /* SearchTermToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F5244A721700B0E74E /* SearchTermToList.swift */; };
 		D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -31,6 +30,8 @@
 		D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2211244A741A00B0E74E /* TrailDetails.swift */; };
 		D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2216244A781500B0E74E /* ControllingTheMap.swift */; };
+		D386C9FE2453A66F00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */; };
+		D386C9FF2453A66F00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */; };
 		D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -42,7 +43,6 @@
 		D3B07E66244E65C000A39B51 /* CustomizingTrailsAndPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */; };
 		D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2216244A781500B0E74E /* ControllingTheMap.swift */; };
 		D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AD244A6F1400B0E74E /* AppDelegate.swift */; };
-		D3B07E69244E65C000A39B51 /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21E5244A70B400B0E74E /* DisplayItem.swift */; };
 		D3B07E6A244E65C000A39B51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */; };
 		D3B07E6B244E65C000A39B51 /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2211244A741A00B0E74E /* TrailDetails.swift */; };
 		D3B07E6C244E65C000A39B51 /* FilteringMapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */; };
@@ -106,7 +106,6 @@
 		D31C21CB244A6F1600B0E74E /* AccuterraSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccuterraSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31C21CF244A6F1600B0E74E /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
 		D31C21D1244A6F1600B0E74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D31C21E5244A70B400B0E74E /* DisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItem.swift; sourceTree = "<group>"; };
 		D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractingWithMap.swift; sourceTree = "<group>"; };
 		D31C21F5244A721700B0E74E /* SearchTermToList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermToList.swift; sourceTree = "<group>"; };
 		D31C21F6244A721700B0E74E /* SearchTermToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTermToMap.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		D31C2210244A741900B0E74E /* AddingTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingTrails.swift; sourceTree = "<group>"; };
 		D31C2211244A741A00B0E74E /* TrailDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailDetails.swift; sourceTree = "<group>"; };
 		D31C2216244A781500B0E74E /* ControllingTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingTheMap.swift; sourceTree = "<group>"; };
+		D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewModel.swift; sourceTree = "<group>"; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E7E244E688300A39B51 /* MapInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteraction.swift; sourceTree = "<group>"; };
@@ -261,7 +261,6 @@
 			children = (
 				D31C21AD244A6F1400B0E74E /* AppDelegate.swift */,
 				D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */,
-				D31C21E5244A70B400B0E74E /* DisplayItem.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -328,6 +327,7 @@
 				D3B07E5B244E55D300A39B51 /* MapView.swift */,
 				D3B07E7E244E688300A39B51 /* MapInteraction.swift */,
 				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
+				D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */,
 			);
 			path = "Map Display";
 			sourceTree = "<group>";
@@ -716,9 +716,9 @@
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
 				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
+				D386C9FE2453A66F00D1A198 /* TrailsViewModel.swift in Sources */,
 				D3B07E7F244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
-				D31C21E6244A70B400B0E74E /* DisplayItem.swift in Sources */,
 				D31C21B0244A6F1400B0E74E /* SceneDelegate.swift in Sources */,
 				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
 				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
@@ -764,9 +764,9 @@
 				D3B07E66244E65C000A39B51 /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */,
 				D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */,
+				D386C9FF2453A66F00D1A198 /* TrailsViewModel.swift in Sources */,
 				D3B07E80244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */,
-				D3B07E69244E65C000A39B51 /* DisplayItem.swift in Sources */,
 				D3B07E6A244E65C000A39B51 /* SceneDelegate.swift in Sources */,
 				D3B07E6B244E65C000A39B51 /* TrailDetails.swift in Sources */,
 				D3B07E6C244E65C000A39B51 /* FilteringMapBounds.swift in Sources */,

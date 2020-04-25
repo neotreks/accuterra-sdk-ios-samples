@@ -15,10 +15,28 @@ struct AddingTrails: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var mapInteraction = MapInteraction()
-    
+    @ObservedObject var vm = TrailsViewModel()
+    @State private var showingAlert = false
+
     var body: some View {
-        ZStack(alignment: .top) {
-            MapView(mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
+        VStack() {
+            ZStack(alignment: .top) {
+                MapView(mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
+            }
+            Spacer()
+            HStack(spacing: 10) {
+                Text("Number of trails: \(vm.trailCount)")
+                Button(action: {
+                    self.showingAlert = true
+                    self.vm.doTrailsSearch()
+                }) {
+                    Text("Get All Trails")
+                }
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text("Trail Info"), message: Text("Number of Trails: \(vm.trailCount)"), dismissButton: .default(Text("OK")))
+                }
+            }
+            .padding()
         }
         .navigationBarTitle(Text("Adding Trails"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
@@ -27,13 +45,13 @@ struct AddingTrails: View {
             }){
                 Image(systemName: "arrow.left")
             })
-        .edgesIgnoringSafeArea([.bottom])
     }
     
 }
 
 struct AddingTrails_Previews: PreviewProvider {
     static var previews: some View {
-        return CreateMap()
+        return AddingTrails()
     }
 }
+
