@@ -21,17 +21,18 @@ extension MGLPointAnnotation {
 struct MapView: UIViewRepresentable {
     
     @Binding var annotations: [MGLPointAnnotation]
+    @Binding var selectedTrailId:Int64
+    @EnvironmentObject var settings: AppSettings
     
     // var mapCenter = CLLocationCoordinate2D(latitude: 37.7666, longitude: -122.427290)
     var mapCenter: CLLocationCoordinate2D?
     var mapBounds: MGLCoordinateBounds?
     var zoomAnimation: Bool = false
-    // @Binding var viewModel: TrailsViewModelBrian
-    @Binding var selectedTrailId:Int64
-    
+    var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
+
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
-    var mapTappingActive = false
+    // var mapTappingActive = false
  
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
     

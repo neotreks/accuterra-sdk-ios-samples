@@ -30,11 +30,8 @@
 		D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2211244A741A00B0E74E /* TrailDetails.swift */; };
 		D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2216244A781500B0E74E /* ControllingTheMap.swift */; };
-		D386C9FE2453A66F00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */; };
-		D386C9FF2453A66F00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */; };
 		D386CA012454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
-		D386CA042455C5CF00D1A198 /* AccuTerra.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D386CA032455C5CF00D1A198 /* AccuTerra.bundle */; };
 		D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA052457570600D1A198 /* MapSearchingViewModel.swift */; };
 		D386CA0A2457942200D1A198 /* 05-Black-Bear-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */; };
 		D386CA0B2457942300D1A198 /* 05-Black-Bear-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */; };
@@ -44,14 +41,20 @@
 		D386CA142457A20000D1A198 /* TrailsViewModelBrian.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA122457A20000D1A198 /* TrailsViewModelBrian.swift */; };
 		D386CA562457D11B00D1A198 /* MapEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA552457D11B00D1A198 /* MapEventRouter.swift */; };
 		D386CA572457D11B00D1A198 /* MapEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA552457D11B00D1A198 /* MapEventRouter.swift */; };
-		D386CA9724588BBE00D1A198 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9624588BBE00D1A198 /* UserSettings.swift */; };
-		D386CA9824588BBE00D1A198 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9624588BBE00D1A198 /* UserSettings.swift */; };
+		D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9624588BBE00D1A198 /* AppSettings.swift */; };
+		D386CA9824588BBE00D1A198 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9624588BBE00D1A198 /* AppSettings.swift */; };
 		D386CA9A2458C89700D1A198 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA992458C89700D1A198 /* MapCoordinator.swift */; };
 		D386CA9B2458C89700D1A198 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA992458C89700D1A198 /* MapCoordinator.swift */; };
 		D386CA9D2459D83D00D1A198 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9C2459D83D00D1A198 /* DetailView.swift */; };
 		D386CA9E2459D83D00D1A198 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9C2459D83D00D1A198 /* DetailView.swift */; };
 		D386CAA02459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */; };
 		D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */; };
+		D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */; };
+		D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */; };
+		D386CAAA245B2C4300D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA9245B2C4300D1A198 /* TrailListView.swift */; };
+		D386CAAB245B2C4300D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA9245B2C4300D1A198 /* TrailListView.swift */; };
+		D386CAAD245B7F7E00D1A198 /* MapSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAAC245B7F7E00D1A198 /* MapSettings.swift */; };
+		D386CAAE245B7F7E00D1A198 /* MapSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAAC245B7F7E00D1A198 /* MapSettings.swift */; };
 		D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -141,18 +144,19 @@
 		D31C2210244A741900B0E74E /* AddingTrails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingTrails.swift; sourceTree = "<group>"; };
 		D31C2211244A741A00B0E74E /* TrailDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailDetails.swift; sourceTree = "<group>"; };
 		D31C2216244A781500B0E74E /* ControllingTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingTheMap.swift; sourceTree = "<group>"; };
-		D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewModel.swift; sourceTree = "<group>"; };
 		D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewModel.swift; sourceTree = "<group>"; };
-		D386CA032455C5CF00D1A198 /* AccuTerra.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccuTerra.bundle; sourceTree = "<group>"; };
 		D386CA052457570600D1A198 /* MapSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchingViewModel.swift; sourceTree = "<group>"; };
 		D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "05-Black-Bear-Pass.gpx"; sourceTree = "<group>"; };
 		D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "04-Imogene-Pass.gpx"; sourceTree = "<group>"; };
 		D386CA122457A20000D1A198 /* TrailsViewModelBrian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewModelBrian.swift; sourceTree = "<group>"; };
 		D386CA552457D11B00D1A198 /* MapEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEventRouter.swift; sourceTree = "<group>"; };
-		D386CA9624588BBE00D1A198 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		D386CA9624588BBE00D1A198 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		D386CA992458C89700D1A198 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		D386CA9C2459D83D00D1A198 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsInfo.swift; sourceTree = "<group>"; };
+		D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewModel.swift; sourceTree = "<group>"; };
+		D386CAA9245B2C4300D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = SOURCE_ROOT; };
+		D386CAAC245B7F7E00D1A198 /* MapSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapSettings.swift; path = AccuterraSampleApp/Views/MapSettings.swift; sourceTree = SOURCE_ROOT; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E7E244E688300A39B51 /* MapInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteraction.swift; sourceTree = "<group>"; };
@@ -222,7 +226,6 @@
 			children = (
 				D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */,
 				D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */,
-				D386CA032455C5CF00D1A198 /* AccuTerra.bundle */,
 				D31C21AC244A6F1400B0E74E /* AccuterraSampleApp */,
 				D31C21C3244A6F1600B0E74E /* AccuterraSampleAppTests */,
 				D31C21CE244A6F1600B0E74E /* AccuterraSampleAppUITests */,
@@ -293,6 +296,7 @@
 		D31C21E2244A704500B0E74E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D386CAAC245B7F7E00D1A198 /* MapSettings.swift */,
 				D31C21AD244A6F1400B0E74E /* AppDelegate.swift */,
 				D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */,
 			);
@@ -304,7 +308,7 @@
 			children = (
 				D31C2206244A72B200B0E74E /* HomeView.swift */,
 				D3B07E98244FAA1E00A39B51 /* ControllerView.swift */,
-				D386CA9624588BBE00D1A198 /* UserSettings.swift */,
+				D386CA9624588BBE00D1A198 /* AppSettings.swift */,
 				D31C220D244A740000B0E74E /* Map Display */,
 				D31C21EA244A71BB00B0E74E /* Controls */,
 				D31C21F4244A71FC00B0E74E /* Searching */,
@@ -356,22 +360,31 @@
 		D31C220D244A740000B0E74E /* Map Display */ = {
 			isa = PBXGroup;
 			children = (
-				D31C220F244A741900B0E74E /* AddingPOIs.swift */,
-				D31C2210244A741900B0E74E /* AddingTrails.swift */,
-				D31C220E244A741900B0E74E /* CreateMap.swift */,
+				D386CAA2245B232900D1A198 /* View Models */,
 				D3B07E5B244E55D300A39B51 /* MapView.swift */,
 				D386CA992458C89700D1A198 /* MapCoordinator.swift */,
-				D3B07E7E244E688300A39B51 /* MapInteraction.swift */,
+				D31C220E244A741900B0E74E /* CreateMap.swift */,
+				D31C2210244A741900B0E74E /* AddingTrails.swift */,
 				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
-				D386CA9C2459D83D00D1A198 /* DetailView.swift */,
+				D31C220F244A741900B0E74E /* AddingPOIs.swift */,
+				D386CAA9245B2C4300D1A198 /* TrailListView.swift */,
 				D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */,
-				D386CA052457570600D1A198 /* MapSearchingViewModel.swift */,
-				D386C9FD2453A66F00D1A198 /* TrailsViewModel.swift */,
-				D386CA122457A20000D1A198 /* TrailsViewModelBrian.swift */,
+				D386CA9C2459D83D00D1A198 /* DetailView.swift */,
 				D386CA552457D11B00D1A198 /* MapEventRouter.swift */,
-				D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */,
+				D3B07E7E244E688300A39B51 /* MapInteraction.swift */,
 			);
 			path = "Map Display";
+			sourceTree = "<group>";
+		};
+		D386CAA2245B232900D1A198 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D386CA052457570600D1A198 /* MapSearchingViewModel.swift */,
+				D386CA122457A20000D1A198 /* TrailsViewModelBrian.swift */,
+				D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */,
+				D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		D3B07E81244F74BA00A39B51 /* Download */ = {
@@ -399,6 +412,7 @@
 				E5480F7161213D33DD726D1A /* [CP] Embed Pods Frameworks */,
 				D3B07E7C244E674B00A39B51 /* Insert AccuTerra Access Tokens */,
 				D3B07E7D244E678300A39B51 /* Insert Mapbox Access Token */,
+				F6786CBFCCA2E3919B670B27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -456,6 +470,7 @@
 				ED3873712A8DA919359ACB1B /* [CP] Embed Pods Frameworks */,
 				D3B07E8B244F793D00A39B51 /* Insert AccuTerra Access Tokens */,
 				D3B07E8C244F798300A39B51 /* Insert Mapbox Access Token */,
+				985934E0A01708D588F49815 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -517,7 +532,6 @@
 			files = (
 				D31C21BA244A6F1600B0E74E /* LaunchScreen.storyboard in Resources */,
 				D31C21B7244A6F1600B0E74E /* Preview Assets.xcassets in Resources */,
-				D386CA042455C5CF00D1A198 /* AccuTerra.bundle in Resources */,
 				D386CA0D2457945300D1A198 /* 04-Imogene-Pass.gpx in Resources */,
 				D386CA0A2457942200D1A198 /* 05-Black-Bear-Pass.gpx in Resources */,
 				D31C21B4244A6F1600B0E74E /* Assets.xcassets in Resources */,
@@ -573,6 +587,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		985934E0A01708D588F49815 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp (Develop)/Pods-AccuterraSampleApp (Develop)-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp (Develop)/Pods-AccuterraSampleApp (Develop)-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp (Develop)/Pods-AccuterraSampleApp (Develop)-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D3B07E7C244E674B00A39B51 /* Insert AccuTerra Access Tokens */ = {
@@ -707,6 +738,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6786CBFCCA2E3919B670B27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -727,10 +775,10 @@
 				D31C2213244A741A00B0E74E /* AddingPOIs.swift in Sources */,
 				D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */,
 				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
+				D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
 				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
-				D386C9FE2453A66F00D1A198 /* TrailsViewModel.swift in Sources */,
 				D3B07E7F244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D386CA9D2459D83D00D1A198 /* DetailView.swift in Sources */,
 				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
@@ -738,14 +786,16 @@
 				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
 				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
 				D386CA9A2458C89700D1A198 /* MapCoordinator.swift in Sources */,
-				D386CA9724588BBE00D1A198 /* UserSettings.swift in Sources */,
+				D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */,
 				D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */,
 				D31C2203244A725300B0E74E /* FilteringCritieria.swift in Sources */,
 				D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */,
 				D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */,
+				D386CAAD245B7F7E00D1A198 /* MapSettings.swift in Sources */,
 				D3B07E83244F75B000A39B51 /* DownloadView.swift in Sources */,
 				D386CAA02459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
 				D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */,
+				D386CAAA245B2C4300D1A198 /* TrailListView.swift in Sources */,
 				D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,23 +822,25 @@
 			files = (
 				D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */,
 				D3B07E87244F75E900A39B51 /* DownloadViewModel.swift in Sources */,
-				D386CA9824588BBE00D1A198 /* UserSettings.swift in Sources */,
+				D386CA9824588BBE00D1A198 /* AppSettings.swift in Sources */,
 				D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */,
 				D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */,
 				D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */,
 				D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D3B07E61244E65C000A39B51 /* HomeView.swift in Sources */,
 				D3B07E62244E65C000A39B51 /* SearchTermToList.swift in Sources */,
+				D386CAAE245B7F7E00D1A198 /* MapSettings.swift in Sources */,
 				D3B07E63244E65C000A39B51 /* AddingPOIs.swift in Sources */,
 				D3B07E64244E65C000A39B51 /* CreateMap.swift in Sources */,
 				D3B07E65244E65C000A39B51 /* SearchListToMap.swift in Sources */,
 				D386CA572457D11B00D1A198 /* MapEventRouter.swift in Sources */,
 				D3B07E66244E65C000A39B51 /* CustomizingTrailsAndPOIs.swift in Sources */,
+				D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
 				D386CA9B2458C89700D1A198 /* MapCoordinator.swift in Sources */,
+				D386CAAB245B2C4300D1A198 /* TrailListView.swift in Sources */,
 				D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */,
 				D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */,
-				D386C9FF2453A66F00D1A198 /* TrailsViewModel.swift in Sources */,
 				D3B07E80244E688300A39B51 /* MapInteraction.swift in Sources */,
 				D386CA142457A20000D1A198 /* TrailsViewModelBrian.swift in Sources */,
 				D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */,

@@ -38,6 +38,7 @@ struct NavLinkView: Identifiable, Hashable {
 struct HomeView: View {
     
     @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var settings: AppSettings
     
     var itemArray = [
         ListItems(section:"Map Display", navLinkItems:
@@ -71,14 +72,14 @@ struct HomeView: View {
             ForEach(itemArray.indices, id: \.self){ idx in
                 Section(header: Text(self.itemArray[idx].section)) {
                     ForEach(self.itemArray[idx].navLinkItems, id: \.self) { item in
-                        NavigationLink(destination: item.destination) {
+                        NavigationLink(destination: item.destination.environmentObject(self.settings)) {
                             Text(item.title)
                         }
                      }
                 }
             }
         }
-        .navigationBarTitle(Text("AccuTerra SDK Samples"), displayMode: .inline)
+        .navigationBarTitle(Text("AccuTerra SDK SwiftUI Samples"), displayMode: .inline)
     }
 }
 

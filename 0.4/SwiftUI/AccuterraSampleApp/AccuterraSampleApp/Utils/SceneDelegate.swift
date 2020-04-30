@@ -87,7 +87,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func gotoHomeView() {
-        let settings = UserSettings()
+        let settings = AppSettings()
         let viewRouter = ViewRouter()
         viewRouter.currentPage = "home"
         self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter).environmentObject(settings))

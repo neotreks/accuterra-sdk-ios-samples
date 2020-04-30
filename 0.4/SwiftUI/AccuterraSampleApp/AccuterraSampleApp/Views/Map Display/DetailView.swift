@@ -78,7 +78,7 @@ struct DetailView: View {
     
     struct DetailView_Previews: PreviewProvider {
         static var previews: some View {
-            return TrailDetails()
+            return DetailView(trailId: 555)
         }
     }
     

@@ -14,43 +14,41 @@ import Combine
 struct AddingTrails: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @EnvironmentObject var settings: AppSettings
     @ObservedObject var mapInteraction = MapInteraction()
     @ObservedObject var vm = TrailsViewModel()
-    @State private var showingAlert = false
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: false, allowPOITaps: false)
+
     @State var annotations: [MGLPointAnnotation] = [
         MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
     ]
-    @State var selectedTrail:Int64 = 0
+    @State var selectedTrailId:Int64 = 0
+    
+    init() {
+        vm.doTrailsSearch()
+    }
 
     var body: some View {
-                Text("hello")
-//        VStack() {
-//            ZStack(alignment: .top) {
-////                MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
-//                MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrail: $selectedTrail )
-//            }
-//            Spacer()
-////            HStack(spacing: 10) {
-////                Text("Number of trails: \(vm.trailCount)")
-////                Button(action: {
-////                    self.showingAlert = true
-////                    self.vm.doTrailsSearch()
-////                }) {
-////                    Text("Get All Trails")
-////                }
-////                .alert(isPresented: $showingAlert) {
-////                    Alert(title: Text("Trail Info"), message: Text("Number of Trails: \(vm.trailCount)"), dismissButton: .default(Text("OK")))
-////                }
-// //           }
-//            .padding()
-//        }
-//        .navigationBarTitle(Text("Adding Trails"), displayMode: .inline)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading: Button(action : {
-//                self.mode.wrappedValue.dismiss()
-//            }){
-//                Image(systemName: "arrow.left")
-//            })
+        VStack() {
+            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            Spacer()
+            HStack(spacing: 10) {
+                Text("Number of trails: \(vm.trailCount)")
+                if vm.trails != nil {
+                    NavigationLink(destination: TrailListView(trails:vm.trails!)) {
+                        Text("Trail List")
+                    }
+                }
+            }
+            .padding()
+        }
+        .navigationBarTitle(Text("Adding Trails"), displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image(systemName: "arrow.left")
+            })
     }
     
 }

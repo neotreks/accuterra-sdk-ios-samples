@@ -18,22 +18,34 @@ struct AddingPOIs: View {
     @State var annotations: [MGLPointAnnotation] = [
         MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
     ]
-    @State var selectedTrail:Int64 = 0
+    @State var selectedTrailId:Int64 = 0
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
     
     var body: some View {
-                Text("hello")
-//        ZStack(alignment: .top) {
-////            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
-//            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrail: $selectedTrail )
-//        }
-//        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading: Button(action : {
-//                self.mode.wrappedValue.dismiss()
-//            }){
-//                Image(systemName: "arrow.left")
-//            })
-//        .edgesIgnoringSafeArea([.bottom])
+        VStack() {
+            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            Spacer()
+            HStack(spacing: 30) {
+                if selectedTrailId == 0 {
+                    Text("Picked Trail ID: N/A")
+                }
+                else {
+                    Text("Picked Trail ID: \(selectedTrailId)")
+                }
+                NavigationLink(destination: DetailView(trailId:selectedTrailId)) {
+                    Text("Trail Details")
+                }
+                .disabled(selectedTrailId == 0)
+            }
+            .padding()
+        }
+        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image(systemName: "arrow.left")
+            })
     }
     
 }

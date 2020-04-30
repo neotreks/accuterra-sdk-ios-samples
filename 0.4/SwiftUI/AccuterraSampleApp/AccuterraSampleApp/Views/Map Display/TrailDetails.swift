@@ -16,6 +16,9 @@ struct TrailDetails: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var mapInteraction = MapInteraction()
+    @EnvironmentObject var settings: AppSettings
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: false)
+    
     @State var selectedTrailId:Int64 = 0
     
     @State var annotations: [MGLPointAnnotation] = [
@@ -24,15 +27,19 @@ struct TrailDetails: View {
     
     var body: some View {
         VStack() {
-            ZStack(alignment: .top) {
-                MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrailId: $selectedTrailId, mapTappingActive: true)
-            }
+            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
             Spacer()
             HStack(spacing: 30) {
-                Text("Trail ID: \(selectedTrailId)")
+                if selectedTrailId == 0 {
+                    Text("Picked Trail ID: N/A")
+                }
+                else {
+                    Text("Picked Trail ID: \(selectedTrailId)")
+                }
                 NavigationLink(destination: DetailView(trailId:selectedTrailId)) {
                     Text("Trail Details")
                 }
+                .disabled(selectedTrailId == 0)
             }
             .padding()
         }

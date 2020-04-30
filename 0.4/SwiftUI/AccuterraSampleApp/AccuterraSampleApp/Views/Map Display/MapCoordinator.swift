@@ -14,12 +14,11 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     var controlView: MapView
     var mapWasLoaded : Bool = false
     var isTrailsLayerManagersLoaded = false
-    var trailService: ITrailService?
+    var trailsService: ITrailService?
     var trails: Array<TrailBasicInfo>?
     
     init(_ mapView: MapView) {
         self.controlView = mapView
-        // self.viewModel = viewModel
     }
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
@@ -48,8 +47,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     func onSignificantMapBoundsChange() {}
     
     func didTapOnMap(coordinate: CLLocationCoordinate2D) {
-         print("didTapOnMap 1")
-        guard self.isTrailsLayerManagersLoaded && controlView.mapTappingActive else {
+        guard self.isTrailsLayerManagersLoaded && controlView.features.allowTrailTaps else {
             return
         }
         
@@ -57,8 +55,6 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     }
     
     func searchTrails(mapView:AccuTerraMapView, coordinate:CLLocationCoordinate2D) -> Int64 {
-        print("searchTrails ...")
-
         let query = TrailsQuery(
             trailLayersManager: mapView.trailLayersManager,
             layers: Set(TrailLayerType.allValues),
@@ -67,23 +63,25 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
 
         let trailId = query.execute().trailIds.first
         if let id = trailId {
-            print("trail ID: \(id)")
-            // controlView.selectedTrail = id
-            
+            // print("trail ID: \(id)")
             mapView.trailLayersManager.highLightTrail(trailId: trailId)
-            self.showTrailPOIs(mapView: mapView, trailId: trailId)
-            
+            if controlView.features.allowPOITaps {
+                self.showTrailPOIs(mapView: mapView, trailId: trailId)
+            }
             return id
-           // self.selectedTrailID = id
-            // self.brianText = "David"
         }
         return 0
     }
     
     private func showTrailPOIs(mapView: AccuTerraMapView, trailId: Int64?) {
         if let trailId = trailId {
+            
             do {
-                if let trailManager = self.trailService,
+                if self.trailsService == nil {
+                    trailsService = ServiceFactory.getTrailService()
+                }
+                
+                if let trailManager = self.trailsService,
                     let trail = try trailManager.getTrailById(trailId) {
                         mapView.trailLayersManager.showTrailPOIs(trail: trail)
                 }
@@ -99,7 +97,9 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     func onMapLoaded() {
         self.mapWasLoaded = true
         self.zoomToDefaultExtent()
-        self.addTrailLayers()
+        if controlView.features.displayTrails {
+            self.addTrailLayers()
+        }
     }
     
     func onLayersAdded(trailLayers: Array<TrailLayerType>) {
@@ -116,13 +116,12 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
             return
         }
         let trailLayersManager = controlView.mapView.trailLayersManager
-        // trailLayersManager.delegate = self
         trailLayersManager.addStandardLayers()
         
     }
     
     func mapViewRegionIsChanging(_ mapView: MGLMapView) {
-        print ("mapViewRegionIsChanging")
+        // print ("mapViewRegionIsChanging")
     }
     
 }
