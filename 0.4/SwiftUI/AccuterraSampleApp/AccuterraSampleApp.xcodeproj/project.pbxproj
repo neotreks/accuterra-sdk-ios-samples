@@ -322,8 +322,8 @@
 		D31C21EA244A71BB00B0E74E /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */,
 				D31C2216244A781500B0E74E /* ControllingTheMap.swift */,
+				D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";

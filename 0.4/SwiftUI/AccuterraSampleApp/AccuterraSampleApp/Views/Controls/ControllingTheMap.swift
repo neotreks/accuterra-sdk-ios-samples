@@ -18,24 +18,55 @@ struct ControllingTheMap: View {
     @State var annotations: [MGLPointAnnotation] = [
         MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
     ]
-    @State var selectedTrail:Int64 = 0
+    @State var selectedTrailId:Int64 = 0
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
     
     var body: some View {
-                Text("hello")
-//        ZStack(alignment: .top) {
-////            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
-//            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrail: $selectedTrail )
-//        }
-//        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading: Button(action : {
-//                self.mode.wrappedValue.dismiss()
-//            }){
-//                Image(systemName: "arrow.left")
-//            })
-//        .edgesIgnoringSafeArea([.bottom])
+        ZStack(alignment: .top) {
+            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            .edgesIgnoringSafeArea(.vertical)
+            VStack(spacing: 20) {
+                Text("Go to Location:")
+                HStack {
+                    Button(action: {
+                        self.mapInteraction.mapCenter = nil
+                        self.mapInteraction.zoomAnimation = false
+                        self.mapInteraction.mapBounds = MapInteraction.getColoradoBounds()
+                    }, label: {
+                        Text("CO")
+                        .padding()
+                            .background(Color.white)
+                    })
+                    Button(action: {
+                        self.mapInteraction.mapBounds = nil
+                        self.mapInteraction.zoomAnimation = false
+                        self.mapInteraction.mapCenter = MapInteraction.getDenverLocation()
+                    }, label: {
+                        Text("Denver")
+                        .padding()
+                        .background(Color.white)
+                    })
+                    Button(action: {
+                        self.mapInteraction.mapBounds = nil
+                        self.mapInteraction.zoomAnimation = true
+                        self.mapInteraction.mapCenter = MapInteraction.getCastleRockLocation()
+                    }, label: {
+                        Text("Castle Rock")
+                        .padding()
+                            .background(Color.white)
+                    })
+                }.shadow(radius: 3)
+            }
+            .frame(height: 100.0)
+        }
+        .navigationBarTitle(Text("Controlling the Map"), displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image(systemName: "arrow.left")
+            })
     }
-    
 }
 
 struct ControllingTheMap_Previews: PreviewProvider {
