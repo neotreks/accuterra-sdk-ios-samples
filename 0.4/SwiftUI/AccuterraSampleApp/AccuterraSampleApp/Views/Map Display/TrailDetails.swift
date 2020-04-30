@@ -11,14 +11,30 @@ import AccuTerraSDK
 import Mapbox
 import Combine
 
+
 struct TrailDetails: View {
-    
+
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var mapInteraction = MapInteraction()
+    @State var selectedTrailId:Int64 = 0
+    
+    @State var annotations: [MGLPointAnnotation] = [
+        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
+    ]
     
     var body: some View {
-        ZStack(alignment: .top) {
-            MapView(mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
+        VStack() {
+            ZStack(alignment: .top) {
+                MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrailId: $selectedTrailId, mapTappingActive: true)
+            }
+            Spacer()
+            HStack(spacing: 30) {
+                Text("Trail ID: \(selectedTrailId)")
+                NavigationLink(destination: DetailView(trailId:selectedTrailId)) {
+                    Text("Trail Details")
+                }
+            }
+            .padding()
         }
         .navigationBarTitle(Text("Trail Details"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
@@ -27,13 +43,12 @@ struct TrailDetails: View {
             }){
                 Image(systemName: "arrow.left")
             })
-        .edgesIgnoringSafeArea([.bottom])
     }
     
 }
 
 struct TrailDetails_Previews: PreviewProvider {
     static var previews: some View {
-        return CreateMap()
+        return TrailDetails()
     }
 }

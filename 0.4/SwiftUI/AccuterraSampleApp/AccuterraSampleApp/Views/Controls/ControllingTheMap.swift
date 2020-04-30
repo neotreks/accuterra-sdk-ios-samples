@@ -15,19 +15,25 @@ struct ControllingTheMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var mapInteraction = MapInteraction()
+    @State var annotations: [MGLPointAnnotation] = [
+        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
+    ]
+    @State var selectedTrail:Int64 = 0
     
     var body: some View {
-        ZStack(alignment: .top) {
-            MapView(mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
-        }
-        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: Button(action : {
-                self.mode.wrappedValue.dismiss()
-            }){
-                Image(systemName: "arrow.left")
-            })
-        .edgesIgnoringSafeArea([.bottom])
+                Text("hello")
+//        ZStack(alignment: .top) {
+////            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
+//            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrail: $selectedTrail )
+//        }
+//        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarItems(leading: Button(action : {
+//                self.mode.wrappedValue.dismiss()
+//            }){
+//                Image(systemName: "arrow.left")
+//            })
+//        .edgesIgnoringSafeArea([.bottom])
     }
     
 }

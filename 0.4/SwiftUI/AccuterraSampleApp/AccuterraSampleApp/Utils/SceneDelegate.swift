@@ -87,9 +87,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func gotoHomeView() {
+        let settings = UserSettings()
         let viewRouter = ViewRouter()
         viewRouter.currentPage = "home"
-        self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter))
+        self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter).environmentObject(settings))
         window?.makeKeyAndVisible()
     }
 }

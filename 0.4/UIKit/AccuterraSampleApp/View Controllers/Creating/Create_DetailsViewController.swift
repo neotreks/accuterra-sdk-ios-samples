@@ -85,11 +85,16 @@ extension Create_DetailsViewController : TrailLayersManagerDelegate {
 
 extension Create_DetailsViewController : AccuTerraMapViewDelegate {
     
+//    func mapView(_ mapView: MGLMapView, regionDidChangeAnimated animated: Bool) {
+//        print("regionDidChange")
+//    }
+    
     func onSignificantMapBoundsChange() {}
     
     func onStyleChanged() {}
     
     func didTapOnMap(coordinate: CLLocationCoordinate2D) {
+        print("didTapOnMap")
         guard self.isTrailsLayerManagersLoaded else {
             return
         }

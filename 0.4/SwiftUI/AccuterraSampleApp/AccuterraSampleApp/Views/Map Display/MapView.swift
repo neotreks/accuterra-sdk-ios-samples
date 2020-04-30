@@ -10,22 +10,45 @@ import SwiftUI
 import AccuTerraSDK
 import Mapbox
 
+extension MGLPointAnnotation {
+    convenience init(title: String, coordinate: CLLocationCoordinate2D) {
+        self.init()
+        self.title = title
+        self.coordinate = coordinate
+    }
+}
+
 struct MapView: UIViewRepresentable {
+    
+    @Binding var annotations: [MGLPointAnnotation]
     
     // var mapCenter = CLLocationCoordinate2D(latitude: 37.7666, longitude: -122.427290)
     var mapCenter: CLLocationCoordinate2D?
     var mapBounds: MGLCoordinateBounds?
     var zoomAnimation: Bool = false
+    // @Binding var viewModel: TrailsViewModelBrian
+    @Binding var selectedTrailId:Int64
+    
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
+    var mapTappingActive = false
  
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
     
     // MARK: - Configuring UIViewRepresentable protocol
     
     func makeUIView(context: UIViewRepresentableContext<MapView>) -> AccuTerraMapView {
+        print("makeUIView .... called")
+        // Initialize map
+        self.mapView.initialize(styleURL: styles[styleId])
+        self.mapView.setUserTrackingMode(.follow, animated: true, completionHandler: {
+        })
+        self.mapView.isRotateEnabled = false //makes map interaction easier
+        self.mapView.isPitchEnabled = false //makes map interaction easier
+        
         mapView.accuTerraDelegate = context.coordinator
         mapView.delegate = context.coordinator
+        mapView.trailLayersManager.delegate = context.coordinator
         return mapView
     }
     
@@ -45,6 +68,8 @@ struct MapView: UIViewRepresentable {
                 uiView.setCenter(location, animated: true)
             }
         }
+        
+        // updateAnnotations()
     }
     
     func styleURL(_ styleURL: URL) -> MapView {
@@ -52,8 +77,8 @@ struct MapView: UIViewRepresentable {
         return self
     }
     
-    func makeCoordinator() -> MapView.Coordinator {
-        Coordinator(self)
+    func makeCoordinator() -> MapCoordinator {
+        MapCoordinator(self)
     }
     
     func centerCoordinate(_ centerCoordinate: CLLocationCoordinate2D) -> MapView {
@@ -61,68 +86,18 @@ struct MapView: UIViewRepresentable {
         return self
     }
     
-    func initMap() -> MapView  {
-        // Initialize map
-        self.mapView.initialize(styleURL: styles[styleId])
-
-        self.mapView.setUserTrackingMode(.follow, animated: true, completionHandler: {
-        })
-        self.mapView.isRotateEnabled = false //makes map interaction easier
-        self.mapView.isPitchEnabled = false //makes map interaction easier
-        
+    func zoomLevel(_ zoomLevel: Double) -> MapView {
+        mapView.zoomLevel = zoomLevel
         return self
     }
-}
-
-extension MapView {
     
-    class Coordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDelegate, MGLMapViewDelegate {
-                
-        var controlView: MapView
-        var mapWasLoaded : Bool = false
-        var isTrailsLayerManagersLoaded = false
-        var trailService: ITrailService?
-        var trails: Array<TrailBasicInfo>?
-        
-        @ObservedObject var vm = TrailsViewModel()
-
-        init(_ mapView: MapView) {
-            self.controlView = mapView
-        }
-        
-        func onStyleChanged() {}
-        
-        func onSignificantMapBoundsChange() {}
-        
-        func didTapOnMap(coordinate: CLLocationCoordinate2D) {}
-        
-        func onMapLoaded() {
-            self.mapWasLoaded = true
-            self.zoomToDefaultExtent()
-            self.addTrailLayers()
-        }
-        
-        func onLayersAdded(trailLayers: Array<TrailLayerType>) {
-            isTrailsLayerManagersLoaded = true
-        }
-        
-        private func zoomToDefaultExtent() {
-            let bounds = MapInteraction.getColoradoBounds()
-            controlView.mapView.zoomToExtent(bounds: bounds, animated: true)
-        }
-        
-        private func addTrailLayers() {
-            guard SdkManager.shared.isTrailDbInitialized else {
-                return
-            }
-            let trailLayersManager = controlView.mapView.trailLayersManager
-
-            trailLayersManager.delegate = self
-            trailLayersManager.addStandardLayers()
-            
-        }
-        
-    }
+//    private func updateAnnotations() {
+//        if let currentAnnotations = mapView.annotations {
+//            mapView.removeAnnotations(currentAnnotations)
+//        }
+//        mapView.addAnnotations(annotations)
+//    }
+    
 }
 
 
