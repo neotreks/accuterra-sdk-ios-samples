@@ -13,7 +13,6 @@ import AccuTerraSDK
 class TrailDetailsViewModel: ObservableObject {
     
     var trailDetails = [(name: String, values: [(key: String, value: String)])]()
-    @Published var trailId:Int64 = 0
 
     func getTrailDetails(trailId:Int64) {
         if trailId > 0 {

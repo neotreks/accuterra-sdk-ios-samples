@@ -48,7 +48,7 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
         if let bounds = mapInteractions.mapBounds {
-            uiView.zoomToExtent(bounds: bounds, animated: true)
+            uiView.zoomToExtent(bounds: bounds, edgePadding:mapInteractions.edgeInsets, animated: true)
         }
         else if let location = mapInteractions.mapCenter {
             if mapInteractions.zoomAnimation {
@@ -63,7 +63,10 @@ struct MapView: UIViewRepresentable {
             }
         }
         
-        // updateAnnotations()
+        if mapInteractions.selectedTrailId != 0 {
+            uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([mapInteractions.selectedTrailId ]))
+            uiView.trailLayersManager.highLightTrail(trailId: mapInteractions.selectedTrailId )
+        }
     }
     
     func styleURL(_ styleURL: URL) -> MapView {
@@ -84,14 +87,6 @@ struct MapView: UIViewRepresentable {
         mapView.zoomLevel = zoomLevel
         return self
     }
-    
-//    private func updateAnnotations() {
-//        if let currentAnnotations = mapView.annotations {
-//            mapView.removeAnnotations(currentAnnotations)
-//        }
-//        mapView.addAnnotations(annotations)
-//    }
-    
 }
 
 

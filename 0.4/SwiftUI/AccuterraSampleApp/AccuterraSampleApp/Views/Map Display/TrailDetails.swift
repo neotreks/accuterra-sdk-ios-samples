@@ -45,7 +45,6 @@ struct TrailDetails: View {
                 Image(systemName: "arrow.left")
             })
     }
-    
 }
 
 struct TrailDetails_Previews: PreviewProvider {

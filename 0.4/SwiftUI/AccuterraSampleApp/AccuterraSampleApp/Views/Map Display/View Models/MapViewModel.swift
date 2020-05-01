@@ -14,6 +14,14 @@ import CoreLocation
 
 class MapViewModel {
     
+    func setTrailBounds(trailId:Int64, trail: Trail) -> MapInteractions {
+        if let locationInfo = trail.locationInfo {
+            let extent = MGLCoordinateBounds(sw: locationInfo.mapBounds.sw.coordinates, ne: locationInfo.mapBounds.ne.coordinates)
+            return MapInteractions(mapCenter: nil, mapBounds: extent, edgeInsets:UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), zoomAnimation: false, selectedTrailId: trailId)
+        }
+        return MapInteractions()
+    }
+    
     func setColoradoBounds() -> MapInteractions {
         let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
         let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)

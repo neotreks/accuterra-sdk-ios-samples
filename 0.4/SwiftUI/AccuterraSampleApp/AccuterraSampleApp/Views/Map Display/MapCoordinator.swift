@@ -81,10 +81,6 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
                 controlView.mapAlerts.displayAlert = true
                 controlView.mapAlerts.title = poi.name ?? "POI"
                 controlView.mapAlerts.message = poi.description ?? ""
-                
-//                let alert = UIAlertController(title: poi.name, message: poi.description ?? "", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                self.present(alert, animated: false, completion: nil)
             }
         }
         catch {
@@ -102,7 +98,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         let trailId = query.execute().trailIds.first
         if let id = trailId {
             // print("trail ID: \(id)")
-            mapView.trailLayersManager.highLightTrail(trailId: trailId)
+            // trail will be hilighted by MapInteractions.selectedTrailId binding
             if controlView.features.allowPOITaps {
                 self.showTrailPOIs(mapView: mapView, trailId: trailId)
             }

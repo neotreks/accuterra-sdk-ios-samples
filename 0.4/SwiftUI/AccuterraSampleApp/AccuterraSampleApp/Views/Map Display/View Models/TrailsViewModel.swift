@@ -18,6 +18,22 @@ class TrailsViewModel: ObservableObject {
     @Published var trails: Array<TrailBasicInfo>?
     @Published var trailCount: Int = 0
     
+    func getTrailById(trailId:Int64) -> Trail? {
+        do {
+            if self.trailService == nil {
+                trailService = ServiceFactory.getTrailService()
+            }
+            
+            if let trailManager = self.trailService {
+                return try trailManager.getTrailById(trailId)
+            }
+        }
+        catch {
+            print("\(error)")
+        }
+        return nil
+    }
+    
     func doTrailsSearch() {
         do {
             if self.trailService == nil {

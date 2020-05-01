@@ -55,6 +55,8 @@
 		D386CAB4245B9CA100D1A198 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB2245B9CA100D1A198 /* MapViewModel.swift */; };
 		D386CAB6245BDF0A00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB5245BDF0A00D1A198 /* TrailListView.swift */; };
 		D386CAB7245BDF0A00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB5245BDF0A00D1A198 /* TrailListView.swift */; };
+		D386CAB9245CA67500D1A198 /* TrailListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB8245CA67500D1A198 /* TrailListRow.swift */; };
+		D386CABA245CA67500D1A198 /* TrailListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB8245CA67500D1A198 /* TrailListRow.swift */; };
 		D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -155,6 +157,7 @@
 		D386CAAF245B9BFC00D1A198 /* MapEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEnvironment.swift; sourceTree = "<group>"; };
 		D386CAB2245B9CA100D1A198 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D386CAB5245BDF0A00D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = "<group>"; };
+		D386CAB8245CA67500D1A198 /* TrailListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListRow.swift; path = AccuterraSampleApp/Views/Searching/TrailListRow.swift; sourceTree = SOURCE_ROOT; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E82244F75B000A39B51 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -368,6 +371,7 @@
 				D386CA9C2459D83D00D1A198 /* DetailView.swift */,
 				D386CA552457D11B00D1A198 /* MapEventRouter.swift */,
 				D386CAB5245BDF0A00D1A198 /* TrailListView.swift */,
+				D386CAB8245CA67500D1A198 /* TrailListRow.swift */,
 			);
 			path = "Map Display";
 			sourceTree = "<group>";
@@ -771,6 +775,7 @@
 				D31C2213244A741A00B0E74E /* AddingPOIs.swift in Sources */,
 				D386CAB3245B9CA100D1A198 /* MapViewModel.swift in Sources */,
 				D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */,
+				D386CAB9245CA67500D1A198 /* TrailListRow.swift in Sources */,
 				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
 				D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
@@ -818,6 +823,7 @@
 				D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */,
 				D3B07E87244F75E900A39B51 /* DownloadViewModel.swift in Sources */,
 				D386CA9824588BBE00D1A198 /* AppSettings.swift in Sources */,
+				D386CABA245CA67500D1A198 /* TrailListRow.swift in Sources */,
 				D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */,
 				D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */,
 				D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */,

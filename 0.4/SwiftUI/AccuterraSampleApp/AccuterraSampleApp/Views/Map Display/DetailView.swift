@@ -50,10 +50,6 @@ struct DetailView: View {
     init(trailId:Int64) {
         trailDetailsVM.getTrailDetails(trailId: trailId)
     }
-
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
     
     var body: some View {
         List {
@@ -81,13 +77,6 @@ struct DetailView: View {
         }
     }
     
-}
-
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
 }
 
 
