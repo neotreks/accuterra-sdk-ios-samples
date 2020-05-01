@@ -7,6 +7,8 @@ build/
 DerivedData/
 */Pods
 */Podfile.lock
+*/SwiftUI/AccuterraSampleApp/Pods
+*/UIKit/AccuterraSampleApp/Pods
 
 ## Various settings
 *.pbxuser
