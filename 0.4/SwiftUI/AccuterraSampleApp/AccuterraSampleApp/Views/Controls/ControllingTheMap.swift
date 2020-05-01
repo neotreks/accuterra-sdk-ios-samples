@@ -17,10 +17,11 @@ struct ControllingTheMap: View {
     var mapVm = MapViewModel()
     @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
+    @State var alertMessages = MapAlertMessages()
 
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(mapInteractions:$mapInteractions, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
             .edgesIgnoringSafeArea(.vertical)
             VStack(spacing: 20) {
                 Text("Go to Location:")

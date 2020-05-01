@@ -16,10 +16,11 @@ struct AddingPOIs: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
     @State var mapInteractions = MapInteractions()
+    @State var alertMessages = MapAlertMessages()
     
     var body: some View {
         VStack() {
-            MapView(mapInteractions:$mapInteractions, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
             Spacer()
             HStack(spacing: 30) {
                 if mapInteractions.selectedTrailId == 0 {

@@ -16,10 +16,11 @@ struct InteractingWithMap: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
     @State var mapInteractions = MapInteractions()
+    @State var alertMessages = MapAlertMessages()
     
     var body: some View {
         VStack() {
-            MapView(mapInteractions:$mapInteractions, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
             Spacer()
             HStack(spacing: 30) {
                 if mapInteractions.selectedTrailId == 0 {
@@ -32,9 +33,9 @@ struct InteractingWithMap: View {
                     Text("Trail Details")
                 }
                 .disabled(mapInteractions.selectedTrailId == 0)
-//                .alert(isPresented: $showingAlert) {
-//                    Alert(title: Text("Trail Info"), message: Text("POI: \(selectedTrailId)"), dismissButton: .default(Text("OK")))
-//                }
+                .alert(isPresented:$alertMessages.displayAlert) {
+                    Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
+                }
             }
             .padding()
         }

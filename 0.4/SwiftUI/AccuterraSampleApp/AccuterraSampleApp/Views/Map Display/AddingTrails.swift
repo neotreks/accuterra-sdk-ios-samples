@@ -17,6 +17,7 @@ struct AddingTrails: View {
     @ObservedObject var vm = TrailsViewModel()
     @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: false, allowPOITaps: false)
+    @State var alertMessages = MapAlertMessages()
     
     init() {
         vm.doTrailsSearch()
@@ -24,7 +25,7 @@ struct AddingTrails: View {
 
     var body: some View {
         VStack() {
-            MapView(mapInteractions:$mapInteractions, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
             Spacer()
             HStack(spacing: 10) {
                 Text("Number of trails: \(vm.trailCount)")

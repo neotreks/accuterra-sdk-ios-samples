@@ -16,9 +16,10 @@ struct CreateMap: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
+    @State var alertMessages = MapAlertMessages()
     
     var body: some View {
-        MapView(mapInteractions:$mapInteractions, features: featureToggles)
+        MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
         .navigationBarTitle(Text("Create a Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {

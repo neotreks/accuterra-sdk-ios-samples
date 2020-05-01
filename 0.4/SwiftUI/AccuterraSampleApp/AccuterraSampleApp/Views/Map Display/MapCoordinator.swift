@@ -78,6 +78,10 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
                 let poi = trail.navigationInfo?.mapPoints.first(where: { (point) -> Bool in
                     return point.id == poiId
                 }) {
+                controlView.mapAlerts.displayAlert = true
+                controlView.mapAlerts.title = poi.name ?? "POI"
+                controlView.mapAlerts.message = poi.description ?? ""
+                
 //                let alert = UIAlertController(title: poi.name, message: poi.description ?? "", preferredStyle: .alert)
 //                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 //                self.present(alert, animated: false, completion: nil)

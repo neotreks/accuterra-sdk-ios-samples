@@ -23,6 +23,8 @@ struct MapView: UIViewRepresentable {
     @Binding var mapInteractions: MapInteractions
     //@EnvironmentObject var settings: AppSettings
     var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
+    @Binding var mapAlerts:MapAlertMessages
+    
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)

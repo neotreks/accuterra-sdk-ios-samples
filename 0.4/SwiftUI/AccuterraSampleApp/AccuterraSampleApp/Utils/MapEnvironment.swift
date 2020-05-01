@@ -22,3 +22,9 @@ struct MapInteractions {
     var zoomAnimation: Bool = false
     var selectedTrailId:Int64 = 0
 }
+
+struct MapAlertMessages {
+    var displayAlert: Bool = false
+    var title:String = "Alert"
+    var message:String = ""
+}
