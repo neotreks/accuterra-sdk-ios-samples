@@ -49,12 +49,12 @@
 		D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */; };
 		D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */; };
 		D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */; };
-		D386CAAA245B2C4300D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA9245B2C4300D1A198 /* TrailListView.swift */; };
-		D386CAAB245B2C4300D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAA9245B2C4300D1A198 /* TrailListView.swift */; };
 		D386CAB0245B9BFC00D1A198 /* MapEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAAF245B9BFC00D1A198 /* MapEnvironment.swift */; };
 		D386CAB1245B9BFC00D1A198 /* MapEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAAF245B9BFC00D1A198 /* MapEnvironment.swift */; };
 		D386CAB3245B9CA100D1A198 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB2245B9CA100D1A198 /* MapViewModel.swift */; };
 		D386CAB4245B9CA100D1A198 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB2245B9CA100D1A198 /* MapViewModel.swift */; };
+		D386CAB6245BDF0A00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB5245BDF0A00D1A198 /* TrailListView.swift */; };
+		D386CAB7245BDF0A00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB5245BDF0A00D1A198 /* TrailListView.swift */; };
 		D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -152,9 +152,9 @@
 		D386CA9C2459D83D00D1A198 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsInfo.swift; sourceTree = "<group>"; };
 		D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailsViewModel.swift; sourceTree = "<group>"; };
-		D386CAA9245B2C4300D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = SOURCE_ROOT; };
 		D386CAAF245B9BFC00D1A198 /* MapEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEnvironment.swift; sourceTree = "<group>"; };
 		D386CAB2245B9CA100D1A198 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D386CAB5245BDF0A00D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = "<group>"; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E82244F75B000A39B51 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -364,10 +364,10 @@
 				D31C2210244A741900B0E74E /* AddingTrails.swift */,
 				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
 				D31C220F244A741900B0E74E /* AddingPOIs.swift */,
-				D386CAA9245B2C4300D1A198 /* TrailListView.swift */,
 				D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */,
 				D386CA9C2459D83D00D1A198 /* DetailView.swift */,
 				D386CA552457D11B00D1A198 /* MapEventRouter.swift */,
+				D386CAB5245BDF0A00D1A198 /* TrailListView.swift */,
 			);
 			path = "Map Display";
 			sourceTree = "<group>";
@@ -775,6 +775,7 @@
 				D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
+				D386CAB6245BDF0A00D1A198 /* TrailListView.swift in Sources */,
 				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
 				D386CA9D2459D83D00D1A198 /* DetailView.swift in Sources */,
 				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
@@ -790,7 +791,6 @@
 				D3B07E83244F75B000A39B51 /* DownloadView.swift in Sources */,
 				D386CAA02459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
 				D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */,
-				D386CAAA245B2C4300D1A198 /* TrailListView.swift in Sources */,
 				D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -833,7 +833,6 @@
 				D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
 				D386CA9B2458C89700D1A198 /* MapCoordinator.swift in Sources */,
-				D386CAAB245B2C4300D1A198 /* TrailListView.swift in Sources */,
 				D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */,
 				D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */,
 				D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */,
@@ -846,6 +845,7 @@
 				D3B07E6F244E65C000A39B51 /* SearchMapToList.swift in Sources */,
 				D386CAB1245B9BFC00D1A198 /* MapEnvironment.swift in Sources */,
 				D3B07E84244F75B000A39B51 /* DownloadView.swift in Sources */,
+				D386CAB7245BDF0A00D1A198 /* TrailListView.swift in Sources */,
 				D3B07E70244E65C000A39B51 /* InteractingWithMap.swift in Sources */,
 				D3B07E71244E65C000A39B51 /* FilteringMap.swift in Sources */,
 			);
