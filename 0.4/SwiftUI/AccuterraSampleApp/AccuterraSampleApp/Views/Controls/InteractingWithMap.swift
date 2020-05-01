@@ -14,26 +14,37 @@ import Combine
 struct InteractingWithMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mapInteraction = MapInteraction()
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrail:Int64 = 0
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
+    @State var mapInteractions = MapInteractions()
     
     var body: some View {
-                Text("hello")
-//        ZStack(alignment: .top) {
-////            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation ).initMap()
-//            MapView(annotations: $annotations, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, selectedTrail: $selectedTrail )
-//        }
-//        .navigationBarTitle(Text("Adding POIs"), displayMode: .inline)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading: Button(action : {
-//                self.mode.wrappedValue.dismiss()
-//            }){
-//                Image(systemName: "arrow.left")
-//            })
-//        .edgesIgnoringSafeArea([.bottom])
+        VStack() {
+            MapView(mapInteractions:$mapInteractions, features: featureToggles)
+            Spacer()
+            HStack(spacing: 30) {
+                if mapInteractions.selectedTrailId == 0 {
+                    Text("Picked Trail ID: N/A")
+                }
+                else {
+                    Text("Picked Trail ID: \(mapInteractions.selectedTrailId)")
+                }
+                NavigationLink(destination: DetailView(trailId:mapInteractions.selectedTrailId)) {
+                    Text("Trail Details")
+                }
+                .disabled(mapInteractions.selectedTrailId == 0)
+//                .alert(isPresented: $showingAlert) {
+//                    Alert(title: Text("Trail Info"), message: Text("POI: \(selectedTrailId)"), dismissButton: .default(Text("OK")))
+//                }
+            }
+            .padding()
+        }
+        .navigationBarTitle(Text("Map Interactions"), displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action : {
+                self.mode.wrappedValue.dismiss()
+            }){
+                Image(systemName: "arrow.left")
+            })
     }
     
 }

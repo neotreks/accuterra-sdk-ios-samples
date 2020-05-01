@@ -14,17 +14,11 @@ import Combine
 struct CreateMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var settings: AppSettings
-    
-    @ObservedObject var mapInteraction = MapInteraction()
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrailId:Int64 = 0
+    @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
     
     var body: some View {
-        MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+        MapView(mapInteractions:$mapInteractions, features: featureToggles)
         .navigationBarTitle(Text("Create a Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {

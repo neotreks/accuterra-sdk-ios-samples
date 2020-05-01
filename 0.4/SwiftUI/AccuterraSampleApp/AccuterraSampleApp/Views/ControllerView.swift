@@ -17,11 +17,11 @@ struct ControllerView : View {
     var body: some View {
             VStack {
                 if viewRouter.currentPage == "download" {
-                    DownloadView(viewRouter: viewRouter)
+                    DownloadView(viewRouter: viewRouter).environmentObject(viewRouter.appSettings)
                 } else if viewRouter.currentPage == "home" {
                     NavigationView {
-                        HomeView(viewRouter: viewRouter)
-                        .navigationBarTitle(Text("AccuTerra SDK Samples"), displayMode: .inline)
+                        HomeView(viewRouter: viewRouter).environmentObject(viewRouter.appSettings)
+                        .navigationBarTitle(Text("AccuTerra SDK SwiftUI Samples"), displayMode: .inline)
                     }
                 }
             }

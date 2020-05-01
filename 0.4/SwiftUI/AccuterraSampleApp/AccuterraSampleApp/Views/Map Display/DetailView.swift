@@ -44,7 +44,6 @@ struct DetailRowItemView: View, Identifiable, Hashable {
 struct DetailView: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mapInteraction = MapInteraction()
     @ObservedObject var trailDetailsVM = TrailDetailsViewModel()
     var trailId:Int64 = 0
     

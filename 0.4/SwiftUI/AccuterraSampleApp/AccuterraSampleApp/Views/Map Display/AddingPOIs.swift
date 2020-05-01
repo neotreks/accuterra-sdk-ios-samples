@@ -14,28 +14,24 @@ import Combine
 struct AddingPOIs: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mapInteraction = MapInteraction()
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrailId:Int64 = 0
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
+    @State var mapInteractions = MapInteractions()
     
     var body: some View {
         VStack() {
-            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles)
             Spacer()
             HStack(spacing: 30) {
-                if selectedTrailId == 0 {
+                if mapInteractions.selectedTrailId == 0 {
                     Text("Picked Trail ID: N/A")
                 }
                 else {
-                    Text("Picked Trail ID: \(selectedTrailId)")
+                    Text("Picked Trail ID: \(mapInteractions.selectedTrailId)")
                 }
-                NavigationLink(destination: DetailView(trailId:selectedTrailId)) {
+                NavigationLink(destination: DetailView(trailId:mapInteractions.selectedTrailId)) {
                     Text("Trail Details")
                 }
-                .disabled(selectedTrailId == 0)
+                .disabled(mapInteractions.selectedTrailId == 0)
             }
             .padding()
         }

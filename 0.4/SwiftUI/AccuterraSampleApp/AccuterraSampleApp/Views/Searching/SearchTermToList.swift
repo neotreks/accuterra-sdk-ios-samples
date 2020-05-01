@@ -14,11 +14,7 @@ import Combine
 struct SearchTermToList: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mapInteraction = MapInteraction()
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrail:Int64 = 0
+
     
     var body: some View {
         Text("hello")

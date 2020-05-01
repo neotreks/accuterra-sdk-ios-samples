@@ -13,6 +13,7 @@ import SwiftUI
 class ViewRouter: ObservableObject {
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
+    let appSettings:AppSettings = AppSettings()
     
     var currentPage: String = "download" {
         didSet {

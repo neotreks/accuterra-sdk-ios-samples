@@ -51,7 +51,41 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
             return
         }
         
-        controlView.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
+        if !searchPois(coordinate: coordinate) {
+            controlView.mapInteractions.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
+        }
+    }
+    
+    func searchPois(coordinate: CLLocationCoordinate2D) -> Bool {
+        let query = TrailPoisQuery(
+            trailLayersManager: controlView.mapView.trailLayersManager,
+            layers: Set(TrailPoiLayerType.allValues),
+            coordinate: coordinate,
+            distanceTolerance: 2.0)
+            
+        if let trailPoi = query.execute().trailPois.first, let poiId = trailPoi.poiIds.first {
+            handleTrailPoiMapClick(trailId: trailPoi.trailId , poiId: poiId)
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func handleTrailPoiMapClick(trailId: Int64, poiId: Int64) {
+        do {
+            if let trailManager = self.trailsService,
+                let trail = try trailManager.getTrailById(trailId),
+                let poi = trail.navigationInfo?.mapPoints.first(where: { (point) -> Bool in
+                    return point.id == poiId
+                }) {
+//                let alert = UIAlertController(title: poi.name, message: poi.description ?? "", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                self.present(alert, animated: false, completion: nil)
+            }
+        }
+        catch {
+            debugPrint("\(error)")
+        }
     }
     
     func searchTrails(mapView:AccuTerraMapView, coordinate:CLLocationCoordinate2D) -> Int64 {
@@ -107,8 +141,10 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     }
     
     private func zoomToDefaultExtent() {
-        let bounds = MapInteraction.getColoradoBounds()
-        controlView.mapView.zoomToExtent(bounds: bounds, animated: true)
+        let mapInteractions = controlView.mapVm.setColoradoBounds()
+        if let bounds = mapInteractions.mapBounds {
+            controlView.mapView.zoomToExtent(bounds:bounds, animated: true)
+        }
     }
     
     private func addTrailLayers() {

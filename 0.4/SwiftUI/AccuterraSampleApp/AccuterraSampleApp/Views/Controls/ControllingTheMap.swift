@@ -14,42 +14,33 @@ import Combine
 struct ControllingTheMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mapInteraction = MapInteraction()
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrailId:Int64 = 0
+    var mapVm = MapViewModel()
+    @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
-    
+
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles)
             .edgesIgnoringSafeArea(.vertical)
             VStack(spacing: 20) {
                 Text("Go to Location:")
                 HStack {
                     Button(action: {
-                        self.mapInteraction.mapCenter = nil
-                        self.mapInteraction.zoomAnimation = false
-                        self.mapInteraction.mapBounds = MapInteraction.getColoradoBounds()
+                        self.mapInteractions = self.mapVm.setColoradoBounds()
                     }, label: {
                         Text("CO")
                         .padding()
                             .background(Color.white)
                     })
                     Button(action: {
-                        self.mapInteraction.mapBounds = nil
-                        self.mapInteraction.zoomAnimation = false
-                        self.mapInteraction.mapCenter = MapInteraction.getDenverLocation()
+                        self.mapInteractions = self.mapVm.setDenverLocation()
                     }, label: {
                         Text("Denver")
                         .padding()
                         .background(Color.white)
                     })
                     Button(action: {
-                        self.mapInteraction.mapBounds = nil
-                        self.mapInteraction.zoomAnimation = true
-                        self.mapInteraction.mapCenter = MapInteraction.getCastleRockLocation()
+                        self.mapInteractions = self.mapVm.setCastleRockLocation()
                     }, label: {
                         Text("Castle Rock")
                         .padding()

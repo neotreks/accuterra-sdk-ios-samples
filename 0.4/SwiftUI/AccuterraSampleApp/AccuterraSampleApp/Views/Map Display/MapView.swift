@@ -20,26 +20,17 @@ extension MGLPointAnnotation {
 
 struct MapView: UIViewRepresentable {
     
-    @Binding var annotations: [MGLPointAnnotation]
-    @Binding var selectedTrailId:Int64
-    @EnvironmentObject var settings: AppSettings
-    
-    // var mapCenter = CLLocationCoordinate2D(latitude: 37.7666, longitude: -122.427290)
-    var mapCenter: CLLocationCoordinate2D?
-    var mapBounds: MGLCoordinateBounds?
-    var zoomAnimation: Bool = false
+    @Binding var mapInteractions: MapInteractions
+    //@EnvironmentObject var settings: AppSettings
     var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
-
     var styles: [URL] = [MGLStyle.outdoorsStyleURL, MGLStyle.satelliteStreetsStyleURL, MGLStyle.streetsStyleURL, AccuTerraStyle.vectorStyleURL]
     var styleId = 0
-    // var mapTappingActive = false
- 
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
+    var mapVm = MapViewModel()
     
     // MARK: - Configuring UIViewRepresentable protocol
     
     func makeUIView(context: UIViewRepresentableContext<MapView>) -> AccuTerraMapView {
-        print("makeUIView .... called")
         // Initialize map
         self.mapView.initialize(styleURL: styles[styleId])
         self.mapView.setUserTrackingMode(.follow, animated: true, completionHandler: {
@@ -54,11 +45,11 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
-        if let bounds = mapBounds {
+        if let bounds = mapInteractions.mapBounds {
             uiView.zoomToExtent(bounds: bounds, animated: true)
         }
-        else if let location = mapCenter {
-            if zoomAnimation {
+        else if let location = mapInteractions.mapCenter {
+            if mapInteractions.zoomAnimation {
                 let camera = MGLMapCamera(lookingAtCenter: location, altitude: 4500, pitch: 0, heading: 0)
 
                 // Animate the camera movement over 5 seconds.

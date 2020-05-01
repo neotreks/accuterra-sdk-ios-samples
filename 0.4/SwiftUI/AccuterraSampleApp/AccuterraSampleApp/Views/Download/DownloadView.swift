@@ -11,7 +11,6 @@ import AccuTerraSDK
 
 struct DownloadView: View {
     
-    @ObservedObject var mapInteraction = MapInteraction()
     @ObservedObject var downloadViewModel = DownloadViewModel()
     @ObservedObject var viewRouter: ViewRouter
     

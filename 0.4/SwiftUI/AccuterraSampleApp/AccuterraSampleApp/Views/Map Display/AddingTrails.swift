@@ -14,15 +14,9 @@ import Combine
 struct AddingTrails: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var settings: AppSettings
-    @ObservedObject var mapInteraction = MapInteraction()
     @ObservedObject var vm = TrailsViewModel()
+    @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: false, allowPOITaps: false)
-
-    @State var annotations: [MGLPointAnnotation] = [
-        MGLPointAnnotation(title: "Mapbox", coordinate: .init(latitude: 37.791434, longitude: -122.396267))
-    ]
-    @State var selectedTrailId:Int64 = 0
     
     init() {
         vm.doTrailsSearch()
@@ -30,7 +24,7 @@ struct AddingTrails: View {
 
     var body: some View {
         VStack() {
-            MapView(annotations: $annotations, selectedTrailId: $selectedTrailId, mapCenter: self.mapInteraction.mapCenter, mapBounds: self.mapInteraction.mapBounds, zoomAnimation: self.mapInteraction.zoomAnimation, features: featureToggles)
+            MapView(mapInteractions:$mapInteractions, features: featureToggles)
             Spacer()
             HStack(spacing: 10) {
                 Text("Number of trails: \(vm.trailCount)")
