@@ -14,22 +14,20 @@ struct TrailCard: View {
     
     var body: some View {
         HStack {
-            Rectangle()
-            .fill(Color.green)
-            .frame(width: 10, height: nil)
+            DifficultyView(difficultyLow: trailItem.difficultyLow, difficultyHigh: trailItem.difficultyHigh)
             VStack(alignment: .leading) {
-                                        Text(trailItem.title)
-                                            .font(.title)
-                                            .bold()
-                                        HStack {
-                                            UserRatingsView(rating: trailItem.rating)
-                                        }
-                                        Text(String(format: "%.2f mi", trailItem.distance ?? 0.0))
-                                            .font(.caption)
-                                            .frame(width: nil, height: 20, alignment: .leading)
-                                        Text(trailItem.description)
-                                            .font(.body)
-                                            .frame(width: nil, height: 75, alignment: .leading)
+                Text(trailItem.title)
+                    .font(.title)
+                    .bold()
+                HStack {
+                    UserRatingsView(rating: trailItem.rating)
+                }
+                Text(String(format: "%.2f mi", trailItem.distance ?? 0.0))
+                    .font(.caption)
+                    .frame(width: nil, height: 20, alignment: .leading)
+                Text(trailItem.description)
+                    .font(.body)
+                    .frame(width: nil, height: 75, alignment: .leading)
             }
         }
     }

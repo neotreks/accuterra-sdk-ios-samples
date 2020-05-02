@@ -39,15 +39,17 @@ struct TrailItem: Identifiable, Hashable {
     let description: String
     let distance:Double?
     let rating:UserRating?
-    let difficulty:TechnicalRating?
+    let difficultyLow:TechnicalRating?
+    let difficultyHigh:TechnicalRating?
 
-    init(title: String, description: String, distance:Double?, rating:UserRating?, difficulty:TechnicalRating?) {
+    init(title: String, description: String, distance:Double?, rating:UserRating?, difficultyLow:TechnicalRating?, difficultyHigh:TechnicalRating?) {
         self.id = UUID()
         self.title = title
         self.description = description
         self.distance = distance
         self.rating = rating
-        self.difficulty = difficulty
+        self.difficultyLow = difficultyLow
+        self.difficultyHigh = difficultyHigh
     }
     
     static func == (lhs: TrailItem, rhs: TrailItem) -> Bool {

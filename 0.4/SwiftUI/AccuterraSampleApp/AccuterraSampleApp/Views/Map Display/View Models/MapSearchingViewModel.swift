@@ -50,7 +50,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             if let service = trailService, let criteria = searchCriteria {
                 let basicInfoList = try service.findTrails(byBasicCriteria: criteria)
                 for item in basicInfoList {
-                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.distance, rating:item.userRating, difficulty:item.techRatingLow))
+                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.distance, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }
                 self.isSearching = true
             }

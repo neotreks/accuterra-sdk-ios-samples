@@ -44,9 +44,6 @@ struct MapSearchingView: View {
                         ForEach(vm.trails, id: \.self) { item in
                             Button(action: {
                                 print(item.title)
-                                print("test")
-                                // self.vm.selectedMapItem = item
-
                             }, label: {
                                 TrailCard(trailItem: item)
 //                                VStack(alignment: .leading, spacing: 4) {
@@ -56,7 +53,6 @@ struct MapSearchingView: View {
 //                                    .lineLimit(2)
 //                                }
                             }).foregroundColor(.black)
-
                             .padding()
                                 .frame(width: 275, height: 175)
                                 .background(Color.white)
