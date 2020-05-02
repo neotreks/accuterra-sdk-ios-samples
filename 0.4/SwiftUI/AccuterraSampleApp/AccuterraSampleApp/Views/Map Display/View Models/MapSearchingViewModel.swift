@@ -26,7 +26,6 @@ class MapSearchingViewModel: NSObject, ObservableObject {
     
     override init() {
         super.init()
-        print("Initializing view model")
 
         cancellable = $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .sink { [weak self] (searchTerm) in
@@ -50,13 +49,13 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             if let service = trailService, let criteria = searchCriteria {
                 let basicInfoList = try service.findTrails(byBasicCriteria: criteria)
                 for item in basicInfoList {
-                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.distance, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
+                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }
                 self.isSearching = true
             }
         }
         catch {
-            debugPrint("\(error)")
+            print("\(error)")
         }
     }
     

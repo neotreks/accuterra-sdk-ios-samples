@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TrailCard: View {
     
+    @ObservedObject var vm = TrailsViewModel()
     let trailItem: TrailItem
     
     var body: some View {
@@ -22,12 +23,13 @@ struct TrailCard: View {
                 HStack {
                     UserRatingsView(rating: trailItem.rating)
                 }
-                Text(String(format: "%.2f mi", trailItem.distance ?? 0.0))
+                Text(vm.getFormattedTrailDistance(distance: trailItem.distance))
                     .font(.caption)
                     .frame(width: nil, height: 20, alignment: .leading)
                 Text(trailItem.description)
                     .font(.body)
                     .frame(width: nil, height: 75, alignment: .leading)
+                    .lineLimit(3)
             }
         }
     }

@@ -91,6 +91,16 @@ class TrailsViewModel: ObservableObject {
             debugPrint("\(error)")
         }
     }
+    
+    func getFormattedTrailDistance(distance:Double?) -> String {
+        // Convert from kilometers to miles
+        if let trailDistance = distance {
+             return GeoUtils.distanceKilometersToMiles(kilometers: trailDistance)
+         }
+         else {
+             return "-- mi"
+         }
+    }
 }
 
 

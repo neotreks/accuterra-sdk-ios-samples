@@ -24,12 +24,6 @@ struct SearchMapToList: View {
 
     init() {
         vm.getTrailsByBounds()
-        // vm.doTrailsSearch()
-//        if let newBounds = mapInteractions.mapBounds {
-//            //bounds = newBounds
-//            print("search map to list new bounds ...")
-//             // bounds changed by moving map
-//        }
     }
     
     var body: some View {

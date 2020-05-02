@@ -21,7 +21,6 @@ struct MapSearchingView: View {
     var body: some View {
         ZStack(alignment: .top) {
             MapView(mapInteractions:$mapInteractions, features: featureToggles, mapAlerts:$alertMessages)
-            // MapViewContainer()
             .edgesIgnoringSafeArea(.all)
             VStack(spacing: 12) {
                 HStack {
@@ -46,15 +45,9 @@ struct MapSearchingView: View {
                                 print(item.title)
                             }, label: {
                                 TrailCard(trailItem: item)
-//                                VStack(alignment: .leading, spacing: 4) {
-//                                    Text(item.title)
-//                                        .font(.headline)
-//                                    Text(item.description)
-//                                    .lineLimit(2)
-//                                }
                             }).foregroundColor(.black)
                             .padding()
-                                .frame(width: 275, height: 175)
+                                .frame(width: 275, height: 200)
                                 .background(Color.white)
                             .cornerRadius(5)
                         }
