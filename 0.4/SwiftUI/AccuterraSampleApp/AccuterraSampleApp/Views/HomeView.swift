@@ -54,6 +54,7 @@ struct HomeView: View {
         ListItems(section:"Searching", navLinkItems:
                             [NavLinkView(title: "List to Map", destination: AnyView(SearchListToMap())),
                             NavLinkView(title: "Map to List", destination: AnyView(SearchMapToList())),
+                            NavLinkView(title: "Search Map", destination: AnyView(MapSearchingView())),
                             NavLinkView(title: "Search Term to Map", destination: AnyView(SearchTermToMap())),
                             NavLinkView(title: "Search Term to List", destination: AnyView(SearchTermToList())),
                             ]),

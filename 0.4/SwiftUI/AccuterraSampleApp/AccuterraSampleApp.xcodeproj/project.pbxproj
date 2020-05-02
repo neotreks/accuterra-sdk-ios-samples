@@ -57,6 +57,14 @@
 		D386CAB7245BDF0A00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB5245BDF0A00D1A198 /* TrailListView.swift */; };
 		D386CAB9245CA67500D1A198 /* TrailListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB8245CA67500D1A198 /* TrailListRow.swift */; };
 		D386CABA245CA67500D1A198 /* TrailListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAB8245CA67500D1A198 /* TrailListRow.swift */; };
+		D386CABC245D177200D1A198 /* MapSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CABB245D177200D1A198 /* MapSearchingView.swift */; };
+		D386CABD245D177300D1A198 /* MapSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CABB245D177200D1A198 /* MapSearchingView.swift */; };
+		D386CABF245DDBC300D1A198 /* TrailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CABE245DDBC300D1A198 /* TrailCard.swift */; };
+		D386CAC0245DDBC300D1A198 /* TrailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CABE245DDBC300D1A198 /* TrailCard.swift */; };
+		D386CAC2245DE20700D1A198 /* UserRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAC1245DE20700D1A198 /* UserRatingsView.swift */; };
+		D386CAC3245DE20700D1A198 /* UserRatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAC1245DE20700D1A198 /* UserRatingsView.swift */; };
+		D386CAC8245E088200D1A198 /* UserRatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAC7245E088200D1A198 /* UserRatingsViewModel.swift */; };
+		D386CAC9245E088200D1A198 /* UserRatingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CAC7245E088200D1A198 /* UserRatingsViewModel.swift */; };
 		D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2210244A741900B0E74E /* AddingTrails.swift */; };
 		D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F6244A721700B0E74E /* SearchTermToMap.swift */; };
@@ -158,6 +166,10 @@
 		D386CAB2245B9CA100D1A198 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D386CAB5245BDF0A00D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = "<group>"; };
 		D386CAB8245CA67500D1A198 /* TrailListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrailListRow.swift; path = AccuterraSampleApp/Views/Searching/TrailListRow.swift; sourceTree = SOURCE_ROOT; };
+		D386CABB245D177200D1A198 /* MapSearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapSearchingView.swift; path = AccuterraSampleApp/Views/MapSearchingView.swift; sourceTree = SOURCE_ROOT; };
+		D386CABE245DDBC300D1A198 /* TrailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailCard.swift; sourceTree = "<group>"; };
+		D386CAC1245DE20700D1A198 /* UserRatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserRatingsView.swift; path = AccuterraSampleApp/Utils/UserRatingsView.swift; sourceTree = SOURCE_ROOT; };
+		D386CAC7245E088200D1A198 /* UserRatingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRatingsViewModel.swift; sourceTree = "<group>"; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E82244F75B000A39B51 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -306,9 +318,10 @@
 		D31C21E9244A719100B0E74E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D386CA9624588BBE00D1A198 /* AppSettings.swift */,
 				D31C2206244A72B200B0E74E /* HomeView.swift */,
 				D3B07E98244FAA1E00A39B51 /* ControllerView.swift */,
-				D386CA9624588BBE00D1A198 /* AppSettings.swift */,
+				D386CAC1245DE20700D1A198 /* UserRatingsView.swift */,
 				D31C220D244A740000B0E74E /* Map Display */,
 				D31C21EA244A71BB00B0E74E /* Controls */,
 				D31C21F4244A71FC00B0E74E /* Searching */,
@@ -323,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				D31C2216244A781500B0E74E /* ControllingTheMap.swift */,
-				D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -333,6 +345,8 @@
 			children = (
 				D31C21F8244A721800B0E74E /* SearchListToMap.swift */,
 				D31C21F7244A721800B0E74E /* SearchMapToList.swift */,
+				D386CABB245D177200D1A198 /* MapSearchingView.swift */,
+				D386CABE245DDBC300D1A198 /* TrailCard.swift */,
 				D31C21F5244A721700B0E74E /* SearchTermToList.swift */,
 				D31C21F6244A721700B0E74E /* SearchTermToMap.swift */,
 			);
@@ -365,6 +379,7 @@
 				D386CA992458C89700D1A198 /* MapCoordinator.swift */,
 				D31C220E244A741900B0E74E /* CreateMap.swift */,
 				D31C2210244A741900B0E74E /* AddingTrails.swift */,
+				D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */,
 				D31C2211244A741A00B0E74E /* TrailDetails.swift */,
 				D31C220F244A741900B0E74E /* AddingPOIs.swift */,
 				D386CA9F2459F59E00D1A198 /* TrailDetailsInfo.swift */,
@@ -383,6 +398,7 @@
 				D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */,
 				D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */,
 				D386CAB2245B9CA100D1A198 /* MapViewModel.swift */,
+				D386CAC7245E088200D1A198 /* UserRatingsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -767,6 +783,7 @@
 				D386CAB0245B9BFC00D1A198 /* MapEnvironment.swift in Sources */,
 				D31C2214244A741A00B0E74E /* AddingTrails.swift in Sources */,
 				D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */,
+				D386CABF245DDBC300D1A198 /* TrailCard.swift in Sources */,
 				D3B07E96244F9EF800A39B51 /* ViewRouter.swift in Sources */,
 				D3B07E99244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D386CA562457D11B00D1A198 /* MapEventRouter.swift in Sources */,
@@ -777,6 +794,7 @@
 				D31C2212244A741A00B0E74E /* CreateMap.swift in Sources */,
 				D386CAB9245CA67500D1A198 /* TrailListRow.swift in Sources */,
 				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
+				D386CAC2245DE20700D1A198 /* UserRatingsView.swift in Sources */,
 				D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
@@ -784,10 +802,12 @@
 				D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */,
 				D386CA9D2459D83D00D1A198 /* DetailView.swift in Sources */,
 				D31C21AE244A6F1400B0E74E /* AppDelegate.swift in Sources */,
+				D386CABC245D177200D1A198 /* MapSearchingView.swift in Sources */,
 				D31C21B0244A6F1400B0E74E /* SceneDelegate.swift in Sources */,
 				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
 				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
 				D386CA9A2458C89700D1A198 /* MapCoordinator.swift in Sources */,
+				D386CAC8245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
 				D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */,
 				D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */,
 				D31C2203244A725300B0E74E /* FilteringCritieria.swift in Sources */,
@@ -825,6 +845,7 @@
 				D386CA9824588BBE00D1A198 /* AppSettings.swift in Sources */,
 				D386CABA245CA67500D1A198 /* TrailListRow.swift in Sources */,
 				D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */,
+				D386CABD245D177300D1A198 /* MapSearchingView.swift in Sources */,
 				D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */,
 				D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */,
 				D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */,
@@ -834,10 +855,12 @@
 				D3B07E64244E65C000A39B51 /* CreateMap.swift in Sources */,
 				D3B07E65244E65C000A39B51 /* SearchListToMap.swift in Sources */,
 				D386CA572457D11B00D1A198 /* MapEventRouter.swift in Sources */,
+				D386CAC3245DE20700D1A198 /* UserRatingsView.swift in Sources */,
 				D386CAB4245B9CA100D1A198 /* MapViewModel.swift in Sources */,
 				D3B07E66244E65C000A39B51 /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
+				D386CAC9245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
 				D386CA9B2458C89700D1A198 /* MapCoordinator.swift in Sources */,
 				D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */,
 				D3B07E67244E65C000A39B51 /* ControllingTheMap.swift in Sources */,
@@ -847,6 +870,7 @@
 				D3B07E6C244E65C000A39B51 /* FilteringMapBounds.swift in Sources */,
 				D3B07E6D244E65C000A39B51 /* FilteringCritieria.swift in Sources */,
 				D386CA9E2459D83D00D1A198 /* DetailView.swift in Sources */,
+				D386CAC0245DDBC300D1A198 /* TrailCard.swift in Sources */,
 				D3B07E6E244E65C000A39B51 /* MapView.swift in Sources */,
 				D3B07E6F244E65C000A39B51 /* SearchMapToList.swift in Sources */,
 				D386CAB1245B9BFC00D1A198 /* MapEnvironment.swift in Sources */,

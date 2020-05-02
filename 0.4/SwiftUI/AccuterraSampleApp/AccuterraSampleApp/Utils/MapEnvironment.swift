@@ -32,6 +32,33 @@ struct MapAlertMessages {
     var message:String = ""
 }
 
+struct TrailItem: Identifiable, Hashable {
+
+    let id: UUID
+    let title: String
+    let description: String
+    let distance:Double?
+    let rating:UserRating?
+    let difficulty:TechnicalRating?
+
+    init(title: String, description: String, distance:Double?, rating:UserRating?, difficulty:TechnicalRating?) {
+        self.id = UUID()
+        self.title = title
+        self.description = description
+        self.distance = distance
+        self.rating = rating
+        self.difficulty = difficulty
+    }
+    
+    static func == (lhs: TrailItem, rhs: TrailItem) -> Bool {
+      return lhs.title == rhs.title
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+    }
+}
+
 struct TrailsFilter {
     var trailNameFilter: String?
     var boundingBoxFilter: MapBounds?
@@ -39,4 +66,18 @@ struct TrailsFilter {
     var minUserRating: Int?
     var maxTripDistance: Int?
     var mapCenter: MapLocation?
+}
+
+enum UserRatingStarFill: Int {
+    case full = 0
+    case partial
+    case none
+}
+
+struct UserRatingStars {
+    var starOne:UserRatingStarFill
+    var starTwo:UserRatingStarFill
+    var starThree:UserRatingStarFill
+    var starFour:UserRatingStarFill
+    var starFive:UserRatingStarFill
 }
