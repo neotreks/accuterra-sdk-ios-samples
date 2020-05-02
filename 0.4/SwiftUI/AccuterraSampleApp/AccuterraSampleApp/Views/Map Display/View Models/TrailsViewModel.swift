@@ -17,6 +17,14 @@ class TrailsViewModel: ObservableObject {
     var trailService: ITrailService?
     @Published var trails: Array<TrailBasicInfo>?
     @Published var trailCount: Int = 0
+    fileprivate var region: MapBounds?
+    
+    init() {
+        NotificationCenter.default.addObserver(forName: MapView.Coordinator.regionChangedNotification, object: nil, queue: .main) { [weak self] (notification) in
+            self?.region = notification.object as? MapBounds
+            self?.getTrailsByBounds()
+        }
+    }
     
     func getTrailById(trailId:Int64) -> Trail? {
         do {
@@ -32,6 +40,35 @@ class TrailsViewModel: ObservableObject {
             print("\(error)")
         }
         return nil
+    }
+    
+    func getTrailsByBounds() {
+        
+        guard SdkManager.shared.isTrailDbInitialized else {
+            return
+        }
+
+        do {
+            if self.trailService == nil {
+                trailService = ServiceFactory.getTrailService()
+            }
+
+            if let bounds = region {
+                let searchCriteria = TrailMapBoundsSearchCriteria(
+                    mapBounds: bounds,
+                    nameSearchString: nil,
+                    techRating: nil,
+                    userRating: nil,
+                    length: nil,
+                    orderBy: OrderBy(),
+                    limit: Int(INT32_MAX))
+                self.trails = try trailService!.findTrails(byMapBoundsCriteria: searchCriteria)
+            }
+        }
+        catch {
+            print("\(error)")
+        }
+
     }
     
     func doTrailsSearch() {

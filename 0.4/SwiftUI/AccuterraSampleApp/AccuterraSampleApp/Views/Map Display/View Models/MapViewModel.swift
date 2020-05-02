@@ -16,17 +16,18 @@ class MapViewModel {
     
     func setTrailBounds(trailId:Int64, trail: Trail) -> MapInteractions {
         if let locationInfo = trail.locationInfo {
-            let extent = MGLCoordinateBounds(sw: locationInfo.mapBounds.sw.coordinates, ne: locationInfo.mapBounds.ne.coordinates)
-            return MapInteractions(mapCenter: nil, mapBounds: extent, edgeInsets:UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), zoomAnimation: false, selectedTrailId: trailId)
+            let bounds = try? MapBounds(minLat: locationInfo.mapBounds.minLat, minLon: locationInfo.mapBounds.minLon, maxLat: locationInfo.mapBounds.maxLat, maxLon: locationInfo.mapBounds.maxLon)
+            return MapInteractions(mapCenter: nil, mapBounds: bounds, edgeInsets:UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), zoomAnimation: false, selectedTrailId: trailId)
         }
         return MapInteractions()
     }
     
     func setColoradoBounds() -> MapInteractions {
-        let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
-        let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
-        let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
-        return MapInteractions(mapCenter: nil, mapBounds: colorado, zoomAnimation: false)
+        let boundsColorado = try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
+//        let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
+//        let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
+//        let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        return MapInteractions(mapCenter: nil, mapBounds: boundsColorado, zoomAnimation: false)
     }
     
     func setCastleRockLocation() -> MapInteractions {

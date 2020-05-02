@@ -9,13 +9,17 @@ import SwiftUI
 import AccuTerraSDK
 import Mapbox
 
-class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDelegate, MGLMapViewDelegate {
+class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDelegate {
             
+    static let regionChangedNotification = NSNotification.Name("regionChangedNotification")
+    
     var controlView: MapView
     var mapWasLoaded : Bool = false
     var isTrailsLayerManagersLoaded = false
     var trailsService: ITrailService?
     var trails: Array<TrailBasicInfo>?
+//    var trailsFilter = TrailsFilter()
+    var previousBoundingBox: MapBounds?
     
     init(_ mapView: MapView) {
         self.controlView = mapView
@@ -143,7 +147,8 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     private func zoomToDefaultExtent() {
         let mapInteractions = controlView.mapVm.setColoradoBounds()
         if let bounds = mapInteractions.mapBounds {
-            controlView.mapView.zoomToExtent(bounds:bounds, animated: true)
+            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
+            controlView.mapView.zoomToExtent(bounds:extent, animated: true)
         }
     }
     
@@ -154,6 +159,46 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         let trailLayersManager = controlView.mapView.trailLayersManager
         trailLayersManager.addStandardLayers()
         
+    }
+
+    
+}
+
+extension MapCoordinator : MGLMapViewDelegate {
+    
+    func mapView(_ mapView: MGLMapView, didChange mode: MGLUserTrackingMode, animated: Bool) {}
+    
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        // Always allow callouts to popup when annotations are tapped.
+        return true
+    }
+    
+    func getMapBounds() throws -> MapBounds {
+        let visibleRegion = controlView.mapView.visibleCoordinateBounds
+        
+        return try MapBounds(
+            minLat: max(visibleRegion.sw.latitude, -90),
+            minLon: max(visibleRegion.sw.longitude, -180),
+            maxLat: min(visibleRegion.ne.latitude, 90),
+            maxLon: min(visibleRegion.ne.longitude, 180))
+    }
+    
+    func mapViewDidBecomeIdle(_ mapView: MGLMapView) {
+        if let newBoundingBox = try? getMapBounds() {
+            if let boundingBox = self.previousBoundingBox {
+                if boundingBox.equals(bounds: newBoundingBox) {
+                    return
+                }
+            }
+            self.previousBoundingBox = newBoundingBox
+            NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
+        }
+    }
+    
+    func mapViewDidFailLoadingMap(_ mapView: MGLMapView, withError error: Error) {
+        controlView.mapAlerts.displayAlert = true
+        controlView.mapAlerts.title = "Map Loading Error"
+        controlView.mapAlerts.message = "\(error)"
     }
     
     func mapViewRegionIsChanging(_ mapView: MGLMapView) {

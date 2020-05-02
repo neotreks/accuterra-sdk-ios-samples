@@ -10,14 +10,6 @@ import SwiftUI
 import AccuTerraSDK
 import Mapbox
 
-extension MGLPointAnnotation {
-    convenience init(title: String, coordinate: CLLocationCoordinate2D) {
-        self.init()
-        self.title = title
-        self.coordinate = coordinate
-    }
-}
-
 struct MapView: UIViewRepresentable {
     
     @Binding var mapInteractions: MapInteractions
@@ -29,6 +21,7 @@ struct MapView: UIViewRepresentable {
     var styleId = 0
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
     var mapVm = MapViewModel()
+    
     
     // MARK: - Configuring UIViewRepresentable protocol
     
@@ -48,7 +41,8 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
         if let bounds = mapInteractions.mapBounds {
-            uiView.zoomToExtent(bounds: bounds, edgePadding:mapInteractions.edgeInsets, animated: true)
+            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
+            uiView.zoomToExtent(bounds:extent, edgePadding:mapInteractions.edgeInsets, animated: true)
         }
         else if let location = mapInteractions.mapCenter {
             if mapInteractions.zoomAnimation {

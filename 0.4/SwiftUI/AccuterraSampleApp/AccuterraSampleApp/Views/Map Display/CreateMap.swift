@@ -28,6 +28,9 @@ struct CreateMap: View {
                 Image(systemName: "arrow.left")
             })
         .edgesIgnoringSafeArea([.bottom])
+        .alert(isPresented:$alertMessages.displayAlert) {
+            Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
+        }
     }
     
 }

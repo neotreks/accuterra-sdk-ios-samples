@@ -34,6 +34,9 @@ struct TrailDetails: View {
                     Text("Trail Details")
                 }
                 .disabled(mapInteractions.selectedTrailId == 0)
+                .alert(isPresented:$alertMessages.displayAlert) {
+                    Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
+                }
             }
             .padding()
         }
