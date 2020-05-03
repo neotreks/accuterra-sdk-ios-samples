@@ -24,9 +24,6 @@ class MapViewModel {
     
     func setColoradoBounds() -> MapInteractions {
         let boundsColorado = try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
-//        let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
-//        let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
-//        let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
         return MapInteractions(mapCenter: nil, mapBounds: boundsColorado, zoomAnimation: false)
     }
     

@@ -31,6 +31,13 @@ struct MapSearchingView: View {
                     .padding(.vertical, 12)
                     .background(Color.white)
                 }.padding()
+                
+                Text("count trails: \(vm.trails.count)")
+                Text("count map items: \(vm.mapItems.count)")
+                
+                ForEach(vm.mapItems, id: \.self) { mapItem in
+                    Text(mapItem.name ?? "")
+                }
 
                 if vm.isSearching {
                     Text("Searching...")

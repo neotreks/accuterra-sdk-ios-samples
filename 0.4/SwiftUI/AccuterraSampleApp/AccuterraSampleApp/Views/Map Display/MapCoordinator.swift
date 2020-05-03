@@ -88,7 +88,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
             }
         }
         catch {
-            debugPrint("\(error)")
+            print("\(error)")
         }
     }
     
@@ -125,7 +125,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
                 }
             }
             catch {
-                debugPrint("\(error)")
+                print("\(error)")
             }
         } else {
             mapView.trailLayersManager.hideAllTrailPOIs()

@@ -20,12 +20,19 @@ class MapSearchingViewModel: NSObject, ObservableObject {
     @Published var trails = [TrailItem]()
     @Published var selectedMapItem: MKMapItem?
     @Published var keyboardHeight: CGFloat = 0
+    @Published var mapItems = [MKMapItem]()
     var trailService: ITrailService?
     var cancellable: AnyCancellable?
-    @Published var mapItems = [MKMapItem]()
+    fileprivate var region: MapBounds?
     
     override init() {
         super.init()
+        
+        self.region = try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
+        
+        NotificationCenter.default.addObserver(forName: MapView.Coordinator.regionChangedNotification, object: nil, queue: .main) { [weak self] (notification) in
+            self?.region = notification.object as? MapBounds
+        }
 
         cancellable = $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .sink { [weak self] (searchTerm) in
@@ -37,28 +44,64 @@ class MapSearchingViewModel: NSObject, ObservableObject {
     
     fileprivate func performSearch(query: String) {
         do {
-            isSearching = false
+            isSearching = true
             
             if self.trailService == nil {
                 trailService = ServiceFactory.getTrailService()
             }
+            
+//            let request = MKLocalSearch.Request()
+//            request.naturalLanguageQuery = query
+//
+//            let localSearch = MKLocalSearch(request: request)
+//            localSearch.start { (resp, err) in
+//                self.mapItems = resp?.mapItems ?? []
+//                self.trails = [TrailItem]()
+//                for item in self.mapItems {
+//                    self.trails.append(TrailItem(title: item.name ?? "elliott", description: "brian", distance: nil, rating:nil, difficultyLow:nil, difficultyHigh: nil))
+//                }
+//                self.isSearching = false
+//
+//            }
 
-            let searchCriteria = try? TrailBasicSearchCriteria(
-                searchString: nil,
-                limit: Int(INT32_MAX))
-            if let service = trailService, let criteria = searchCriteria {
-                let basicInfoList = try service.findTrails(byBasicCriteria: criteria)
+            if let bounds = region {
+                print("perform search ... top query: \(query) | isSearching: \(self.isSearching)")
+                let searchCriteria = TrailMapBoundsSearchCriteria(
+                    mapBounds: bounds,
+                    nameSearchString: query,
+                    techRating: nil,
+                    userRating: nil,
+                    length: nil,
+                    orderBy: OrderBy(),
+                    limit: Int(INT32_MAX))
+                let basicInfoList = try trailService!.findTrails(byMapBoundsCriteria: searchCriteria)
+                print("perform search . \(basicInfoList.count)")
+                self.trails = [TrailItem]()
                 for item in basicInfoList {
+                    print("perform search name: \(item.name)")
                     self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }
-                self.isSearching = true
+                self.isSearching = false
             }
+
+
+//            let searchCriteria = try? TrailBasicSearchCriteria(
+//                searchString: query,
+//                limit: Int(INT32_MAX))
+//            if let service = trailService, let criteria = searchCriteria {
+//                let basicInfoList = try service.findTrails(byBasicCriteria: criteria)
+//                 self.trails = [TrailItem]()
+//                for item in basicInfoList {
+//                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
+//                }
+//                self.isSearching = true
+//            }
         }
         catch {
             print("\(error)")
         }
     }
-    
+        
     fileprivate func listenForKeyboardNotifications() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { [weak self] (notification) in
             guard let value = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }

@@ -29,7 +29,6 @@ struct SearchMapToList: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                self.Print("view map bounds: \(String(describing: self.mapInteractions.mapBounds))")
                 MapView(mapInteractions:self.$mapInteractions, features: self.featureToggles, mapAlerts:self.$alertMessages)
                     .frame(width: geometry.size.width, height: geometry.size.height / 2)
                     .background(Color.orange)
