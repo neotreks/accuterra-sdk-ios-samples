@@ -68,7 +68,9 @@ extension MapView {
                 return
             }
             
-            controlView.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
+            if !searchPois(coordinate: coordinate) {
+                controlView.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
+            }
         }
         
         func searchTrails(mapView:AccuTerraMapView, coordinate:CLLocationCoordinate2D) -> Int64 {
@@ -104,6 +106,38 @@ extension MapView {
                 }
             } else {
                 mapView.trailLayersManager.hideAllTrailPOIs()
+            }
+        }
+        
+        func searchPois(coordinate: CLLocationCoordinate2D) -> Bool {
+            let query = TrailPoisQuery(
+                trailLayersManager: controlView.mapView.trailLayersManager,
+                layers: Set(TrailPoiLayerType.allValues),
+                coordinate: coordinate,
+                distanceTolerance: 2.0)
+                
+            if let trailPoi = query.execute().trailPois.first, let poiId = trailPoi.poiIds.first {
+                handleTrailPoiMapClick(trailId: trailPoi.trailId , poiId: poiId)
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        func handleTrailPoiMapClick(trailId: Int64, poiId: Int64) {
+            do {
+                if let trailManager = self.trailService,
+                    let trail = try trailManager.getTrailById(trailId),
+                    let poi = trail.navigationInfo?.mapPoints.first(where: { (point) -> Bool in
+                        return point.id == poiId
+                    }) {
+                    controlView.mapAlerts.displayAlert = true
+                    controlView.mapAlerts.title = poi.name ?? "POI"
+                    controlView.mapAlerts.message = poi.description ?? ""
+                }
+            }
+            catch {
+                print("\(error)")
             }
         }
         
