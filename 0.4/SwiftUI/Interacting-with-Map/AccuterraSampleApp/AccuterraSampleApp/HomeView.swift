@@ -13,7 +13,7 @@ import Mapbox
 struct HomeView: View {
     
     // @ObservedObject var viewRouter: ViewRouter
-    @State var selectedTrailId:Int64
+    @State var selectedTrailId:Int64 = 0
     @State var alertMessages = MapAlertMessages()
 
     var body: some View {
