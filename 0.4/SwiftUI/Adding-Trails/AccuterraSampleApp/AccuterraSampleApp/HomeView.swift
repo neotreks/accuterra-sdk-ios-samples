@@ -12,10 +12,11 @@ import Mapbox
 
 struct HomeView: View {
     
-    // @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var vm = TrailsViewModel()
     
     init() {
+        print("HomeView init ...")
         vm.doTrailsSearch()
     }
     
@@ -33,6 +34,12 @@ struct HomeView: View {
                 }
             }
         }
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView().environmentObject(ViewRouter())
     }
 }
 

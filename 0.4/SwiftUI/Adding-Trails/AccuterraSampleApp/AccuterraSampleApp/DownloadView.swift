@@ -12,7 +12,7 @@ import AccuTerraSDK
 struct DownloadView: View {
     
     @ObservedObject var downloadViewModel = DownloadViewModel()
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     private let maxValue: Double = 100
     private let controlForegroundColor:UIColor = .red
@@ -126,3 +126,8 @@ struct ProgressCircle: View {
     }
 }
 
+struct DownloadView_Previews : PreviewProvider {
+    static var previews: some View {
+        DownloadView().environmentObject(ViewRouter())
+    }
+}
