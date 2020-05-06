@@ -9,19 +9,25 @@ import SwiftUI
 
 struct ControllerView : View {
     
-    @ObservedObject var viewRouter: ViewRouter
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
             VStack {
                 if viewRouter.currentPage == "download" {
-                    DownloadView(viewRouter: viewRouter)
+                    DownloadView()
                 } else if viewRouter.currentPage == "home" {
                     NavigationView {
-                        // HomeView(viewRouter: viewRouter)
-                        HomeView(selectedTrailId: 0)
+                        HomeView()
                         .navigationBarTitle(Text("AccuTerra SDK SwiftUI Samples"), displayMode: .inline)
                     }
                 }
             }
     }
 }
+
+struct ControllerView_Previews : PreviewProvider {
+    static var previews: some View {
+        ControllerView().environmentObject(ViewRouter())
+    }
+}
+
