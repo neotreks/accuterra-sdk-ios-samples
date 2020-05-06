@@ -12,8 +12,8 @@ import Mapbox
 
 struct HomeView: View {
     
-    // @ObservedObject var viewRouter: ViewRouter
-    @State var selectedTrailId:Int64
+    @EnvironmentObject var viewRouter: ViewRouter
+    @State var selectedTrailId:Int64 = 0
 
     
     var body: some View {
