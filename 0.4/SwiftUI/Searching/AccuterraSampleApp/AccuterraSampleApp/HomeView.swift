@@ -13,6 +13,7 @@ import Mapbox
 struct HomeView: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var vm = MapSearchingViewModel()
     @State var selectedTrailId:Int64 = 0
     @State var alertMessages = MapAlertMessages()

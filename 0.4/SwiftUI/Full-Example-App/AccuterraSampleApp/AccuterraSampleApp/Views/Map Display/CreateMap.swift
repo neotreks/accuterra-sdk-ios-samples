@@ -14,7 +14,7 @@ import Combine
 struct CreateMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
     @State var alertMessages = MapAlertMessages()
@@ -24,7 +24,7 @@ struct CreateMap: View {
         .navigationBarTitle(Text("Create a Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.resetEnv()
+                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")

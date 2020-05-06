@@ -14,7 +14,7 @@ struct MapSearchingView: View {
     
     @ObservedObject var vm = MapSearchingViewModel()
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
     @State var alertMessages = MapAlertMessages()
     var mapVm = MapViewModel()
@@ -65,7 +65,7 @@ struct MapSearchingView: View {
                 .navigationBarTitle(Text("Search Map"), displayMode: .inline)
                     .navigationBarBackButtonHidden(true)
                     .navigationBarItems(leading: Button(action : {
-                        self.env.resetEnv()
+                        self.env.mapIntEnv.resetEnv()
                         self.mode.wrappedValue.dismiss()
                     }){
                         Image(systemName: "arrow.left")

@@ -1,5 +1,5 @@
 //
-//  SearchingMapToList.swift
+//  SearchingListToMap.swift
 //  AccuterraSampleApp
 //
 //  Created by Brian Elliott on 4/17/20.
@@ -11,18 +11,17 @@ import AccuTerraSDK
 import Mapbox
 import Combine
 
-struct SearchMapToList: View {
+struct SearchListToMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     @State var alertMessages = MapAlertMessages()
-    @State var filter = TrailsFilter()
     @ObservedObject var vm = TrailsViewModel()
-    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: false, updateSearchByMapBounds:true, filteringOn:true)
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: false)
     var mapVm = MapViewModel()
-
+    
     init() {
-        vm.getTrailsByBounds()
+        vm.doTrailsSearch()
     }
     
     var body: some View {
@@ -35,7 +34,20 @@ struct SearchMapToList: View {
                     if self.vm.trails != nil {
                         ForEach(self.vm.trails!.indices, id: \.self){ idx in
                             HStack {
-                                Text(self.vm.trails![idx].name)
+                                Button(action: {
+                                    let trailId = self.vm.trails![idx].id
+                                    let trail = self.vm.getTrailById(trailId:trailId)
+                                    if let trail = trail {
+                                        let (bounds, insets, selectedTrailId) = self.mapVm.getTrailBounds(trailId:trailId, trail: trail)
+                                        if let mapBounds = bounds {
+                                            self.env.mapIntEnv.mapBounds = mapBounds
+                                            self.env.mapIntEnv.edgeInsets = insets
+                                            self.env.mapIntEnv.selectedTrailId = selectedTrailId
+                                        }
+                                    }
+                                }, label: {
+                                    TrailListRow(trailName: self.vm.trails![idx].name)
+                                })
                             }
                         }
                     }
@@ -46,20 +58,13 @@ struct SearchMapToList: View {
                 .frame(width: geometry.size.width, height: geometry.size.height / 2)
             }
         }
-        .navigationBarTitle(Text("Search Map to List"), displayMode: .inline)
+        .navigationBarTitle(Text("Search List to Map    "), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.resetEnv()
+                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")
             })
-    }
-}
-
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
     }
 }

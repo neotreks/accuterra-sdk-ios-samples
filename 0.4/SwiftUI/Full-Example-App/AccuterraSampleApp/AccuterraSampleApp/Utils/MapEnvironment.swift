@@ -19,13 +19,13 @@ struct FeatureToggles {
     var filteringOn = false
 }
 
-struct MapInteractions {
-    var mapCenter: CLLocationCoordinate2D? = nil
-    var mapBounds: MapBounds? = nil
-    var edgeInsets:UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-    var zoomAnimation: Bool = false
-    var selectedTrailId:Int64 = 0
-}
+//struct MapInteractions {
+//    var mapCenter: CLLocationCoordinate2D? = nil
+//    var mapBounds: MapBounds? = nil
+//    var edgeInsets:UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+//    var zoomAnimation: Bool = false
+//    var selectedTrailId:Int64 = 0
+//}
 
 struct MapAlertMessages {
     var displayAlert: Bool = false
@@ -43,9 +43,8 @@ struct TrailItem: Identifiable, Hashable {
     let rating:UserRating?
     let difficultyLow:TechnicalRating?
     let difficultyHigh:TechnicalRating?
-    let bounds:MapBounds?
 
-    init(trailId: Int64, title: String, description: String, distance:Double?, rating:UserRating?, difficultyLow:TechnicalRating?, difficultyHigh:TechnicalRating?, bounds:MapBounds?) {
+    init(trailId: Int64, title: String, description: String, distance:Double?, rating:UserRating?, difficultyLow:TechnicalRating?, difficultyHigh:TechnicalRating?) {
         self.id = UUID()
         self.trailId = trailId
         self.title = title
@@ -54,7 +53,6 @@ struct TrailItem: Identifiable, Hashable {
         self.rating = rating
         self.difficultyLow = difficultyLow
         self.difficultyHigh = difficultyHigh
-        self.bounds = bounds
     }
     
     static func == (lhs: TrailItem, rhs: TrailItem) -> Bool {

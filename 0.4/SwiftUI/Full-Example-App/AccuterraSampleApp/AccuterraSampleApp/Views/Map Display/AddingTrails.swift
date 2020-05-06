@@ -14,7 +14,7 @@ import Combine
 struct AddingTrails: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     @ObservedObject var vm = TrailsViewModel()
     @State var mapInteractions = MapInteractions()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: false, allowPOITaps: false)
@@ -44,7 +44,7 @@ struct AddingTrails: View {
         .navigationBarTitle(Text("Adding Trails"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.resetEnv()
+                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")

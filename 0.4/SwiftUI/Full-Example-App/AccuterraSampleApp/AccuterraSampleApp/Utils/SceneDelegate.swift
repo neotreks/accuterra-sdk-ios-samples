@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  AccuterraSampleApp
 //
-//  Created by Brian Elliott on 4/17/20.
+//  Created by Brian Elliott on 5/3/20.
 //  Copyright © 2020 NeoTreks, Inc. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var scene: UIWindowScene?
+    var appEnvironment:AppEnvironment = AppEnvironment()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
@@ -28,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
             else {
                 // Download the trails DB
-                window.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: ViewRouter()))
+                window.rootViewController = UIHostingController(rootView: ControllerView().environmentObject(appEnvironment))
             }
 
             self.window = window
@@ -43,7 +44,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         SdkManager.shared.initSdkAsync(config: SdkConfig(clientToken: clientToken, wsUrl: serviceUrl), delegate: self)
     }
-
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -85,13 +85,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             presentVC?.present(alertVC, animated: true, completion: nil)
         }
     }
-    
+
     func gotoHomeView() {
-        let viewRouter = ViewRouter()
-        viewRouter.currentPage = "home"
-        self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter).environmentObject(MapInteractionsEnvironment()))
+        appEnvironment.currentPage = "home"
+        self.window?.rootViewController = UIHostingController(rootView: ControllerView().environmentObject(appEnvironment))
         window?.makeKeyAndVisible()
     }
+
 }
 
 extension SceneDelegate : SdkInitDelegate {
@@ -112,5 +112,6 @@ extension SceneDelegate : SdkInitDelegate {
         }
     }
 }
+
 
 

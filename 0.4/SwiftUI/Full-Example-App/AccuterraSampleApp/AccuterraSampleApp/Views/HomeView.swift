@@ -37,9 +37,6 @@ struct NavLinkView: Identifiable, Hashable {
 
 struct HomeView: View {
     
-    @ObservedObject var viewRouter: ViewRouter
-    @EnvironmentObject var mapIntEnv: MapInteractionsEnvironment
-    
     var itemArray = [
         ListItems(section:"Map Display", navLinkItems:
                             [NavLinkView(title: "Creating a Map", destination: AnyView(CreateMap())),
@@ -73,7 +70,7 @@ struct HomeView: View {
             ForEach(itemArray.indices, id: \.self){ idx in
                 Section(header: Text(self.itemArray[idx].section)) {
                     ForEach(self.itemArray[idx].navLinkItems, id: \.self) { item in
-                        NavigationLink(destination: item.destination.environmentObject(self.mapIntEnv)) {
+                        NavigationLink(destination: item.destination) {
                             Text(item.title)
                         }
                      }
@@ -86,6 +83,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewRouter: ViewRouter())
+        HomeView()
     }
 }

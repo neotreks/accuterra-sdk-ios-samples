@@ -14,7 +14,7 @@ import Combine
 struct TrailListView: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     var trails: Array<TrailBasicInfo>
 
     var body: some View {
@@ -26,7 +26,7 @@ struct TrailListView: View {
         .navigationBarTitle(Text("Trail List"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.resetEnv()
+                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")

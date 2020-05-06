@@ -57,7 +57,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         }
         
         if !searchPois(coordinate: coordinate) {
-            controlView.env.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
+            controlView.env.mapIntEnv.selectedTrailId = searchTrails(mapView: controlView.mapView, coordinate: coordinate)
         }
     }
     
@@ -143,7 +143,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         
         NotificationCenter.default.addObserver(forName: MapView.Coordinator.showTrailsOnMapNotification, object: nil, queue: .main) { [weak self] (notification) in
             if let (bounds, trailIs) = notification.object as? (MapBounds, Set<Int64>) {
-                self?.controlView.env.mapBounds = bounds
+                self?.controlView.env.mapIntEnv.mapBounds = bounds
                 // self.mapView.zoomToExtent(bounds: bounds, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), animated: true)
                 
                 if self?.trailsService == nil {
@@ -161,7 +161,7 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     
     private func zoomToDefaultExtent() {
         // let mapInteractions = controlView.mapVm.getColoradoBounds()
-        controlView.env.mapBounds = controlView.mapVm.getColoradoBounds()
+        controlView.env.mapIntEnv.mapBounds = controlView.mapVm.getColoradoBounds()
 //        if let bounds = mapInteractions.mapBounds {
 //            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
 //            controlView.mapView.zoomToExtent(bounds:extent, animated: true)

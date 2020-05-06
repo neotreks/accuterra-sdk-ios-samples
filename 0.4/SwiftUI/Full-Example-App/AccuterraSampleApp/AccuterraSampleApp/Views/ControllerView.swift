@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ControllerView : View {
     
-    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var appEnv: AppEnvironment
     
     var body: some View {
             VStack {
-                if viewRouter.currentPage == "download" {
+                if appEnv.currentPage == "download" {
                     DownloadView()
-                } else if viewRouter.currentPage == "home" {
+                } else if appEnv.currentPage == "home" {
                     NavigationView {
                         HomeView()
                         .navigationBarTitle(Text("AccuTerra SDK SwiftUI Samples"), displayMode: .inline)

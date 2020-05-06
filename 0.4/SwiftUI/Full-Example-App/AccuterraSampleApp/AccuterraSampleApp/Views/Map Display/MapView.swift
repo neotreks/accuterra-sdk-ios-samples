@@ -12,7 +12,7 @@ import Mapbox
 
 struct MapView: UIViewRepresentable {
     
-    @EnvironmentObject var env: MapInteractionsEnvironment
+    @EnvironmentObject var env: AppEnvironment
     var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
     @Binding var mapAlerts:MapAlertMessages
     
@@ -38,13 +38,13 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
-        print("updateUIView .... bounds: \(String(describing: env.mapBounds))")
-        if let bounds = env.mapBounds {
+        print("updateUIView .... bounds: \(String(describing: env.mapIntEnv.mapBounds))")
+        if let bounds = env.mapIntEnv.mapBounds {
             let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-            uiView.zoomToExtent(bounds:extent, edgePadding:env.edgeInsets, animated: true)
+            uiView.zoomToExtent(bounds:extent, edgePadding:env.mapIntEnv.edgeInsets, animated: true)
         }
-        else if let location = env.mapCenter {
-            if env.zoomAnimation {
+        else if let location = env.mapIntEnv.mapCenter {
+            if env.mapIntEnv.zoomAnimation {
                 let camera = MGLMapCamera(lookingAtCenter: location, altitude: 4500, pitch: 0, heading: 0)
 
                 // Animate the camera movement over 5 seconds.
@@ -56,9 +56,9 @@ struct MapView: UIViewRepresentable {
             }
         }
         
-        if env.selectedTrailId != 0 {
+        if env.mapIntEnv.selectedTrailId != 0 {
             // uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.selectedTrailId ]))
-            uiView.trailLayersManager.highLightTrail(trailId: env.selectedTrailId )
+            uiView.trailLayersManager.highLightTrail(trailId: env.mapIntEnv.selectedTrailId )
         }
     }
     

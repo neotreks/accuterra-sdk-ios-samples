@@ -78,7 +78,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
                     var trailIds:Array<Int64> = []
                     for item in infoList {
                         print("perform search name: \(item.name)")
-                        self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh, bounds: item.))
+                        self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                         trailIds.append(item.id)
                     }
                     for i in trailIds {
