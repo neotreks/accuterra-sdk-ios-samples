@@ -37,6 +37,8 @@ struct NavLinkView: Identifiable, Hashable {
 
 struct HomeView: View {
     
+    @EnvironmentObject var env: AppEnvironment
+    
     var itemArray = [
         ListItems(section:"Map Display", navLinkItems:
                             [NavLinkView(title: "Creating a Map", destination: AnyView(CreateMap())),
@@ -70,7 +72,7 @@ struct HomeView: View {
             ForEach(itemArray.indices, id: \.self){ idx in
                 Section(header: Text(self.itemArray[idx].section)) {
                     ForEach(self.itemArray[idx].navLinkItems, id: \.self) { item in
-                        NavigationLink(destination: item.destination) {
+                        NavigationLink(destination: (item.destination).environmentObject(self.env)) {
                             Text(item.title)
                         }
                      }

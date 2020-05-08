@@ -40,9 +40,9 @@ struct SearchListToMap: View {
                                     if let trail = trail {
                                         let (bounds, insets, selectedTrailId) = self.mapVm.getTrailBounds(trailId:trailId, trail: trail)
                                         if let mapBounds = bounds {
-                                            self.env.mapIntEnv.mapBounds = mapBounds
-                                            self.env.mapIntEnv.edgeInsets = insets
-                                            self.env.mapIntEnv.selectedTrailId = selectedTrailId
+//                                            self.env.mapIntEnv.mapBounds = mapBounds
+//                                            self.env.mapIntEnv.edgeInsets = insets
+//                                            self.env.mapIntEnv.selectedTrailId = selectedTrailId
                                         }
                                     }
                                 }, label: {

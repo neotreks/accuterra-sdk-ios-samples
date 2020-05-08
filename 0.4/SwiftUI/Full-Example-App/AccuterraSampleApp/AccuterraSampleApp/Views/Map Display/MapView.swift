@@ -13,6 +13,7 @@ import Mapbox
 struct MapView: UIViewRepresentable {
     
     @EnvironmentObject var env: AppEnvironment
+    var initialState:MapInteractions = MapInteractions()
     var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
     @Binding var mapAlerts:MapAlertMessages
     
@@ -41,7 +42,8 @@ struct MapView: UIViewRepresentable {
         print("updateUIView .... bounds: \(String(describing: env.mapIntEnv.mapBounds))")
         if let bounds = env.mapIntEnv.mapBounds {
             let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-            uiView.zoomToExtent(bounds:extent, edgePadding:env.mapIntEnv.edgeInsets, animated: true)
+            let insets = initialState.defaults.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            uiView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
         }
         else if let location = env.mapIntEnv.mapCenter {
             if env.mapIntEnv.zoomAnimation {

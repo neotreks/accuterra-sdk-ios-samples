@@ -10,13 +10,6 @@ import AccuTerraSDK
 import Mapbox
 
 class AppEnvironment: ObservableObject {
-        
-    let objectWillChange = PassthroughSubject<AppEnvironment,Never>()
-    let mapIntEnv = MapInteractions()
-    
-    var currentPage: String = "download" {
-        didSet {
-            objectWillChange.send(self)
-        }
-    }
+    @Published var mapIntEnv = MapInteractionsEnvironment()
+    @Published var currentPage: String = "download"
 }

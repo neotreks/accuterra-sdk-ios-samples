@@ -26,7 +26,6 @@ struct TrailListView: View {
         .navigationBarTitle(Text("Trail List"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")

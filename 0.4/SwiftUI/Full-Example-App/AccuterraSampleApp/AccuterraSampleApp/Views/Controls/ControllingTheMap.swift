@@ -14,8 +14,8 @@ import Combine
 struct ControllingTheMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var env: MapInteractionsEnvironment
-    //@State var mapInteractions = MapInteractions()
+    // @EnvironmentObject var env: MapInteractions
+    @EnvironmentObject var env: AppEnvironment
     @State var alertMessages = MapAlertMessages()
     var mapVm = MapViewModel()
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true, updateSearchByMapBounds:true)
@@ -29,9 +29,9 @@ struct ControllingTheMap: View {
                 HStack {
                     Button(action: {
                         let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setColoradoBounds()
-                        self.env.mapCenter = mapCenter
-                        self.env.zoomAnimation = zoomAnimation
-                        self.env.mapBounds = mapBounds
+                        self.env.mapIntEnv.mapCenter = mapCenter
+                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
+                        self.env.mapIntEnv.mapBounds = mapBounds
                     }, label: {
                         Text("CO")
                         .padding()
@@ -39,9 +39,9 @@ struct ControllingTheMap: View {
                     })
                     Button(action: {
                         let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setDenverLocation()
-                        self.env.mapCenter = mapCenter
-                        self.env.zoomAnimation = zoomAnimation
-                        self.env.mapBounds = mapBounds
+                        self.env.mapIntEnv.mapCenter = mapCenter
+                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
+                        self.env.mapIntEnv.mapBounds = mapBounds
                     }, label: {
                         Text("Denver")
                         .padding()
@@ -49,9 +49,9 @@ struct ControllingTheMap: View {
                     })
                     Button(action: {
                         let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setCastleRockLocation()
-                        self.env.mapCenter = mapCenter
-                        self.env.zoomAnimation = zoomAnimation
-                        self.env.mapBounds = mapBounds
+                        self.env.mapIntEnv.mapCenter = mapCenter
+                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
+                        self.env.mapIntEnv.mapBounds = mapBounds
                     }, label: {
                         Text("Castle Rock")
                         .padding()
@@ -67,7 +67,7 @@ struct ControllingTheMap: View {
         .navigationBarTitle(Text("Controlling the Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
-                self.env.resetEnv()
+                self.env.mapIntEnv.resetEnv()
                 self.mode.wrappedValue.dismiss()
             }){
                 Image(systemName: "arrow.left")

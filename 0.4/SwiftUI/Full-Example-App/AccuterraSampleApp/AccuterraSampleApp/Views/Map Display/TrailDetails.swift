@@ -18,10 +18,16 @@ struct TrailDetails: View {
     @EnvironmentObject var env: AppEnvironment
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: false)
     @State var alertMessages = MapAlertMessages()
+    var mapVm = MapViewModel()
+    let initialMapDefaults:MapInteractions = MapInteractions()
+    
+    init() {
+        initialMapDefaults.defaults.mapBounds = mapVm.getColoradoBounds()
+    }
     
     var body: some View {
         VStack() {
-            MapView(features: featureToggles, mapAlerts:$alertMessages)
+            MapView(initialState: initialMapDefaults, features: featureToggles, mapAlerts:$alertMessages)
             Spacer()
             HStack(spacing: 30) {
                 if env.mapIntEnv.selectedTrailId == 0 {

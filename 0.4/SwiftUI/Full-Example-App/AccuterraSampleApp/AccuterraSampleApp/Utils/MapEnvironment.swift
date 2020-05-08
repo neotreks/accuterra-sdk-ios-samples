@@ -19,14 +19,6 @@ struct FeatureToggles {
     var filteringOn = false
 }
 
-//struct MapInteractions {
-//    var mapCenter: CLLocationCoordinate2D? = nil
-//    var mapBounds: MapBounds? = nil
-//    var edgeInsets:UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-//    var zoomAnimation: Bool = false
-//    var selectedTrailId:Int64 = 0
-//}
-
 struct MapAlertMessages {
     var displayAlert: Bool = false
     var title:String = "Alert"

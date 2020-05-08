@@ -136,7 +136,8 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     func onMapLoaded() {
         print("onMapLoaded")
         self.mapWasLoaded = true
-        self.zoomToDefaultExtent()
+        print("onMapLoaded .... bounds: \(String(describing: controlView.env.mapIntEnv.mapBounds))")
+        self.zoomToDefaultBounds()
         if controlView.features.displayTrails {
             self.addTrailLayers()
         }
@@ -159,13 +160,12 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         isTrailsLayerManagersLoaded = true
     }
     
-    private func zoomToDefaultExtent() {
-        // let mapInteractions = controlView.mapVm.getColoradoBounds()
-        controlView.env.mapIntEnv.mapBounds = controlView.mapVm.getColoradoBounds()
-//        if let bounds = mapInteractions.mapBounds {
-//            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-//            controlView.mapView.zoomToExtent(bounds:extent, animated: true)
-//        }
+    private func zoomToDefaultBounds() {
+        if let bounds = controlView.initialState.defaults.mapBounds {
+            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
+            let insets = controlView.initialState.defaults.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            controlView.mapView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
+        }
     }
     
     private func addTrailLayers() {
@@ -176,8 +176,6 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         trailLayersManager.addStandardLayers()
         
     }
-
-    
 }
 
 extension MapCoordinator : MGLMapViewDelegate {
@@ -212,7 +210,8 @@ extension MapCoordinator : MGLMapViewDelegate {
                 }
                 self.previousBoundingBox = newBoundingBox
                 print("mapViewDidBecomeIdle   ******")
-                NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
+                controlView.env.mapIntEnv.mapBounds = newBoundingBox
+                // NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
             }
         }
     }
