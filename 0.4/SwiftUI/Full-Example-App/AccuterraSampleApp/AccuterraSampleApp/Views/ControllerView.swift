@@ -27,6 +27,6 @@ struct ControllerView : View {
 
 struct ControllerView_Previews : PreviewProvider {
     static var previews: some View {
-        ControllerView().environmentObject(ViewRouter())
+        ControllerView().environmentObject(AppEnvironment())
     }
 }

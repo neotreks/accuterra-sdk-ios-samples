@@ -105,8 +105,6 @@
 		D3B07E87244F75E900A39B51 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */; };
 		D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E88244F761100A39B51 /* DownloadService.swift */; };
 		D3B07E8A244F761100A39B51 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E88244F761100A39B51 /* DownloadService.swift */; };
-		D3B07E96244F9EF800A39B51 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E95244F9EF800A39B51 /* ViewRouter.swift */; };
-		D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E95244F9EF800A39B51 /* ViewRouter.swift */; };
 		D3B07E99244FAA1E00A39B51 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E98244FAA1E00A39B51 /* ControllerView.swift */; };
 		D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E98244FAA1E00A39B51 /* ControllerView.swift */; };
 		FCAD5228C4EE2DA8FBE107A2 /* Pods_AccuterraSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630C035D3FF0BB70E3BFCC1E /* Pods_AccuterraSampleApp.framework */; };
@@ -136,7 +134,7 @@
 		ABF01E2BBBA77A31CB28F3FD /* Pods-AccuterraSampleApp (Develop).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp (Develop).debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp (Develop)/Pods-AccuterraSampleApp (Develop).debug.xcconfig"; sourceTree = "<group>"; };
 		AC8B18708127830D66A9AE8E /* Pods-AccuterraSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C803D3914D6A83F2F1C9A4B5 /* Pods-AccuterraSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleApp.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleApp/Pods-AccuterraSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C21AA244A6F1400B0E74E /* AccuterraSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31C21AD244A6F1400B0E74E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D31C21B3244A6F1600B0E74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,11 +187,10 @@
 		D386CBC62463702100D1A198 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		D386CBC92463709D00D1A198 /* MapInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractions.swift; sourceTree = "<group>"; };
 		D3B07E5B244E55D300A39B51 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSampleApp(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B07E7A244E65C000A39B51 /* AccuterraSample(Develop).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccuterraSample(Develop).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B07E82244F75B000A39B51 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		D3B07E88244F761100A39B51 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
-		D3B07E95244F9EF800A39B51 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		D3B07E98244FAA1E00A39B51 /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,10 +265,10 @@
 		D31C21AB244A6F1400B0E74E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */,
+				D31C21AA244A6F1400B0E74E /* AccuterraSample.app */,
 				D31C21C0244A6F1600B0E74E /* AccuterraSampleAppTests.xctest */,
 				D31C21CB244A6F1600B0E74E /* AccuterraSampleAppUITests.xctest */,
-				D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */,
+				D3B07E7A244E65C000A39B51 /* AccuterraSample(Develop).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				D3B07E82244F75B000A39B51 /* DownloadView.swift */,
-				D3B07E95244F9EF800A39B51 /* ViewRouter.swift */,
 				D3B07E85244F75E900A39B51 /* DownloadViewModel.swift */,
 				D3B07E88244F761100A39B51 /* DownloadService.swift */,
 			);
@@ -460,7 +456,7 @@
 			);
 			name = AccuterraSampleApp;
 			productName = AccuterraSampleApp;
-			productReference = D31C21AA244A6F1400B0E74E /* AccuterraSampleApp.app */;
+			productReference = D31C21AA244A6F1400B0E74E /* AccuterraSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D31C21BF244A6F1600B0E74E /* AccuterraSampleAppTests */ = {
@@ -518,7 +514,7 @@
 			);
 			name = "AccuterraSampleApp (Develop)";
 			productName = AccuterraSampleApp;
-			productReference = D3B07E7A244E65C000A39B51 /* AccuterraSampleApp(Develop).app */;
+			productReference = D3B07E7A244E65C000A39B51 /* AccuterraSample(Develop).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -809,7 +805,6 @@
 				D31C21FA244A721800B0E74E /* SearchTermToMap.swift in Sources */,
 				D386CACB245E127E00D1A198 /* DifficultyView.swift in Sources */,
 				D386CABF245DDBC300D1A198 /* TrailCard.swift in Sources */,
-				D3B07E96244F9EF800A39B51 /* ViewRouter.swift in Sources */,
 				D3B07E99244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D386CA562457D11B00D1A198 /* MapEventRouter.swift in Sources */,
 				D31C2207244A72B200B0E74E /* HomeView.swift in Sources */,
@@ -878,7 +873,6 @@
 				D3B07E5F244E65C000A39B51 /* AddingTrails.swift in Sources */,
 				D386CABD245D177300D1A198 /* MapSearchingView.swift in Sources */,
 				D3B07E60244E65C000A39B51 /* SearchTermToMap.swift in Sources */,
-				D3B07E97244F9EF800A39B51 /* ViewRouter.swift in Sources */,
 				D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D3B07E61244E65C000A39B51 /* HomeView.swift in Sources */,
 				D3B07E62244E65C000A39B51 /* SearchTermToList.swift in Sources */,
@@ -1073,7 +1067,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AccuterraSample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1094,7 +1088,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AccuterraSample;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1199,7 +1193,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
-				PRODUCT_NAME = "AccuterraSampleApp(Develop)";
+				PRODUCT_NAME = "AccuterraSample(Develop)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1220,7 +1214,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neotreks.AccuterraSampleApp;
-				PRODUCT_NAME = "AccuterraSampleApp(Develop)";
+				PRODUCT_NAME = "AccuterraSample(Develop)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

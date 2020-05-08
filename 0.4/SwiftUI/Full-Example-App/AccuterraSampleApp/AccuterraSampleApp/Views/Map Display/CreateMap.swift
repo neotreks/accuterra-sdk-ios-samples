@@ -41,10 +41,6 @@ struct CreateMap: View {
             .alert(isPresented:$alertMessages.displayAlert) {
                 Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
             }
-//            .onAppear {
-//                print("create map on appear called")
-//                self.env.mapIntEnv.mapBounds = self.mapVm.getColoradoBounds()
-//            }
             Image(systemName: "location.north")
               .resizable()
               .aspectRatio(contentMode: .fit)
@@ -77,7 +73,7 @@ struct CreateMap: View {
 
 struct CreateMap_Previews: PreviewProvider {
     static var previews: some View {
-        return CreateMap()
+        CreateMap().environmentObject(AppEnvironment())
     }
 }
 

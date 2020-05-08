@@ -12,7 +12,7 @@ import AccuTerraSDK
 struct DownloadView: View {
     
     @ObservedObject var downloadViewModel = DownloadViewModel()
-    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var env: AppEnvironment
     
     private let maxValue: Double = 100
     private let controlForegroundColor:UIColor = .red
@@ -21,7 +21,7 @@ struct DownloadView: View {
         Alert(title: Text("Download Status"),
         message: Text("Success! Proceeding to map."),
         dismissButton: .default(Text("OK"))  {
-            self.viewRouter.currentPage = "home"
+            self.env.currentPage = "home"
         })
     }
     
