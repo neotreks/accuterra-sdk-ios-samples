@@ -16,7 +16,6 @@ class MapSearchingViewModel: NSObject, ObservableObject {
     @Published var isSearching = false
     @Published var searchQuery = ""
     @Published var trails = [TrailItem]()
-    @Published var mapItems = [MKMapItem]()
     @Published var selectedMapItem: MKMapItem?
     @Published var keyboardHeight: CGFloat = 0
     var trailService: ITrailService?
@@ -37,38 +36,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
         return try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
     }
     
-//    fileprivate func performSearch(query: String) {
-//        isSearching = true
-//
-//        let request = MKLocalSearch.Request()
-//        request.naturalLanguageQuery = query
-//        if let region = self.region {
-//            request.region = getColoradoBounds()
-//        }
-//
-//
-//        let localSearch = MKLocalSearch(request: request)
-//        localSearch.start { (resp, err) in
-//            // handle your error
-//
-//            self.mapItems = resp?.mapItems ?? []
-//
-//            var airportAnnotations = [MKPointAnnotation]()
-//
-//            resp?.mapItems.forEach({ (mapItem) in
-//                print(mapItem.name ?? "")
-//                let annotation = MKPointAnnotation()
-//                annotation.title = mapItem.name
-//                annotation.coordinate = mapItem.placemark.coordinate
-//                airportAnnotations.append(annotation)
-//            })
-//            self.isSearching = false
-//
-//            self.annotations = airportAnnotations
-//        }
-//    }
-    
-    fileprivate func performSearch(query: String) {
+    private func performSearch(query: String) {
         do {
             isSearching = true
             
@@ -88,11 +56,13 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             let basicInfoList = try trailService?.findTrails(byMapBoundsCriteria: searchCriteria)
             print("perform search . \(String(describing: basicInfoList?.count))")
             if let infoList = basicInfoList {
-                self.trails = [TrailItem]()
+                self.trails = []
                 var trailIds:Array<Int64> = []
                 for item in infoList {
                     print("perform search name: \(item.name)")
                     self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
+                    trailIds.append(item.id)
+                    // self.testArray.append(item.name)
                     trailIds.append(item.id)
                 }
                 for i in trailIds {
@@ -100,26 +70,13 @@ class MapSearchingViewModel: NSObject, ObservableObject {
                 }
                 self.isSearching = false
             }
-
-
-//            let searchCriteria = try? TrailBasicSearchCriteria(
-//                searchString: query,
-//                limit: Int(INT32_MAX))
-//            if let service = trailService, let criteria = searchCriteria {
-//                let basicInfoList = try service.findTrails(byBasicCriteria: criteria)
-//                 self.trails = [TrailItem]()
-//                for item in basicInfoList {
-//                    self.trails.append(TrailItem(title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
-//                }
-//                self.isSearching = true
-//            }
         }
         catch {
             print("\(error)")
         }
     }
         
-    fileprivate func listenForKeyboardNotifications() {
+    private func listenForKeyboardNotifications() {
         NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { [weak self] (notification) in
             guard let value = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
             let keyboardFrame = value.cgRectValue

@@ -11,7 +11,7 @@ import AccuTerraSDK
 import Mapbox
 
 struct HomeView: View {
-
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var vm = MapSearchingViewModel()
@@ -37,24 +37,29 @@ struct HomeView: View {
                     Text("Searching...")
                 }
 
-                Spacer()
-
+                Spacer().frame(maxHeight: .infinity)
                 ScrollView(.horizontal) {
                     HStack(spacing: 16) {
                         ForEach(vm.trails, id: \.self) { item in
-                            Button(action: {
-                                print(item.title)
-                            }, label: {
-                                TrailCard(trailItem: item)
-                            }).foregroundColor(.black)
-                            .padding()
-                                .frame(width: 275, height: 200)
-                                .background(Color.white)
-                            .cornerRadius(5)
+                            VStack {
+                                  Button(action: {
+                                      print(item.title)
+                                  }, label: {
+                                    VStack(alignment: .leading, spacing: 4) {
+                                         TrailCard(trailItem: item)
+                                    }
+                                  }).foregroundColor(.black)
+                                  .padding()
+                                      .frame(width: 275, height: 200)
+                                      .background(Color.white)
+                                  .cornerRadius(5)
+                            }
                         }
                     }
+                    .frame(maxHeight: .infinity)
                     .padding(.horizontal, 16)
                 }.shadow(radius: 5)
+                    .frame(maxHeight: 200)
                 .navigationBarTitle(Text("Search Map"), displayMode: .inline)
                     .navigationBarBackButtonHidden(true)
                     .navigationBarItems(leading: Button(action : {
@@ -66,7 +71,6 @@ struct HomeView: View {
                 .alert(isPresented:$alertMessages.displayAlert) {
                     Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
                 }
-
                 Spacer().frame(height: vm.keyboardHeight)
             }
        }
@@ -74,10 +78,9 @@ struct HomeView: View {
     }
 }
 
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
     }
 }
 
