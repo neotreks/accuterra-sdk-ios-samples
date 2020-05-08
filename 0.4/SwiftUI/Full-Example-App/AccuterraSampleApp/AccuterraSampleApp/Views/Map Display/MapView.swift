@@ -40,9 +40,10 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
         print("updateUIView .... bounds: \(String(describing: env.mapIntEnv.mapBounds))")
+        print("updateUIView .... center: \(String(describing: env.mapIntEnv.mapCenter))")
         if let bounds = env.mapIntEnv.mapBounds {
             let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-            let insets = initialState.defaults.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+            let insets = env.mapIntEnv.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
             uiView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
         }
         else if let location = env.mapIntEnv.mapCenter {
@@ -59,7 +60,7 @@ struct MapView: UIViewRepresentable {
         }
         
         if env.mapIntEnv.selectedTrailId != 0 {
-            // uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.selectedTrailId ]))
+            // uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.mapIntEnv.selectedTrailId ]))
             uiView.trailLayersManager.highLightTrail(trailId: env.mapIntEnv.selectedTrailId )
         }
     }

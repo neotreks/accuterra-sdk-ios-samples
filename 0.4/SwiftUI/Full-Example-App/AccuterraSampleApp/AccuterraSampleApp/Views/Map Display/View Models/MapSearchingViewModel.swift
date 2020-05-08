@@ -33,7 +33,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
 
         cancellable = $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .sink { [weak self] (searchTerm) in
-                self?.performSearch(query: searchTerm)
+                // self?.performSearch(query: searchTerm)
         }
         
         listenForKeyboardNotifications()
@@ -92,7 +92,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
 //                    let bounds:MGLCoordinateBounds = MGLCoordinateBounds(sw: southwest, ne: northeast)
 //                    MapView.Coordinator.showTrailsOnMapNotification
                     
-                    NotificationCenter.default.post(name: MapCoordinator.showTrailsOnMapNotification, object: (extent, trailIds))
+                    // NotificationCenter.default.post(name: MapCoordinator.showTrailsOnMapNotification, object: (extent, trailIds))
                     
 //                    self.mapView.zoomToExtent(bounds: bounds, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), animated: true)
 //                    self.mapView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>(trailIds))

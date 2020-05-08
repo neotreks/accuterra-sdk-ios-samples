@@ -21,9 +21,9 @@ struct SearchMapToList: View {
     var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: false, updateSearchByMapBounds:true, filteringOn:true)
     var mapVm = MapViewModel()
 
-    init() {
-        vm.getTrailsByBounds()
-    }
+//    init() {
+//        vm.getTrailsByBounds()
+//    }
     
     var body: some View {
         GeometryReader { geometry in

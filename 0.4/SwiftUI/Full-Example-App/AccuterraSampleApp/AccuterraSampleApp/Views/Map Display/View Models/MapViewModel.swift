@@ -21,18 +21,6 @@ class MapViewModel {
         }
         return (nil, UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), trailId)
     }
-    
-    func setColoradoBounds() -> (CLLocationCoordinate2D?, Bool, MapBounds?) {
-        return (nil, false, getColoradoBounds())
-    }
-    
-    func setCastleRockLocation() -> (CLLocationCoordinate2D?, Bool, MapBounds?) {
-        return (getCastleRockLocation(), true, nil)
-    }
-    
-    func setDenverLocation() -> (CLLocationCoordinate2D?, Bool, MapBounds?) {
-        return (getDenverLocation(), true, nil)
-    }
 
     func getColoradoBounds() -> MapBounds {
         return try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)

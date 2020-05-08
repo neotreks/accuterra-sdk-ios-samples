@@ -14,48 +14,43 @@ import Combine
 struct ControllingTheMap: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    // @EnvironmentObject var env: MapInteractions
     @EnvironmentObject var env: AppEnvironment
     @State var alertMessages = MapAlertMessages()
     var mapVm = MapViewModel()
-    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true, updateSearchByMapBounds:true)
+    var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
+    let initialMapDefaults:MapInteractions = MapInteractions()
 
+    init() {
+        initialMapDefaults.defaults.mapBounds = mapVm.getColoradoBounds()
+    }
+    
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(features: featureToggles, mapAlerts:$alertMessages)
+            MapView(initialState: initialMapDefaults, features: featureToggles, mapAlerts:$alertMessages)
             .edgesIgnoringSafeArea(.vertical)
             VStack(spacing: 20) {
                 Text("Go to Location:")
                 HStack {
                     Button(action: {
-                        let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setColoradoBounds()
-                        self.env.mapIntEnv.mapCenter = mapCenter
-                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
-                        self.env.mapIntEnv.mapBounds = mapBounds
+                        self.env.mapIntEnv = MapInteractionsEnvironment(mapBounds: self.mapVm.getColoradoBounds())
                     }, label: {
                         Text("CO")
                         .padding()
-                            .background(Color.white)
+                        .background(Color.white)
                     })
                     Button(action: {
-                        let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setDenverLocation()
-                        self.env.mapIntEnv.mapCenter = mapCenter
-                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
-                        self.env.mapIntEnv.mapBounds = mapBounds
+                        self.env.mapIntEnv = MapInteractionsEnvironment(mapCenter: self.mapVm.getDenverLocation())
                     }, label: {
                         Text("Denver")
                         .padding()
                         .background(Color.white)
                     })
                     Button(action: {
-                        let (mapCenter, zoomAnimation, mapBounds) = self.mapVm.setCastleRockLocation()
-                        self.env.mapIntEnv.mapCenter = mapCenter
-                        self.env.mapIntEnv.zoomAnimation = zoomAnimation
-                        self.env.mapIntEnv.mapBounds = mapBounds
+                        self.env.mapIntEnv = MapInteractionsEnvironment(mapCenter: self.mapVm.getCastleRockLocation(), zoomAnimation: true)
                     }, label: {
                         Text("Castle Rock")
                         .padding()
-                            .background(Color.white)
+                        .background(Color.white)
                     })
                 }.shadow(radius: 3)
                 .alert(isPresented:$alertMessages.displayAlert) {

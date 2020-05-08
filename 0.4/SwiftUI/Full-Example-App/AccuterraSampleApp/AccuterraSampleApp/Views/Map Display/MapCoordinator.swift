@@ -210,7 +210,7 @@ extension MapCoordinator : MGLMapViewDelegate {
                 }
                 self.previousBoundingBox = newBoundingBox
                 print("mapViewDidBecomeIdle   ******")
-                controlView.env.mapIntEnv.mapBounds = newBoundingBox
+                // controlView.env.mapIntEnv.mapBounds = newBoundingBox
                 // NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
             }
         }
