@@ -50,7 +50,7 @@ extension DownloadViewModel : SdkInitDelegate {
                 self.loadingState = .loaded
                 self.downloadSuccess = true
              case .FAILED(let error):
-                print("Download error: \(String(describing: error))")
+                debugPrint("Download error: \(String(describing: error))")
                 self.loadingState = .failed
                 self.downloadError = "\(String(describing: error))"
             default:

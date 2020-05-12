@@ -17,16 +17,12 @@
 		D386CB3A245F57F600D1A198 /* AccuterraSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB39245F57F600D1A198 /* AccuterraSampleAppTests.swift */; };
 		D386CB45245F57F600D1A198 /* AccuterraSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB44245F57F600D1A198 /* AccuterraSampleAppUITests.swift */; };
 		D386CB55245F596400D1A198 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB54245F596400D1A198 /* MapView.swift */; };
-		D386CB57245F5ADC00D1A198 /* MapInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB56245F5ADC00D1A198 /* MapInteraction.swift */; };
 		D386CB59245F7AE900D1A198 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB58245F7AE900D1A198 /* ViewRouter.swift */; };
 		D386CB5B245F7BA700D1A198 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB5A245F7BA700D1A198 /* DownloadViewModel.swift */; };
 		D386CB5D245F7CE300D1A198 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB5C245F7CE300D1A198 /* DownloadView.swift */; };
 		D386CB5F245F7DFC00D1A198 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB5E245F7DFC00D1A198 /* ControllerView.swift */; };
 		D386CB61245F7EC400D1A198 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB60245F7EC400D1A198 /* DownloadService.swift */; };
 		D386CB63245F8E1F00D1A198 /* TrailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB62245F8E1F00D1A198 /* TrailViewModel.swift */; };
-		D386CB65245F92DB00D1A198 /* TrailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB64245F92DB00D1A198 /* TrailListView.swift */; };
-		D386CB67245FACFC00D1A198 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB66245FACFC00D1A198 /* DetailView.swift */; };
-		D386CB69245FAD6700D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB68245FAD6700D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CB6B245FAD9E00D1A198 /* TrailDetailsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB6A245FAD9E00D1A198 /* TrailDetailsInfo.swift */; };
 		D386CB6D245FCB0500D1A198 /* MapAlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB6C245FCB0500D1A198 /* MapAlertMessages.swift */; };
 		D386CB6F245FD78D00D1A198 /* TrailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB6E245FD78D00D1A198 /* TrailCard.swift */; };
@@ -39,6 +35,7 @@
 		D386CB7F245FD99000D1A198 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB7E245FD99000D1A198 /* MapViewModel.swift */; };
 		D386CB83245FD9F600D1A198 /* MapSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB82245FD9F600D1A198 /* MapSearchingViewModel.swift */; };
 		D386CB87245FE01000D1A198 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CB86245FE01000D1A198 /* DifficultyView.swift */; };
+		D386CBCD2466211700D1A198 /* SearchFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CBCC2466211700D1A198 /* SearchFilters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,16 +74,12 @@
 		D386CB44245F57F600D1A198 /* AccuterraSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuterraSampleAppUITests.swift; sourceTree = "<group>"; };
 		D386CB46245F57F600D1A198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D386CB54245F596400D1A198 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		D386CB56245F5ADC00D1A198 /* MapInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteraction.swift; sourceTree = "<group>"; };
 		D386CB58245F7AE900D1A198 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		D386CB5A245F7BA700D1A198 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		D386CB5C245F7CE300D1A198 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		D386CB5E245F7DFC00D1A198 /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
 		D386CB60245F7EC400D1A198 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		D386CB62245F8E1F00D1A198 /* TrailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailViewModel.swift; sourceTree = "<group>"; };
-		D386CB64245F92DB00D1A198 /* TrailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailListView.swift; sourceTree = "<group>"; };
-		D386CB66245FACFC00D1A198 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		D386CB68245FAD6700D1A198 /* TrailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewModel.swift; sourceTree = "<group>"; };
 		D386CB6A245FAD9E00D1A198 /* TrailDetailsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsInfo.swift; sourceTree = "<group>"; };
 		D386CB6C245FCB0500D1A198 /* MapAlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAlertMessages.swift; sourceTree = "<group>"; };
 		D386CB6E245FD78D00D1A198 /* TrailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailCard.swift; sourceTree = "<group>"; };
@@ -99,6 +92,7 @@
 		D386CB7E245FD99000D1A198 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		D386CB82245FD9F600D1A198 /* MapSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchingViewModel.swift; sourceTree = "<group>"; };
 		D386CB86245FE01000D1A198 /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
+		D386CBCC2466211700D1A198 /* SearchFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +138,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D3341D842469C1CC00F0F9F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D386CB5E245F7DFC00D1A198 /* ControllerView.swift */,
+				D386CB26245F57F400D1A198 /* HomeView.swift */,
+				D386CB54245F596400D1A198 /* MapView.swift */,
+				D386CB6E245FD78D00D1A198 /* TrailCard.swift */,
+				D386CB70245FD7D000D1A198 /* TrailItem.swift */,
+				D386CB72245FD81100D1A198 /* UserRatingsView.swift */,
+				D386CB76245FD86600D1A198 /* UserRatingsStars.swift */,
+				D386CB58245F7AE900D1A198 /* ViewRouter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3341D852469C1DA00F0F9F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D386CB22245F57F400D1A198 /* AppDelegate.swift */,
+				D386CB24245F57F400D1A198 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3341D862469C1EA00F0F9F9 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D386CB82245FD9F600D1A198 /* MapSearchingViewModel.swift */,
+				D386CB7E245FD99000D1A198 /* MapViewModel.swift */,
+				D386CB62245F8E1F00D1A198 /* TrailViewModel.swift */,
+				D386CB74245FD82800D1A198 /* UserRatingsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		D3341D872469C20400F0F9F9 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				D386CB5A245F7BA700D1A198 /* DownloadViewModel.swift */,
+				D386CB60245F7EC400D1A198 /* DownloadService.swift */,
+				D386CB5C245F7CE300D1A198 /* DownloadView.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		D3341D882469C73400F0F9F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D386CB7A245FD8B000D1A198 /* GeoUtils.swift */,
+				D386CB6C245FCB0500D1A198 /* MapAlertMessages.swift */,
+				D386CBCC2466211700D1A198 /* SearchFilters.swift */,
+				D386CB78245FD88E00D1A198 /* TechRatingsStars.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D386CB16245F57F400D1A198 = {
 			isa = PBXGroup;
 			children = (
@@ -171,30 +221,11 @@
 		D386CB21245F57F400D1A198 /* AccuterraSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				D386CB22245F57F400D1A198 /* AppDelegate.swift */,
-				D386CB5E245F7DFC00D1A198 /* ControllerView.swift */,
-				D386CB66245FACFC00D1A198 /* DetailView.swift */,
-				D386CB5A245F7BA700D1A198 /* DownloadViewModel.swift */,
-				D386CB60245F7EC400D1A198 /* DownloadService.swift */,
-				D386CB5C245F7CE300D1A198 /* DownloadView.swift */,
-				D386CB7A245FD8B000D1A198 /* GeoUtils.swift */,
-				D386CB26245F57F400D1A198 /* HomeView.swift */,
-				D386CB6C245FCB0500D1A198 /* MapAlertMessages.swift */,
-				D386CB56245F5ADC00D1A198 /* MapInteraction.swift */,
-				D386CB82245FD9F600D1A198 /* MapSearchingViewModel.swift */,
-				D386CB54245F596400D1A198 /* MapView.swift */,
-				D386CB7E245FD99000D1A198 /* MapViewModel.swift */,
-				D386CB24245F57F400D1A198 /* SceneDelegate.swift */,
-				D386CB78245FD88E00D1A198 /* TechRatingsStars.swift */,
-				D386CB6E245FD78D00D1A198 /* TrailCard.swift */,
-				D386CB70245FD7D000D1A198 /* TrailItem.swift */,
-				D386CB68245FAD6700D1A198 /* TrailDetailsViewModel.swift */,
-				D386CB64245F92DB00D1A198 /* TrailListView.swift */,
-				D386CB62245F8E1F00D1A198 /* TrailViewModel.swift */,
-				D386CB72245FD81100D1A198 /* UserRatingsView.swift */,
-				D386CB74245FD82800D1A198 /* UserRatingsViewModel.swift */,
-				D386CB76245FD86600D1A198 /* UserRatingsStars.swift */,
-				D386CB58245F7AE900D1A198 /* ViewRouter.swift */,
+				D3341D872469C20400F0F9F9 /* Download */,
+				D3341D852469C1DA00F0F9F9 /* Resources */,
+				D3341D882469C73400F0F9F9 /* Utils */,
+				D3341D862469C1EA00F0F9F9 /* View Models */,
+				D3341D842469C1CC00F0F9F9 /* Views */,
 				D386CB28245F57F600D1A198 /* Assets.xcassets */,
 				D386CB2D245F57F600D1A198 /* LaunchScreen.storyboard */,
 				D386CB30245F57F600D1A198 /* Info.plist */,
@@ -471,19 +502,16 @@
 				D386CB55245F596400D1A198 /* MapView.swift in Sources */,
 				D386CB5B245F7BA700D1A198 /* DownloadViewModel.swift in Sources */,
 				D386CB61245F7EC400D1A198 /* DownloadService.swift in Sources */,
-				D386CB67245FACFC00D1A198 /* DetailView.swift in Sources */,
 				D386CB71245FD7D000D1A198 /* TrailItem.swift in Sources */,
 				D386CB25245F57F400D1A198 /* SceneDelegate.swift in Sources */,
 				D386CB83245FD9F600D1A198 /* MapSearchingViewModel.swift in Sources */,
+				D386CBCD2466211700D1A198 /* SearchFilters.swift in Sources */,
 				D386CB59245F7AE900D1A198 /* ViewRouter.swift in Sources */,
-				D386CB65245F92DB00D1A198 /* TrailListView.swift in Sources */,
 				D386CB79245FD88E00D1A198 /* TechRatingsStars.swift in Sources */,
 				D386CB27245F57F400D1A198 /* HomeView.swift in Sources */,
 				D386CB6F245FD78D00D1A198 /* TrailCard.swift in Sources */,
 				D386CB77245FD86600D1A198 /* UserRatingsStars.swift in Sources */,
-				D386CB69245FAD6700D1A198 /* TrailDetailsViewModel.swift in Sources */,
 				D386CB73245FD81100D1A198 /* UserRatingsView.swift in Sources */,
-				D386CB57245F5ADC00D1A198 /* MapInteraction.swift in Sources */,
 				D386CB7B245FD8B000D1A198 /* GeoUtils.swift in Sources */,
 				D386CB87245FE01000D1A198 /* DifficultyView.swift in Sources */,
 				D386CB6D245FCB0500D1A198 /* MapAlertMessages.swift in Sources */,

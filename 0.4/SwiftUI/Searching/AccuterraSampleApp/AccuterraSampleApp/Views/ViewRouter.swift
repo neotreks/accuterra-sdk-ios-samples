@@ -11,12 +11,6 @@ import Combine
 import SwiftUI
 
 class ViewRouter: ObservableObject {
-    
-    let objectWillChange = PassthroughSubject<ViewRouter,Never>()
-    
-    var currentPage: String = "download" {
-        didSet {
-            objectWillChange.send(self)
-        }
-    }
+    @Published var currentPage = "download"
+    @Published var searchFilers = SearchFilters()
 }

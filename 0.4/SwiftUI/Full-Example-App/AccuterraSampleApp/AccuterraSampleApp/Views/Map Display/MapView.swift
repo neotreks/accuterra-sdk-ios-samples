@@ -60,7 +60,7 @@ struct MapView: UIViewRepresentable {
         }
         
         if env.mapIntEnv.selectedTrailId != 0 {
-            // uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.mapIntEnv.selectedTrailId ]))
+            uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.mapIntEnv.selectedTrailId ]))
             uiView.trailLayersManager.highLightTrail(trailId: env.mapIntEnv.selectedTrailId )
         }
     }

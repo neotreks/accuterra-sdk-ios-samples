@@ -104,7 +104,7 @@ extension SceneDelegate : SdkInitDelegate {
             case .COMPLETED:
                 self.gotoHomeView()
              case .FAILED(let error):
-                print("Download error: \(String(describing: error))")
+                debugPrint("Download error: \(String(describing: error))")
                 self.showDownloadErrors(error: String(describing: error))
             default:
                 break
