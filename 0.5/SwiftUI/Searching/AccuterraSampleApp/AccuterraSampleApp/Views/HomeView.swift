@@ -80,13 +80,6 @@ struct HomeView: View {
                     .padding(.horizontal, 16)
                 }.shadow(radius: 5)
                     .frame(maxHeight: 200)
-                .navigationBarTitle(Text("Search Map"), displayMode: .inline)
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarItems(leading: Button(action : {
-                        self.mode.wrappedValue.dismiss()
-                    }){
-                        Image(systemName: "arrow.left")
-                    })
                 .edgesIgnoringSafeArea([.bottom])
                 .alert(isPresented:$alertMessages.displayAlert) {
                     Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))

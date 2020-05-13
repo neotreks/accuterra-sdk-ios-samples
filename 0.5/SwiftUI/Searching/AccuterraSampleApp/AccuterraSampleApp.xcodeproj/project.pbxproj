@@ -142,9 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				D386CB5E245F7DFC00D1A198 /* ControllerView.swift */,
+				D386CB86245FE01000D1A198 /* DifficultyView.swift */,
 				D386CB26245F57F400D1A198 /* HomeView.swift */,
 				D386CB54245F596400D1A198 /* MapView.swift */,
 				D386CB6E245FD78D00D1A198 /* TrailCard.swift */,
+				D386CB6A245FAD9E00D1A198 /* TrailDetailsInfo.swift */,
 				D386CB70245FD7D000D1A198 /* TrailItem.swift */,
 				D386CB72245FD81100D1A198 /* UserRatingsView.swift */,
 				D386CB76245FD86600D1A198 /* UserRatingsStars.swift */,
@@ -197,8 +199,6 @@
 		D386CB16245F57F400D1A198 = {
 			isa = PBXGroup;
 			children = (
-				D386CB86245FE01000D1A198 /* DifficultyView.swift */,
-				D386CB6A245FAD9E00D1A198 /* TrailDetailsInfo.swift */,
 				D386CB21245F57F400D1A198 /* AccuterraSampleApp */,
 				D386CB38245F57F600D1A198 /* AccuterraSampleAppTests */,
 				D386CB43245F57F600D1A198 /* AccuterraSampleAppUITests */,
