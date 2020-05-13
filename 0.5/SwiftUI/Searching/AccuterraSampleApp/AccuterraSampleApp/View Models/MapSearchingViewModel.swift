@@ -19,7 +19,6 @@ class MapSearchingViewModel: NSObject, ObservableObject {
     @Published var defaultMapBounds:MapBounds? = nil
     @Published var trails = [TrailItem]()
     @Published var selectedMapItem: Int64 = 0
-    @Published var visibleTrailIds:Array<Int64> = []
     @Published var keyboardHeight: CGFloat = 0
     @Published var searchBounds:MapBounds?
     var trailService: ITrailService?
@@ -55,7 +54,6 @@ class MapSearchingViewModel: NSObject, ObservableObject {
         self.searchQuery = ""
         self.isSearching = false
         self.trails = []
-        self.visibleTrailIds = []
         self.selectedMapItem = 0
     }
     
@@ -67,7 +65,6 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             guard query.count > 0 else {
                 isSearching = false
                 self.trails = []
-                self.visibleTrailIds = []
                 return
             }
             
@@ -86,10 +83,8 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             let basicInfoList = try trailService?.findTrails(byMapBoundsCriteria: searchCriteria)
             if let infoList = basicInfoList {
                 self.trails = []
-                self.visibleTrailIds = []
                 for item in infoList {
                     self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
-                    visibleTrailIds.append(item.id)
                 }
                 self.isSearching = false
             }

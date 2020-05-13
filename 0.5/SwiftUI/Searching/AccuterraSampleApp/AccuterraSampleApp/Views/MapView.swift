@@ -13,7 +13,6 @@ import Mapbox
 struct MapView: UIViewRepresentable {
 
     var selectedTrailId:Int64
-    var visibleTrailIds:Array<Int64> = []
     var defaultBounds:MapBounds?
     var mapAlerts:MapAlertMessages
     @EnvironmentObject var env: ViewRouter
@@ -51,13 +50,6 @@ struct MapView: UIViewRepresentable {
             }
         }
 
-        // Make sure all found trails are visible
-        if visibleTrailIds.count > 0 {
-            uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>(self.visibleTrailIds))
-            for id in visibleTrailIds {
-                uiView.trailLayersManager.highLightTrail(trailId: id)
-            }
-        }
         if self.selectedTrailId > 0 {
             uiView.trailLayersManager.highLightTrail(trailId: self.selectedTrailId)
             zoomToTrail(mapView: uiView, trailId: self.selectedTrailId)

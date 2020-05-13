@@ -22,7 +22,7 @@ struct HomeView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(selectedTrailId: vm.selectedMapItem, visibleTrailIds: vm.visibleTrailIds, defaultBounds: vm.defaultMapBounds, mapAlerts: alertMessages, resetMap:$reset)
+            MapView(selectedTrailId: vm.selectedMapItem, defaultBounds: vm.defaultMapBounds, mapAlerts: alertMessages, resetMap:$reset)
             .edgesIgnoringSafeArea(.all)
             VStack(spacing: 12) {
                 // if vm.selectedMapItem == 0 || firstTime {
