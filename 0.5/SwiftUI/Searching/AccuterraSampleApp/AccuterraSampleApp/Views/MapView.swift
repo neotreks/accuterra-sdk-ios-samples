@@ -75,7 +75,7 @@ struct MapView: UIViewRepresentable {
 
         }
         catch {
-            print("\(error)")
+            debugPrint("\(error)")
         }
     }
     

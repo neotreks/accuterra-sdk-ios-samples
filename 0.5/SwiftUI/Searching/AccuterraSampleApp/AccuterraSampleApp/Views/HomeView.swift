@@ -25,7 +25,6 @@ struct HomeView: View {
             MapView(selectedTrailId: vm.selectedMapItem, defaultBounds: vm.defaultMapBounds, mapAlerts: alertMessages, resetMap:$reset)
             .edgesIgnoringSafeArea(.all)
             VStack(spacing: 12) {
-                // if vm.selectedMapItem == 0 || firstTime {
                 if !firstTime || vm.selectedMapItem > 0 {
                     Button(action: {
                         self.reset = true
