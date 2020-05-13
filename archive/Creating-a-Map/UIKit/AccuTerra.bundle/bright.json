@@ -1,0 +1,34 @@
+{
+    "version":8,
+    "name":"Bright",
+    "metadata":{
+        "mapbox:type":"template",
+        "mapbox:groups":{
+        },
+        "mapbox:autocomposite":false,
+        "openmaptiles:version":"3.x",
+        "openmaptiles:mapbox:owner":"openmaptiles",
+        "openmaptiles:mapbox:source:url":"mapbox://openmaptiles.4qljc88t"
+    },
+    "center":[
+        8.542,
+        47.372
+    ],
+    "zoom":11.6,
+    "bearing":0,
+    "pitch":0,
+    "sources":{
+    },
+    "sprite":"asset://AccuTerra.bundle/sprites/sprite",
+    "glyphs":"asset://AccuTerra.bundle/glyphs/{fontstack}/{range}.pbf",
+    "layers":[
+        {
+            "id":"background",
+            "type":"background",
+            "paint":{
+                "background-color":"#f8f4f0"
+            }
+        }
+    ],
+    "id":"bright"
+}
