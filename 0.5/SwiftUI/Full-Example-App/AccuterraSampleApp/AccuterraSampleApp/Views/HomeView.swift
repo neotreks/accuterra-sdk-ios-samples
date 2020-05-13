@@ -54,12 +54,9 @@ struct HomeView: View {
                             [NavLinkView(title: "List to Map", destination: AnyView(SearchListToMap())),
                             NavLinkView(title: "Map to List", destination: AnyView(SearchMapToList())),
                             NavLinkView(title: "Search Map", destination: AnyView(MapSearchingView())),
-                            NavLinkView(title: "Search Term to Map", destination: AnyView(SearchTermToMap())),
-                            NavLinkView(title: "Search Term to List", destination: AnyView(SearchTermToList())),
                             ]),
         ListItems(section:"Filtering", navLinkItems:
-                            [NavLinkView(title: "Difficulty Filter Criteria", destination: AnyView(FilteringCriteria())),
-                            NavLinkView(title: "Map Filtering", destination: AnyView(FilteringMap())),
+                            [NavLinkView(title: "Map Filtering", destination: AnyView(FilteringMap())),
                             NavLinkView(title: "Map Bounds Filtering", destination: AnyView(FilteringMapBounds())),
                             ]),
         ListItems(section:"Customizing", navLinkItems:
