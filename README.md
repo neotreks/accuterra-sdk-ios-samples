@@ -3,7 +3,7 @@ Sample apps for iOS built with the AccuTerra SDK
 
 These sample apps are provided to demonstrate the capabilities of the AccuTerra Maps SDK. 
 
-To run these apps, you will need Cocoapods installed. See the instructions here for more [details](https://sdk.accuterra.com/develop/ios-sdk-home/ios-getting-started/) if you need help with Cocoapods. Otherwise, follow these steps:
+To run these apps, you will need Access Tokens (see below) and Cocoapods installed. See the instructions here for more [details](https://sdk.accuterra.com/develop/ios-sdk-home/ios-getting-started/) if you need help with Cocoapods. Otherwise, follow these steps:
 
 1. Clone the repo
 2. In a terminal, "cd" to the directory containing the sample of interest. This will contain the project file, workspace, and Podfile
