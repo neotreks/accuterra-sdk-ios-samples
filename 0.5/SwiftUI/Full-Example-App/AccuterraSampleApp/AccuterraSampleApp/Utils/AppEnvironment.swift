@@ -11,6 +11,4 @@ import Mapbox
 
 class AppEnvironment: ObservableObject {
     @Published var mapIntEnv = MapInteractionsEnvironment()
-    // View routing: https://blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-environmentobject/
-    @Published var currentPage: String = "download"
 }

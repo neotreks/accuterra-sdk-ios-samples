@@ -14,7 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var scene: UIWindowScene?
+    var viewRouter:ViewRouter = ViewRouter()
     var appEnvironment:AppEnvironment = AppEnvironment()
+
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
@@ -29,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
             else {
                 // Download the trails DB
-                window.rootViewController = UIHostingController(rootView: ControllerView().environmentObject(appEnvironment))
+                window.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter).environmentObject(appEnvironment))
             }
 
             self.window = window
@@ -87,8 +89,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func gotoHomeView() {
-        appEnvironment.currentPage = "home"
-        self.window?.rootViewController = UIHostingController(rootView: ControllerView().environmentObject(appEnvironment))
+        self.viewRouter.currentPage = "home"
+        self.window?.rootViewController = UIHostingController(rootView: ControllerView(viewRouter: viewRouter).environmentObject(appEnvironment))
+//        self.window?.rootViewController = UIHostingController(rootView: ControllerView().environmentObject(appEnvironment))
         window?.makeKeyAndVisible()
     }
 

@@ -18,7 +18,7 @@ struct TrailCard: View {
             DifficultyView(difficultyLow: trailItem.difficultyLow, difficultyHigh: trailItem.difficultyHigh)
             VStack(alignment: .leading) {
                 Text(trailItem.title)
-                    .font(.title)
+                    .font(.system(size: 20))
                     .bold()
                 HStack {
                     UserRatingsView(rating: trailItem.rating)

@@ -9,13 +9,5 @@ import Combine
 
 
 class AppSettings: ObservableObject {
-    
     @Published var selectedTrailId:Int64 = 0
-    // @Published var featureToggles = FeatureToggles(displayTrails: true, allowTrailTaps: true, allowPOITaps: true)
-    
-//    struct FeatureToggles {
-//        var displayTrails:Bool
-//        var allowTrailTaps:Bool
-//        var allowPOITaps:Bool
-//    }
 }

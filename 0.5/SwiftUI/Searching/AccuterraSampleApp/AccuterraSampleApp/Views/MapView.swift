@@ -54,6 +54,9 @@ struct MapView: UIViewRepresentable {
             uiView.trailLayersManager.highLightTrail(trailId: self.selectedTrailId)
             zoomToTrail(mapView: uiView, trailId: self.selectedTrailId)
         }
+        else if context.coordinator.isTrailsLayerManagersLoaded {
+            uiView.trailLayersManager.highLightTrail(trailId: nil )
+        }
     }
     
     private func getCenterFromBounds(bounds:MapBounds) -> CLLocationCoordinate2D {

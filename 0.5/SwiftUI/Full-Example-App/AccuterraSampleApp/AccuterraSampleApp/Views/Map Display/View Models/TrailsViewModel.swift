@@ -19,14 +19,6 @@ class TrailsViewModel: ObservableObject {
     @Published var trailCount: Int = 0
     fileprivate var region: MapBounds?
     
-//    init() {
-//        NotificationCenter.default.addObserver(forName: MapView.Coordinator.regionChangedNotification, object: nil, queue: .main) { [weak self] (notification) in
-//            self?.region = notification.object as? MapBounds
-//            print("TrailsViewModel .... observer ....")
-//            self?.getTrailsByBounds()
-//        }
-//    }
-    
     func getTrailById(trailId:Int64) -> Trail? {
         do {
             if self.trailService == nil {

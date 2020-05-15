@@ -90,7 +90,7 @@ class MapSearchingViewModel: NSObject, ObservableObject {
             }
         }
         catch {
-            print("\(error)")
+            debugPrint("\(error)")
         }
     }
         

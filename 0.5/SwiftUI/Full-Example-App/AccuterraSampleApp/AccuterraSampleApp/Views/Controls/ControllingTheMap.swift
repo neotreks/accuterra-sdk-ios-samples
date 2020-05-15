@@ -26,7 +26,7 @@ struct ControllingTheMap: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            MapView(initialState: initialMapDefaults, features: featureToggles, mapAlerts:$alertMessages)
+            MapView(features: featureToggles, mapAlerts:$alertMessages)
             .edgesIgnoringSafeArea(.vertical)
             VStack(spacing: 20) {
                 Text("Go to Location:")

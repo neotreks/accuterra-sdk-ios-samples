@@ -26,27 +26,6 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         self.controlView = mapView
     }
     
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
-        
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 37.791329, longitude: -122.396906),
-            CLLocationCoordinate2D(latitude: 37.791591, longitude: -122.396566),
-            CLLocationCoordinate2D(latitude: 37.791147, longitude: -122.396009),
-            CLLocationCoordinate2D(latitude: 37.790883, longitude: -122.396349),
-            CLLocationCoordinate2D(latitude: 37.791329, longitude: -122.396906),
-        ]
-        
-        let buildingFeature = MGLPolygonFeature(coordinates: coordinates, count: 5)
-        let shapeSource = MGLShapeSource(identifier: "buildingSource", features: [buildingFeature], options: nil)
-        mapView.style?.addSource(shapeSource)
-        
-        let fillLayer = MGLFillStyleLayer(identifier: "buildingFillLayer", source: shapeSource)
-        fillLayer.fillColor = NSExpression(forConstantValue: UIColor.blue)
-        fillLayer.fillOpacity = NSExpression(forConstantValue: 0.5)
-        
-        mapView.style?.addLayer(fillLayer)
-    }
-    
     func onStyleChanged() {}
     
     func onSignificantMapBoundsChange() {}
@@ -134,25 +113,10 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
     }
     
     func onMapLoaded() {
-        print("onMapLoaded")
         self.mapWasLoaded = true
-        print("onMapLoaded .... bounds: \(String(describing: controlView.env.mapIntEnv.mapBounds))")
-        self.zoomToDefaultBounds()
+        self.zoomToDefaultExtent()
         if controlView.features.displayTrails {
             self.addTrailLayers()
-        }
-        
-        NotificationCenter.default.addObserver(forName: MapView.Coordinator.showTrailsOnMapNotification, object: nil, queue: .main) { [weak self] (notification) in
-            if let (bounds, trailIs) = notification.object as? (MapBounds, Set<Int64>) {
-                self?.controlView.env.mapIntEnv.mapBounds = bounds
-                // self.mapView.zoomToExtent(bounds: bounds, edgePadding: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10), animated: true)
-                
-                if self?.trailsService == nil {
-                    self?.trailsService = ServiceFactory.getTrailService()
-                }
-                // self?.trailsService.setVisibleTrails(trailIds: trailIs)
-            }
-           //  self?.controlView.env.mapBounds = notification.object as? MapBounds
         }
     }
     
@@ -160,14 +124,15 @@ class MapCoordinator: NSObject, AccuTerraMapViewDelegate, TrailLayersManagerDele
         isTrailsLayerManagersLoaded = true
     }
     
-    private func zoomToDefaultBounds() {
-        if let bounds = controlView.initialState.defaults.mapBounds {
-            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-            let insets = controlView.initialState.defaults.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-            controlView.mapView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
-        }
+    private func zoomToDefaultExtent() {
+        // Colorado’s bounds
+        let northeast = CLLocationCoordinate2D(latitude: 40.989329, longitude: -102.062592)
+        let southwest = CLLocationCoordinate2D(latitude: 36.986207, longitude: -109.049896)
+        let colorado = MGLCoordinateBounds(sw: southwest, ne: northeast)
+        
+        controlView.mapView.zoomToExtent(bounds: colorado, animated: true)
     }
-    
+
     private func addTrailLayers() {
         guard SdkManager.shared.isTrailDbInitialized else {
             return
@@ -201,17 +166,13 @@ extension MapCoordinator : MGLMapViewDelegate {
         if controlView.features.updateSearchByMapBounds {
 
             if let newBoundingBox = try? getMapBounds() {
-                print("mapViewDidBecomeIdle   new bounds: \(newBoundingBox)")
-                print("mapViewDidBecomeIdle   previous bounds: \(String(describing: self.previousBoundingBox))")
                 if let boundingBox = self.previousBoundingBox {
                     if boundingBox.equals(bounds: newBoundingBox) {
                         return
                     }
                 }
                 self.previousBoundingBox = newBoundingBox
-                print("mapViewDidBecomeIdle   ******")
-                // controlView.env.mapIntEnv.mapBounds = newBoundingBox
-                // NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
+                NotificationCenter.default.post(name: MapCoordinator.regionChangedNotification, object: newBoundingBox)
             }
         }
     }

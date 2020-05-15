@@ -16,7 +16,6 @@ struct HomeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var vm = MapSearchingViewModel()
     @State var alertMessages = MapAlertMessages()
-    @State private var firstTime = true
     @State var reset:Bool = false
     var mapVm = MapViewModel()
 
@@ -25,7 +24,7 @@ struct HomeView: View {
             MapView(selectedTrailId: vm.selectedMapItem, defaultBounds: vm.defaultMapBounds, mapAlerts: alertMessages, resetMap:$reset)
             .edgesIgnoringSafeArea(.all)
             VStack(spacing: 12) {
-                if !firstTime || vm.selectedMapItem > 0 {
+                if vm.selectedMapItem > 0 {
                     Button(action: {
                         self.reset = true
                         self.vm.resetTrails()
@@ -41,7 +40,6 @@ struct HomeView: View {
                 else {
                     HStack {
                         TextField("Search terms", text: $vm.searchQuery, onCommit: {
-                            self.firstTime = false
                             UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.endEditing(true)
                         })
                         .padding(.horizontal, 16)

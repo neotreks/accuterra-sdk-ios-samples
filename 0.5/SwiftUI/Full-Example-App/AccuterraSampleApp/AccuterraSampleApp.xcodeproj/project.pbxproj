@@ -29,6 +29,7 @@
 		D31C2217244A781500B0E74E /* ControllingTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2216244A781500B0E74E /* ControllingTheMap.swift */; };
 		D3341D8A246C8BFC00F0F9F9 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */; };
 		D3341D8B246C8BFC00F0F9F9 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */; };
+		D3341D93246DB2AF00F0F9F9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */; };
 		D386CA012454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA052457570600D1A198 /* MapSearchingViewModel.swift */; };
@@ -154,6 +155,7 @@
 		D31C2211244A741A00B0E74E /* TrailDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailDetails.swift; sourceTree = "<group>"; };
 		D31C2216244A781500B0E74E /* ControllingTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingTheMap.swift; sourceTree = "<group>"; };
 		D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = SOURCE_ROOT; };
+		D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewModel.swift; sourceTree = "<group>"; };
 		D386CA052457570600D1A198 /* MapSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchingViewModel.swift; sourceTree = "<group>"; };
 		D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "05-Black-Bear-Pass.gpx"; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				D386CA9624588BBE00D1A198 /* AppSettings.swift */,
 				D31C2206244A72B200B0E74E /* HomeView.swift */,
 				D3B07E98244FAA1E00A39B51 /* ControllerView.swift */,
+				D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */,
 				D386CAC1245DE20700D1A198 /* UserRatingsView.swift */,
 				D31C220D244A740000B0E74E /* Map Display */,
 				D31C21EA244A71BB00B0E74E /* Controls */,
@@ -801,6 +804,7 @@
 				D386CAB9245CA67500D1A198 /* TrailListRow.swift in Sources */,
 				D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */,
 				D386CACE245E13DF00D1A198 /* TechRatingColorMapper.swift in Sources */,
+				D3341D93246DB2AF00F0F9F9 /* ViewRouter.swift in Sources */,
 				D386CAC2245DE20700D1A198 /* UserRatingsView.swift in Sources */,
 				D386CAD1245E1B1400D1A198 /* GeoUtils.swift in Sources */,
 				D386CBC72463702100D1A198 /* AppEnvironment.swift in Sources */,

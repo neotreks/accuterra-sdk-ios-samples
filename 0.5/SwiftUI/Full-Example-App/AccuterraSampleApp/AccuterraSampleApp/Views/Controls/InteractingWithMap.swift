@@ -26,7 +26,7 @@ struct InteractingWithMap: View {
     
     var body: some View {
         VStack() {
-            MapView(initialState: initialMapDefaults, features: featureToggles, mapAlerts:$alertMessages)
+            MapView(features: featureToggles, mapAlerts:$alertMessages)
             Spacer()
             HStack(spacing: 30) {
                 if env.mapIntEnv.selectedTrailId == 0 {

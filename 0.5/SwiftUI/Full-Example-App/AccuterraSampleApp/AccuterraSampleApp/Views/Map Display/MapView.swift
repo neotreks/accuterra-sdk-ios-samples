@@ -13,7 +13,6 @@ import Mapbox
 struct MapView: UIViewRepresentable {
     
     @EnvironmentObject var env: AppEnvironment
-    var initialState:MapInteractions = MapInteractions()
     var features:FeatureToggles = FeatureToggles(displayTrails: false, allowTrailTaps: false, allowPOITaps: false)
     @Binding var mapAlerts:MapAlertMessages
     
@@ -21,6 +20,8 @@ struct MapView: UIViewRepresentable {
     var styleId = 0
     let mapView: AccuTerraMapView = AccuTerraMapView(frame: .zero, styleURL: MGLStyle.streetsStyleURL)
     var mapVm = MapViewModel()
+    var initialMapDefaults:MapInteractions = MapInteractions()
+    var coordinator:MapCoordinator?
     
     // MARK: - Configuring UIViewRepresentable protocol
     
@@ -39,12 +40,8 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: AccuTerraMapView, context: UIViewRepresentableContext<MapView>) {
-        print("updateUIView .... bounds: \(String(describing: env.mapIntEnv.mapBounds))")
-        print("updateUIView .... center: \(String(describing: env.mapIntEnv.mapCenter))")
         if let bounds = env.mapIntEnv.mapBounds {
-            let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
-            let insets = env.mapIntEnv.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-            uiView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
+            zoomToBounds(mapView: uiView, bounds: bounds)
         }
         else if let location = env.mapIntEnv.mapCenter {
             if env.mapIntEnv.zoomAnimation {
@@ -58,14 +55,47 @@ struct MapView: UIViewRepresentable {
                 uiView.setCenter(location, animated: true)
             }
         }
-        
-        if env.mapIntEnv.selectedTrailId != 0 {
-            uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.mapIntEnv.selectedTrailId ]))
+
+        if env.mapIntEnv.selectedTrailId > 0 {
+            uiView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([env.mapIntEnv.selectedTrailId]))
             uiView.trailLayersManager.highLightTrail(trailId: env.mapIntEnv.selectedTrailId )
+            zoomToTrail(mapView: uiView, trailId: env.mapIntEnv.selectedTrailId)
+        }
+        else if context.coordinator.isTrailsLayerManagersLoaded {
+            uiView.trailLayersManager.highLightTrail(trailId: nil )
         }
     }
     
-    func styleURL(_ styleURL: URL) -> MapView {
+    private func zoomToTrail(mapView: AccuTerraMapView, trailId: Int64) {
+        self.mapView.trailLayersManager.setVisibleTrails(trailIds: Set<Int64>([trailId]))
+        self.mapView.trailLayersManager.highLightTrail(trailId: trailId)
+        do {
+            if SdkManager.shared.isTrailDbInitialized {
+                let trailsService = ServiceFactory.getTrailService()
+                if let trail = try trailsService.getTrailById(trailId),
+                    let locationInfo = trail.locationInfo {
+                    self.zoomToTrail(mapView:mapView, locationInfo: locationInfo)
+                }
+            }
+
+        }
+        catch {
+            debugPrint("\(error)")
+        }
+    }
+    
+    private func zoomToBounds(mapView: AccuTerraMapView, bounds:MapBounds) {
+        let extent = MGLCoordinateBounds(sw: bounds.sw.coordinates, ne: bounds.ne.coordinates)
+        let insets = env.mapIntEnv.edgeInsets ??  UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        mapView.zoomToExtent(bounds:extent, edgePadding:insets, animated: true)
+    }
+    
+    private func zoomToTrail(mapView: AccuTerraMapView, locationInfo: TrailLocationInfo) {
+        let extent = MGLCoordinateBounds(sw: locationInfo.mapBounds.sw.coordinates, ne: locationInfo.mapBounds.ne.coordinates)
+        mapView.zoomToExtent(bounds: extent, edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), animated: true)
+    }
+    
+    private func styleURL(_ styleURL: URL) -> MapView {
         mapView.styleURL = styleURL
         return self
     }
@@ -74,12 +104,12 @@ struct MapView: UIViewRepresentable {
         MapCoordinator(self)
     }
     
-    func centerCoordinate(_ centerCoordinate: CLLocationCoordinate2D) -> MapView {
+    private func centerCoordinate(_ centerCoordinate: CLLocationCoordinate2D) -> MapView {
         mapView.centerCoordinate = centerCoordinate
         return self
     }
     
-    func zoomLevel(_ zoomLevel: Double) -> MapView {
+    private func zoomLevel(_ zoomLevel: Double) -> MapView {
         mapView.zoomLevel = zoomLevel
         return self
     }

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ControllerView : View {
     
-    @EnvironmentObject var appEnv: AppEnvironment
+    // @EnvironmentObject var appEnv: AppEnvironment
+    @ObservedObject var viewRouter: ViewRouter
     
     var body: some View {
             VStack {
-                if appEnv.currentPage == "download" {
-                    DownloadView()
-                } else if appEnv.currentPage == "home" {
+                if viewRouter.currentPage == "download" {
+                    DownloadView(viewRouter: viewRouter)
+                } else if viewRouter.currentPage == "home" {
                     NavigationView {
                         HomeView()
                         .navigationBarTitle(Text("AccuTerra SDK SwiftUI Samples"), displayMode: .inline)
@@ -27,6 +28,6 @@ struct ControllerView : View {
 
 struct ControllerView_Previews : PreviewProvider {
     static var previews: some View {
-        ControllerView().environmentObject(AppEnvironment())
+        ControllerView(viewRouter: ViewRouter())
     }
 }
