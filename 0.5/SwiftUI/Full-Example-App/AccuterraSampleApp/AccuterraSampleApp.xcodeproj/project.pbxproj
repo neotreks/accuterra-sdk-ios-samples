@@ -30,6 +30,12 @@
 		D3341D8A246C8BFC00F0F9F9 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */; };
 		D3341D8B246C8BFC00F0F9F9 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */; };
 		D3341D93246DB2AF00F0F9F9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */; };
+		D3341D9B246FAC7200F0F9F9 /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */; };
+		D3341D9C246FAC7200F0F9F9 /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */; };
+		D3341D9E246FAD9A00F0F9F9 /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */; };
+		D3341D9F246FAD9A00F0F9F9 /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */; };
+		D3341DA72471068F00F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */; };
+		D3341DA82471068F00F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */; };
 		D386CA012454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA052457570600D1A198 /* MapSearchingViewModel.swift */; };
@@ -156,6 +162,9 @@
 		D31C2216244A781500B0E74E /* ControllingTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllingTheMap.swift; sourceTree = "<group>"; };
 		D3341D89246C8BFC00F0F9F9 /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = SOURCE_ROOT; };
 		D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = SOURCE_ROOT; };
+		D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnumUtil.swift; path = ../../../../../UIKit/EnumUtil.swift; sourceTree = "<group>"; };
+		D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Synchronized.swift; path = ../../../../../UIKit/Synchronized.swift; sourceTree = "<group>"; };
+		D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = SOURCE_ROOT; };
 		D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewModel.swift; sourceTree = "<group>"; };
 		D386CA052457570600D1A198 /* MapSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchingViewModel.swift; sourceTree = "<group>"; };
 		D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "05-Black-Bear-Pass.gpx"; sourceTree = "<group>"; };
@@ -316,8 +325,10 @@
 		D31C21E2244A704500B0E74E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */,
 				D31C21AD244A6F1400B0E74E /* AppDelegate.swift */,
 				D386CBC62463702100D1A198 /* AppEnvironment.swift */,
+				D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */,
 				D386CAAF245B9BFC00D1A198 /* MapEnvironment.swift */,
 				D386CAD3245E676A00D1A198 /* MapInteractionsEnvironment.swift */,
 				D386CBC92463709D00D1A198 /* MapInteractions.swift */,
@@ -406,10 +417,11 @@
 		D386CAA2245B232900D1A198 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */,
 				D386CA052457570600D1A198 /* MapSearchingViewModel.swift */,
+				D386CAB2245B9CA100D1A198 /* MapViewModel.swift */,
 				D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */,
 				D386CAA3245B24BB00D1A198 /* TrailsViewModel.swift */,
-				D386CAB2245B9CA100D1A198 /* MapViewModel.swift */,
 				D386CAC7245E088200D1A198 /* UserRatingsViewModel.swift */,
 			);
 			path = "View Models";
@@ -809,6 +821,7 @@
 				D386CAD1245E1B1400D1A198 /* GeoUtils.swift in Sources */,
 				D386CBC72463702100D1A198 /* AppEnvironment.swift in Sources */,
 				D386CAA4245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
+				D3341D9E246FAD9A00F0F9F9 /* Synchronized.swift in Sources */,
 				D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */,
 				D3B07E89244F761100A39B51 /* DownloadService.swift in Sources */,
 				D386CAB6245BDF0A00D1A198 /* TrailListView.swift in Sources */,
@@ -822,8 +835,10 @@
 				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
 				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
 				D386CA9A2458C89700D1A198 /* MapCoordinator.swift in Sources */,
+				D3341D9B246FAC7200F0F9F9 /* EnumUtil.swift in Sources */,
 				D386CAC8245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
 				D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */,
+				D3341DA72471068F00F0F9F9 /* FilterViewModel.swift in Sources */,
 				D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */,
 				D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */,
 				D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */,
@@ -863,6 +878,7 @@
 				D386CABD245D177300D1A198 /* MapSearchingView.swift in Sources */,
 				D3B07E9A244FAA1E00A39B51 /* ControllerView.swift in Sources */,
 				D3B07E61244E65C000A39B51 /* HomeView.swift in Sources */,
+				D3341D9F246FAD9A00F0F9F9 /* Synchronized.swift in Sources */,
 				D3B07E63244E65C000A39B51 /* AddingPOIs.swift in Sources */,
 				D386CBCB2463709D00D1A198 /* MapInteractions.swift in Sources */,
 				D3B07E64244E65C000A39B51 /* CreateMap.swift in Sources */,
@@ -875,6 +891,7 @@
 				D386CAA5245B24BB00D1A198 /* TrailsViewModel.swift in Sources */,
 				D386CACF245E13DF00D1A198 /* TechRatingColorMapper.swift in Sources */,
 				D386CAA12459F59E00D1A198 /* TrailDetailsInfo.swift in Sources */,
+				D3341D9C246FAC7200F0F9F9 /* EnumUtil.swift in Sources */,
 				D3341D8B246C8BFC00F0F9F9 /* DifficultyView.swift in Sources */,
 				D386CAC9245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
 				D386CA9B2458C89700D1A198 /* MapCoordinator.swift in Sources */,
@@ -894,6 +911,7 @@
 				D3B07E70244E65C000A39B51 /* InteractingWithMap.swift in Sources */,
 				D386CAD5245E676A00D1A198 /* MapInteractionsEnvironment.swift in Sources */,
 				D3B07E71244E65C000A39B51 /* FilteringMap.swift in Sources */,
+				D3341DA82471068F00F0F9F9 /* FilterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

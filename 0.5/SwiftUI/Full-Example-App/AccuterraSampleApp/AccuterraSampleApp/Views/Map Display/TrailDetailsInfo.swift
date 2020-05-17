@@ -2,7 +2,7 @@
 //  TrailDetailsInfo.swift
 //  AccuterraSampleApp
 //
-//  Created by Brian Elliott on 4/29/20.
+//  Created by Rudolf Kopřiva on 4/29/20.
 //  Copyright © 2020 NeoTreks, Inc. All rights reserved.
 //
 
