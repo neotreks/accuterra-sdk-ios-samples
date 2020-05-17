@@ -57,7 +57,6 @@ class FilterViewModel: NSObject, ObservableObject {
             var techRatingSearchCriteria: TechRatingSearchCriteria?
 
             if let maxDifficultyLevel = difficultyLevel, maxDifficultyLevel < 5 {
-                print("difficulty 2  = \(maxDifficultyLevel)")
                 techRatingSearchCriteria = TechRatingSearchCriteria(
                     level: maxDifficultyLevel,
                     comparison: Comparison.lessEquals)
@@ -65,7 +64,6 @@ class FilterViewModel: NSObject, ObservableObject {
             
             var userRatingSearchCriteria: UserRatingSearchCriteria?
             if let minUserRating = minUserRating, minUserRating > 0 {
-                print("userrating = \(minUserRating)")
                 userRatingSearchCriteria = UserRatingSearchCriteria(
                     userRating: Double(minUserRating),
                     comparison: .greaterEquals)
@@ -73,7 +71,6 @@ class FilterViewModel: NSObject, ObservableObject {
             
             var lengthSearchCriteria: LengthSearchCriteria?
             if let maxTripDistance = maxTripDistance {
-                print("distance = \(maxTripDistance)")
                 lengthSearchCriteria = LengthSearchCriteria(length: Double(maxTripDistance))
             }
             
@@ -86,9 +83,6 @@ class FilterViewModel: NSObject, ObservableObject {
                 orderBy: OrderBy(),
                 limit: Int(INT32_MAX))
             
-            print("mapcenter: \(mapCenter)")
-            print("trailName: \(trailName)")
-
             let basicInfoList = try trailService?.findTrails(byMapCriteria: searchCriteria)
             if let infoList = basicInfoList {
                 self.moreTrailsFound = infoList.count
@@ -99,7 +93,6 @@ class FilterViewModel: NSObject, ObservableObject {
                     if count > resultsLimit {
                         break
                     }
-                    print("trail search .... item: \(item.name), user rating: \(item.userRating), difficulty:\(item.techRatingHigh), distance: \(item.length)")
                     self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }
                 self.isSearching = false

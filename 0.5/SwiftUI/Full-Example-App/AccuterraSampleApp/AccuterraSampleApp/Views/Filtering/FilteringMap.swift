@@ -251,10 +251,6 @@ struct FilteringMap: View {
             .edgesIgnoringSafeArea([.bottom])
             Spacer().frame(height: vm.keyboardHeight)
         }
-        //Spacer().frame(height: vm.keyboardHeight)
-//        .alert(isPresented:$alertMessages.displayAlert) {
-//            Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
-//        }
         .navigationBarTitle(Text("Filter Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
