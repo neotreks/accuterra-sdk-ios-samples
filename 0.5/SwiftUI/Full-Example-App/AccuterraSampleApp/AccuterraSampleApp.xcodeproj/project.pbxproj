@@ -34,15 +34,11 @@
 		D3341D9C246FAC7200F0F9F9 /* EnumUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */; };
 		D3341D9E246FAD9A00F0F9F9 /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */; };
 		D3341D9F246FAD9A00F0F9F9 /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */; };
-		D3341DA72471068F00F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */; };
-		D3341DA82471068F00F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */; };
+		D3341DAD2471EB4800F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DAC2471EB4800F0F9F9 /* FilterViewModel.swift */; };
+		D3341DAE2471EB4800F0F9F9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3341DAC2471EB4800F0F9F9 /* FilterViewModel.swift */; };
 		D386CA012454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA022454788D00D1A198 /* TrailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */; };
 		D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA052457570600D1A198 /* MapSearchingViewModel.swift */; };
-		D386CA0A2457942200D1A198 /* 05-Black-Bear-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */; };
-		D386CA0B2457942300D1A198 /* 05-Black-Bear-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */; };
-		D386CA0D2457945300D1A198 /* 04-Imogene-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */; };
-		D386CA0E2457945300D1A198 /* 04-Imogene-Pass.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */; };
 		D386CA562457D11B00D1A198 /* MapEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA552457D11B00D1A198 /* MapEventRouter.swift */; };
 		D386CA572457D11B00D1A198 /* MapEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA552457D11B00D1A198 /* MapEventRouter.swift */; };
 		D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386CA9624588BBE00D1A198 /* AppSettings.swift */; };
@@ -164,11 +160,9 @@
 		D3341D92246DB2AF00F0F9F9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		D3341D9A246FAC7200F0F9F9 /* EnumUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnumUtil.swift; path = ../../../../../UIKit/EnumUtil.swift; sourceTree = "<group>"; };
 		D3341D9D246FAD9A00F0F9F9 /* Synchronized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Synchronized.swift; path = ../../../../../UIKit/Synchronized.swift; sourceTree = "<group>"; };
-		D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D3341DAC2471EB4800F0F9F9 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailDetailsViewModel.swift; sourceTree = "<group>"; };
 		D386CA052457570600D1A198 /* MapSearchingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchingViewModel.swift; sourceTree = "<group>"; };
-		D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "05-Black-Bear-Pass.gpx"; sourceTree = "<group>"; };
-		D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "04-Imogene-Pass.gpx"; sourceTree = "<group>"; };
 		D386CA552457D11B00D1A198 /* MapEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEventRouter.swift; sourceTree = "<group>"; };
 		D386CA9624588BBE00D1A198 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		D386CA992458C89700D1A198 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
@@ -253,8 +247,6 @@
 		D31C21A1244A6F1400B0E74E = {
 			isa = PBXGroup;
 			children = (
-				D386CA0C2457945300D1A198 /* 04-Imogene-Pass.gpx */,
-				D386CA092457941B00D1A198 /* 05-Black-Bear-Pass.gpx */,
 				D31C21AC244A6F1400B0E74E /* AccuterraSampleApp */,
 				D31C21C3244A6F1600B0E74E /* AccuterraSampleAppTests */,
 				D31C21CE244A6F1600B0E74E /* AccuterraSampleAppUITests */,
@@ -417,7 +409,7 @@
 		D386CAA2245B232900D1A198 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				D3341DA62471068F00F0F9F9 /* FilterViewModel.swift */,
+				D3341DAC2471EB4800F0F9F9 /* FilterViewModel.swift */,
 				D386CA052457570600D1A198 /* MapSearchingViewModel.swift */,
 				D386CAB2245B9CA100D1A198 /* MapViewModel.swift */,
 				D386CA002454788D00D1A198 /* TrailDetailsViewModel.swift */,
@@ -571,8 +563,6 @@
 			files = (
 				D31C21BA244A6F1600B0E74E /* LaunchScreen.storyboard in Resources */,
 				D31C21B7244A6F1600B0E74E /* Preview Assets.xcassets in Resources */,
-				D386CA0D2457945300D1A198 /* 04-Imogene-Pass.gpx in Resources */,
-				D386CA0A2457942200D1A198 /* 05-Black-Bear-Pass.gpx in Resources */,
 				D31C21B4244A6F1600B0E74E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,8 +586,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B07E74244E65C000A39B51 /* LaunchScreen.storyboard in Resources */,
-				D386CA0B2457942300D1A198 /* 05-Black-Bear-Pass.gpx in Resources */,
-				D386CA0E2457945300D1A198 /* 04-Imogene-Pass.gpx in Resources */,
 				D3B07E75244E65C000A39B51 /* Preview Assets.xcassets in Resources */,
 				D3B07E76244E65C000A39B51 /* Assets.xcassets in Resources */,
 			);
@@ -838,7 +826,7 @@
 				D3341D9B246FAC7200F0F9F9 /* EnumUtil.swift in Sources */,
 				D386CAC8245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
 				D386CA9724588BBE00D1A198 /* AppSettings.swift in Sources */,
-				D3341DA72471068F00F0F9F9 /* FilterViewModel.swift in Sources */,
+				D3341DAD2471EB4800F0F9F9 /* FilterViewModel.swift in Sources */,
 				D386CA062457570600D1A198 /* MapSearchingViewModel.swift in Sources */,
 				D3B07E5C244E55D300A39B51 /* MapView.swift in Sources */,
 				D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */,
@@ -911,7 +899,7 @@
 				D3B07E70244E65C000A39B51 /* InteractingWithMap.swift in Sources */,
 				D386CAD5245E676A00D1A198 /* MapInteractionsEnvironment.swift in Sources */,
 				D3B07E71244E65C000A39B51 /* FilteringMap.swift in Sources */,
-				D3341DA82471068F00F0F9F9 /* FilterViewModel.swift in Sources */,
+				D3341DAE2471EB4800F0F9F9 /* FilterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

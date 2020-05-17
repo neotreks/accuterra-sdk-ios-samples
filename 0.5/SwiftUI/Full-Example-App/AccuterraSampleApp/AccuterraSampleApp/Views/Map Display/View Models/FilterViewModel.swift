@@ -119,8 +119,3 @@ class FilterViewModel: NSObject, ObservableObject {
         }
     }
 }
-
-
-
-
-
