@@ -62,7 +62,6 @@ struct MapSearchingView: View {
                                       Button(action: {
                                         let id = item.trailId
                                         self.env.mapIntEnv.selectedTrailId = id
-                                        // self.vm.selectedMapItem = id
                                       }, label: {
                                         VStack(alignment: .leading, spacing: 4) {
                                              TrailCard(trailItem: item)

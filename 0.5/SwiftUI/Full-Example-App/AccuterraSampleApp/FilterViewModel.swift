@@ -14,78 +14,88 @@ import Combine
 class FilterViewModel: NSObject, ObservableObject {
     
     @Published var isSearching = false
-    @Published var searchQuery = ""
-    @Published var reset = false
     @Published var trails = [TrailItem]()
     @Published var keyboardHeight: CGFloat = 0
     @Published var searchBounds:MapBounds?
     var trailService: ITrailService?
-    var cancellable: AnyCancellable?
 
     override init() {
         super.init()
-
-        cancellable = $searchQuery.debounce(for: .milliseconds(1000), scheduler: RunLoop.main)
-            .sink { [weak self] (searchTerm) in
-                self?.performSearch(query: searchTerm)
-        }
         
         listenForKeyboardNotifications()
-        
-        NotificationCenter.default.addObserver(forName: MapView.Coordinator.regionChangedNotification, object: nil, queue: .main) { [weak self] (notification) in
-            self?.searchBounds = notification.object as? MapBounds
-        }
-        
     }
 
-    func getColoradoBounds() -> MapBounds {
-        return try! MapBounds( minLat: 37.99906, minLon: -109.04265, maxLat: 41.00097, maxLon: -102.04607)
+    func getTellurideLocation() -> MapLocation {
+        return MapLocation(latitude: 37.9375, longitude: -107.8123)
     }
     
-    func getUSBounds() -> MapBounds {
-        return try! MapBounds(minLat: 25.79467, minLon: -125.32188, maxLat: 48.90785, maxLon:  -66.23966)
+    func getAspenLocation() -> MapLocation {
+        return MapLocation(latitude: 39.1911, longitude: -106.8175)
     }
     
     func resetTrails() {
-        self.searchQuery = ""
         self.isSearching = false
         self.trails = []
     }
     
-    private func performSearch(query: String) {
+    func searchTrails(trailName:String = "", difficultyLevel:Int?, minUserRating:Int?, maxTripDistance:Int?, mapCenter:MapLocation) {
+        
+        guard SdkManager.shared.isTrailDbInitialized else {
+            return
+        }
+        
         do {
-            isSearching = true
-            
-            // Only search if there is a search term
-            guard query.count > 0 else {
-                isSearching = false
-                self.trails = []
-                return
-            }
-            
+        
             if self.trailService == nil {
                 trailService = ServiceFactory.getTrailService()
             }
+            
+            var techRatingSearchCriteria: TechRatingSearchCriteria?
 
-            let searchCriteria = TrailMapBoundsSearchCriteria(
-                mapBounds: self.searchBounds ?? getUSBounds(),
-                nameSearchString: query,
-                techRating: nil,
-                userRating: nil,
-                length: nil,
+            if let maxDifficultyLevel = difficultyLevel, maxDifficultyLevel < 5 {
+                print("difficulty 2  = \(maxDifficultyLevel)")
+                techRatingSearchCriteria = TechRatingSearchCriteria(
+                    level: maxDifficultyLevel,
+                    comparison: Comparison.lessEquals)
+            }
+            
+            var userRatingSearchCriteria: UserRatingSearchCriteria?
+            if let minUserRating = minUserRating, minUserRating > 0 {
+                print("userrating = \(minUserRating)")
+                userRatingSearchCriteria = UserRatingSearchCriteria(
+                    userRating: Double(minUserRating),
+                    comparison: .greaterEquals)
+            }
+            
+            var lengthSearchCriteria: LengthSearchCriteria?
+            if let maxTripDistance = maxTripDistance {
+                print("distance = \(maxTripDistance)")
+                lengthSearchCriteria = LengthSearchCriteria(length: Double(maxTripDistance))
+            }
+            
+            let searchCriteria = TrailMapSearchCriteria(
+                mapCenter: mapCenter,
+                nameSearchString: trailName,
+                techRating: techRatingSearchCriteria,
+                userRating: userRatingSearchCriteria,
+                length: lengthSearchCriteria,
                 orderBy: OrderBy(),
                 limit: Int(INT32_MAX))
-            let basicInfoList = try trailService?.findTrails(byMapBoundsCriteria: searchCriteria)
+            
+            print("mapcenter: \(mapCenter)")
+            print("trailName: \(trailName)")
+
+            let basicInfoList = try trailService?.findTrails(byMapCriteria: searchCriteria)
             if let infoList = basicInfoList {
                 self.trails = []
                 for item in infoList {
+                    print("trail search .... item: \(item.name), user rating: \(item.userRating), difficulty:\(item.techRatingHigh), distance: \(item.length)")
                     self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }
                 self.isSearching = false
             }
-        }
-        catch {
-            print("\(error)")
+        } catch {
+            debugPrint("\(error)")
         }
     }
         
