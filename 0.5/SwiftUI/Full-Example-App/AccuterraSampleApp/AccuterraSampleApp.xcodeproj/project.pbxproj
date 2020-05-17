@@ -18,7 +18,6 @@
 		D31C21EC244A71CC00B0E74E /* InteractingWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */; };
 		D31C21FB244A721800B0E74E /* SearchMapToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F7244A721800B0E74E /* SearchMapToList.swift */; };
 		D31C21FC244A721800B0E74E /* SearchListToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F8244A721800B0E74E /* SearchListToMap.swift */; };
-		D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */; };
 		D31C2202244A725300B0E74E /* FilteringMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FF244A725300B0E74E /* FilteringMap.swift */; };
 		D31C2207244A72B200B0E74E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2206244A72B200B0E74E /* HomeView.swift */; };
 		D31C2209244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */; };
@@ -89,7 +88,6 @@
 		D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AD244A6F1400B0E74E /* AppDelegate.swift */; };
 		D3B07E6A244E65C000A39B51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21AF244A6F1400B0E74E /* SceneDelegate.swift */; };
 		D3B07E6B244E65C000A39B51 /* TrailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C2211244A741A00B0E74E /* TrailDetails.swift */; };
-		D3B07E6C244E65C000A39B51 /* FilteringMapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */; };
 		D3B07E6E244E65C000A39B51 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B07E5B244E55D300A39B51 /* MapView.swift */; };
 		D3B07E6F244E65C000A39B51 /* SearchMapToList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21F7244A721800B0E74E /* SearchMapToList.swift */; };
 		D3B07E70244E65C000A39B51 /* InteractingWithMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */; };
@@ -148,7 +146,6 @@
 		D31C21EB244A71CC00B0E74E /* InteractingWithMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractingWithMap.swift; sourceTree = "<group>"; };
 		D31C21F7244A721800B0E74E /* SearchMapToList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMapToList.swift; sourceTree = "<group>"; };
 		D31C21F8244A721800B0E74E /* SearchListToMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListToMap.swift; sourceTree = "<group>"; };
-		D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringMapBounds.swift; sourceTree = "<group>"; };
 		D31C21FF244A725300B0E74E /* FilteringMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringMap.swift; sourceTree = "<group>"; };
 		D31C2206244A72B200B0E74E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D31C2208244A72EC00B0E74E /* CustomizingTrailsAndPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizingTrailsAndPOIs.swift; sourceTree = "<group>"; };
@@ -375,7 +372,6 @@
 			isa = PBXGroup;
 			children = (
 				D31C21FF244A725300B0E74E /* FilteringMap.swift */,
-				D31C21FE244A725300B0E74E /* FilteringMapBounds.swift */,
 			);
 			path = Filtering;
 			sourceTree = "<group>";
@@ -822,7 +818,6 @@
 				D386CABC245D177200D1A198 /* MapSearchingView.swift in Sources */,
 				D31C21B0244A6F1400B0E74E /* SceneDelegate.swift in Sources */,
 				D31C2215244A741A00B0E74E /* TrailDetails.swift in Sources */,
-				D31C2201244A725300B0E74E /* FilteringMapBounds.swift in Sources */,
 				D386CA9A2458C89700D1A198 /* MapCoordinator.swift in Sources */,
 				D3341D9B246FAC7200F0F9F9 /* EnumUtil.swift in Sources */,
 				D386CAC8245E088200D1A198 /* UserRatingsViewModel.swift in Sources */,
@@ -890,7 +885,6 @@
 				D3B07E68244E65C000A39B51 /* AppDelegate.swift in Sources */,
 				D3B07E6A244E65C000A39B51 /* SceneDelegate.swift in Sources */,
 				D3B07E6B244E65C000A39B51 /* TrailDetails.swift in Sources */,
-				D3B07E6C244E65C000A39B51 /* FilteringMapBounds.swift in Sources */,
 				D386CA9E2459D83D00D1A198 /* DetailView.swift in Sources */,
 				D386CAC0245DDBC300D1A198 /* TrailCard.swift in Sources */,
 				D3B07E6E244E65C000A39B51 /* MapView.swift in Sources */,

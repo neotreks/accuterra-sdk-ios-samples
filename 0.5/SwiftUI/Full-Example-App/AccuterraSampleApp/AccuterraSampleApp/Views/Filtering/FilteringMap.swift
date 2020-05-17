@@ -60,6 +60,7 @@ struct FilteringMap: View {
         self.userRatingLabel = "Any"
         self.tripDistanceLabel = "Any"
         self.trailName = ""
+        self.vm.moreTrailsFound = 0
         UIApplication.shared.endEditing() // Call to dismiss keyboard
     }
         
@@ -204,13 +205,56 @@ struct FilteringMap: View {
             .padding(.top, 10)
 
             HStack {
-                Text("Trails")
+                if vm.moreTrailsFound > vm.trails.count {
+                    Text("Trails - Found: \(vm.moreTrailsFound) | Displayed: 100")
+                    .frame(height: 50)
+                }
+                else {
+                    Text("Trails - Found: \(vm.trails.count)")
+                    .frame(height: 50)
+                }
                 Spacer()
             }
             .padding(7)
             .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
-            Spacer()
+            ScrollView(.horizontal) {
+                HStack(spacing: 16) {
+                    if vm.trails.count > 0 {
+                        ForEach(vm.trails, id: \.self) { item in
+                            VStack {
+                                  Button(action: {
+                                    let id = item.trailId
+                                    self.env.mapIntEnv.selectedTrailId = id
+                                  }, label: {
+                                    VStack(alignment: .leading, spacing: 4) {
+                                         TrailCard(trailItem: item)
+                                    }
+                                  }).foregroundColor(.black)
+                                  .padding()
+                                      .frame(width: 275, height: 200)
+                                      .background(Color.white)
+                                  .cornerRadius(5)
+                            }
+                        }
+                    }
+                    else {
+                        VStack {
+                            Text("No Trails Found!")
+                            Spacer()
+                        }
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                .padding(.horizontal, 16)
+            }.shadow(radius: 5)
+            .frame(maxHeight: 200)
+            .edgesIgnoringSafeArea([.bottom])
+            Spacer().frame(height: vm.keyboardHeight)
         }
+        //Spacer().frame(height: vm.keyboardHeight)
+//        .alert(isPresented:$alertMessages.displayAlert) {
+//            Alert(title: Text(alertMessages.title), message: Text(alertMessages.message), dismissButton: .default(Text("OK")))
+//        }
         .navigationBarTitle(Text("Filter Map"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action : {
@@ -219,6 +263,7 @@ struct FilteringMap: View {
             }){
                 Image(systemName: "arrow.left")
             })
+
     }
 }
 

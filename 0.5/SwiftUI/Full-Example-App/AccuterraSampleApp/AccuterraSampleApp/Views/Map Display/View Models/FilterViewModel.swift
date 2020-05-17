@@ -15,9 +15,11 @@ class FilterViewModel: NSObject, ObservableObject {
     
     @Published var isSearching = false
     @Published var trails = [TrailItem]()
+    @Published var moreTrailsFound = 0
     @Published var keyboardHeight: CGFloat = 0
     @Published var searchBounds:MapBounds?
     var trailService: ITrailService?
+    let resultsLimit = 100
 
     override init() {
         super.init()
@@ -49,6 +51,8 @@ class FilterViewModel: NSObject, ObservableObject {
             if self.trailService == nil {
                 trailService = ServiceFactory.getTrailService()
             }
+            
+            self.moreTrailsFound = 0
             
             var techRatingSearchCriteria: TechRatingSearchCriteria?
 
@@ -87,8 +91,14 @@ class FilterViewModel: NSObject, ObservableObject {
 
             let basicInfoList = try trailService?.findTrails(byMapCriteria: searchCriteria)
             if let infoList = basicInfoList {
+                self.moreTrailsFound = infoList.count
                 self.trails = []
+                var count = 0
                 for item in infoList {
+                    count += 1
+                    if count > resultsLimit {
+                        break
+                    }
                     print("trail search .... item: \(item.name), user rating: \(item.userRating), difficulty:\(item.techRatingHigh), distance: \(item.length)")
                     self.trails.append(TrailItem(trailId: item.id, title: item.name, description: item.highlights, distance: item.length, rating:item.userRating, difficultyLow:item.techRatingLow, difficultyHigh: item.techRatingHigh))
                 }

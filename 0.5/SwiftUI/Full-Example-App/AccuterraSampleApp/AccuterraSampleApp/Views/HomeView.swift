@@ -56,11 +56,7 @@ struct HomeView: View {
                             NavLinkView(title: "Search Map", destination: AnyView(MapSearchingView())),
                             ]),
         ListItems(section:"Filtering", navLinkItems:
-                            [NavLinkView(title: "Map Filtering", destination: AnyView(FilteringMap())),
-                            NavLinkView(title: "Map Bounds Filtering", destination: AnyView(FilteringMapBounds())),
-                            ]),
-        ListItems(section:"Customizing", navLinkItems:
-                            [NavLinkView(title: "Custom Trail & POI Styles", destination: AnyView(CustomizingTrailsAndPOIs())),
+                            [NavLinkView(title: "Map Filtering", destination: AnyView(FilteringMap()))
                             ]),
     ]
     
