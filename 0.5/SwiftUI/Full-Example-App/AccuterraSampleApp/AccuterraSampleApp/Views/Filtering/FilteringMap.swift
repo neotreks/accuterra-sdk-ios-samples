@@ -22,13 +22,13 @@ struct FilteringMap: View {
     var centerOptions = ["Telluride", "Aspen"]
     @State private var difficulty:Float = 5
     @State private var difficultyLabel:String = "Any"
-    @State private var userRating:Float = 6
+    @State private var userRating:Float = 5
     @State private var userRatingLabel:String = "Any"
     @State private var tripDistance:Float = 100
     @State private var tripDistanceLabel:String = "Any"
     var minimumValue:Float = 0.0
     var maximumvalue:Float = 100.0
-    let reserveUserRatings = [5,4,3,2,1,0]
+    let reversedUserRatings = [5,4,3,2,1,0]
     
     private lazy var difficultyLevels = [TechnicalRating]()
     private let MAX_STARS = 6
@@ -49,6 +49,19 @@ struct FilteringMap: View {
             return MAX_STARS - Int(progress)
         }
     }
+    
+    private func clear() {
+        self.vm.resetTrails()
+        self.difficulty = 5
+        self.userRating = 5
+        self.tripDistance = 100
+        self.mapCenterSelection = 0
+        self.difficultyLabel = "Any"
+        self.userRatingLabel = "Any"
+        self.tripDistanceLabel = "Any"
+        self.trailName = ""
+        UIApplication.shared.endEditing() // Call to dismiss keyboard
+    }
         
     init() {
         EnumUtil.cacheEnums()
@@ -57,16 +70,25 @@ struct FilteringMap: View {
         clearFiters()
     }
     
-    func clearFiters() {
+    private func clearFiters() {
         let diffValues = self.getDifficultyArray
         difficulty = Float(diffValues().count)
         userRating = Float(MAX_STARS)
         tripDistance = Float(MAX_DISTANCE)
     }
     
-    func getDifficultyArray() -> [TechnicalRating] {
+    private func getDifficultyArray() -> [TechnicalRating] {
         var mutatableSelf = self
         return mutatableSelf.difficultyLevels
+    }
+    
+    private func getMapCenter() -> MapLocation {
+        if self.centerOptions[mapCenterSelection] == "Telluride" {
+            return vm.getTellurideLocation()
+        }
+        else {
+            return vm.getAspenLocation()
+        }
     }
 
     var body: some View {
@@ -120,10 +142,10 @@ struct FilteringMap: View {
                                 Spacer()
                                 Text("\(userRatingLabel)")
                             }
-                            Slider(value: $userRating, in: 0...Float(MAX_STARS) - 1, onEditingChanged: { _ in
+                            Slider(value: $userRating, in: 0...Float(MAX_STARS)-1, onEditingChanged: { _ in
                                 let count = Int(self.userRating)
                                 if count >= 0 && count <= self.MAX_STARS {
-                                    let starsCount = self.reserveUserRatings[count]
+                                    let starsCount = self.reversedUserRatings[count]
                                     if starsCount == 1 {
                                         self.userRatingLabel =  "\(starsCount) star"
                                     }
@@ -154,7 +176,8 @@ struct FilteringMap: View {
                         HStack {
                             Spacer()
                             Button(action: {
-                                 print("Apply")
+                                print("Apply")
+                                self.vm.searchTrails(trailName: self.trailName, difficultyLevel: Int(self.difficulty), minUserRating: self.reversedUserRatings[Int(self.userRating)], maxTripDistance: Int(self.tripDistance), mapCenter: self.getMapCenter())
                              }) {
                                  Text("Apply Filters")
                                 .padding()
@@ -165,9 +188,9 @@ struct FilteringMap: View {
                             }
                             Spacer()
                             Button(action: {
-                                 print("Clear")
+                                self.clear()
                              }) {
-                                 Text("Clear")
+                                Text("Clear")
                             }
                         }
                         .padding(.bottom, 10)
@@ -202,5 +225,11 @@ struct FilteringMap: View {
 struct FilteringMap_Previews: PreviewProvider {
     static var previews: some View {
         return FilteringMap()
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
