@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wxf-zC-jpn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejZ-kZ-hx5" customClass="AccuTerraMapView" customModule="AccuTerraSDK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="accuTerraDelegate" destination="BYZ-38-t0r" id="wa8-7J-LlN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TPI-69-L1h"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejZ-kZ-hx5" secondAttribute="trailing" id="2cQ-KS-ahD"/>
+                            <constraint firstItem="ejZ-kZ-hx5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KuA-uc-Pg2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ejZ-kZ-hx5" secondAttribute="bottom" id="RLi-n4-aYu"/>
+                            <constraint firstItem="ejZ-kZ-hx5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oGD-7v-mDg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uqz-NJ-Bbl"/>
+                    <connections>
+                        <outlet property="mapView" destination="ejZ-kZ-hx5" id="pnA-Mp-cUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="90"/>
+        </scene>
+        <!--Sdk Init View Controller-->
+        <scene sceneID="JwQ-F5-eyq">
+            <objects>
+                <viewController id="wxf-zC-jpn" customClass="SdkInitViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzE-E1-H4N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-16-NbF">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3WC-zr-UBA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yx5-16-NbF" firstAttribute="centerX" secondItem="3WC-zr-UBA" secondAttribute="centerX" id="3Pb-Mp-DTi"/>
+                            <constraint firstItem="yx5-16-NbF" firstAttribute="centerY" secondItem="3WC-zr-UBA" secondAttribute="centerY" id="mpf-YW-btT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="map" modalPresentationStyle="overFullScreen" id="Npr-I3-d0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tKN-aT-y0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
