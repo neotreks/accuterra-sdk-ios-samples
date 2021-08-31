@@ -1,0 +1,24 @@
+{
+  "version": 8,
+  "sources": {
+    "here-satellite": {
+      "type": "raster",
+      "tiles": ["https://1.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/512/jpg"],
+      "attribution": "<a href=\"https://www.here.com\" target=\"_blank\">Here Technologies</a>",
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+        "id": "background",
+        "type": "background",
+        "paint": {"background-color": "rgb(4,7,14)"}
+    },
+    {
+      "id": "here-satellite",
+      "type": "raster",
+      "source": "here-satellite",
+      "paint": {}
+    }
+  ]
+}

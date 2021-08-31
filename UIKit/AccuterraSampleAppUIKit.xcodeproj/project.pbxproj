@@ -18,6 +18,12 @@
 		5771417525B06CD000AD5DEF /* DemoAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771417425B06CD000AD5DEF /* DemoAccessManager.swift */; };
 		57B3C5F825B4685000F09A37 /* MyStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3C5F725B4685000F09A37 /* MyStyleProvider.swift */; };
 		57B3C88E25B703F300F09A37 /* SdkInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3C88D25B703F300F09A37 /* SdkInitViewController.swift */; };
+		57B4C75C26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C75B26DE5D7400A9E650 /* HEREMapsURLProtocol.swift */; };
+		57B4C75D26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C75B26DE5D7400A9E650 /* HEREMapsURLProtocol.swift */; };
+		57B4C75E26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C75B26DE5D7400A9E650 /* HEREMapsURLProtocol.swift */; };
+		57B4C76026DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C75F26DE5D9C00A9E650 /* HERESatelliteStyle.json */; };
+		57B4C76126DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C75F26DE5D9C00A9E650 /* HERESatelliteStyle.json */; };
+		57B4C76226DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C75F26DE5D9C00A9E650 /* HERESatelliteStyle.json */; };
 		7E7B6048FBD4BA6B998258EE /* Pods_AccuterraSampleAppUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ED04A457A0C9B50BF5444B /* Pods_AccuterraSampleAppUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,8 @@
 		5771417425B06CD000AD5DEF /* DemoAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAccessManager.swift; sourceTree = "<group>"; };
 		57B3C5F725B4685000F09A37 /* MyStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStyleProvider.swift; sourceTree = "<group>"; };
 		57B3C88D25B703F300F09A37 /* SdkInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkInitViewController.swift; sourceTree = "<group>"; };
+		57B4C75B26DE5D7400A9E650 /* HEREMapsURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEREMapsURLProtocol.swift; sourceTree = "<group>"; };
+		57B4C75F26DE5D9C00A9E650 /* HERESatelliteStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HERESatelliteStyle.json; sourceTree = "<group>"; };
 		650E21DFD2A0C440B89E8BBA /* Pods-AccuterraSampleAppUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccuterraSampleAppUIKit.release.xcconfig"; path = "Target Support Files/Pods-AccuterraSampleAppUIKit/Pods-AccuterraSampleAppUIKit.release.xcconfig"; sourceTree = "<group>"; };
 		709267EE903284E14DF3D3DE /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 		C5ED04A457A0C9B50BF5444B /* Pods_AccuterraSampleAppUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleAppUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +122,7 @@
 		577140BC25B0369500AD5DEF /* AccuterraSampleAppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				57B4C75A26DE5D6800A9E650 /* HERE */,
 				577140BD25B0369500AD5DEF /* AppDelegate.swift */,
 				577140BF25B0369500AD5DEF /* SceneDelegate.swift */,
 				577140C125B0369500AD5DEF /* MapViewController.swift */,
@@ -144,6 +153,15 @@
 				577140E125B0369700AD5DEF /* Info.plist */,
 			);
 			path = AccuterraSampleAppUIKitUITests;
+			sourceTree = "<group>";
+		};
+		57B4C75A26DE5D6800A9E650 /* HERE */ = {
+			isa = PBXGroup;
+			children = (
+				57B4C75B26DE5D7400A9E650 /* HEREMapsURLProtocol.swift */,
+				57B4C75F26DE5D9C00A9E650 /* HERESatelliteStyle.json */,
+			);
+			path = HERE;
 			sourceTree = "<group>";
 		};
 		779F83603904A13BF6297C66 /* Pods */ = {
@@ -177,6 +195,7 @@
 				577140B725B0369500AD5DEF /* Frameworks */,
 				577140B825B0369500AD5DEF /* Resources */,
 				2036966832AEFDC52477AA9B /* [CP] Embed Pods Frameworks */,
+				56FD99C5EBF3C84CA3D1302B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +292,7 @@
 				577140CA25B0369700AD5DEF /* LaunchScreen.storyboard in Resources */,
 				577140C725B0369700AD5DEF /* Assets.xcassets in Resources */,
 				577140C525B0369500AD5DEF /* Main.storyboard in Resources */,
+				57B4C76026DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4C76126DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4C76226DE5D9C00A9E650 /* HERESatelliteStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +354,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		56FD99C5EBF3C84CA3D1302B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleAppUIKit/Pods-AccuterraSampleAppUIKit-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleAppUIKit/Pods-AccuterraSampleAppUIKit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AccuterraSampleAppUIKit/Pods-AccuterraSampleAppUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -341,6 +380,7 @@
 			files = (
 				5771417525B06CD000AD5DEF /* DemoAccessManager.swift in Sources */,
 				577140C225B0369500AD5DEF /* MapViewController.swift in Sources */,
+				57B4C75C26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				577140BE25B0369500AD5DEF /* AppDelegate.swift in Sources */,
 				57B3C5F825B4685000F09A37 /* MyStyleProvider.swift in Sources */,
 				577140C025B0369500AD5DEF /* SceneDelegate.swift in Sources */,
@@ -352,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4C75D26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				577140D525B0369700AD5DEF /* TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B4C75E26DE5D7400A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				577140E025B0369700AD5DEF /* TestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
