@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EE22A9F297EB78D00603BAA /* ApkHereMapClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE22A9E297EB78D00603BAA /* ApkHereMapClass.swift */; };
+		2EE22AA1297EB80400603BAA /* DemoIdentityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE22AA0297EB80400603BAA /* DemoIdentityManager.swift */; };
 		5771418625B0712700AD5DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771418525B0712700AD5DEF /* AppDelegate.swift */; };
 		5771418825B0712700AD5DEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771418725B0712700AD5DEF /* SceneDelegate.swift */; };
 		5771418A25B0712700AD5DEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5771418925B0712700AD5DEF /* ContentView.swift */; };
@@ -19,9 +21,6 @@
 		577141EE25B0749900AD5DEF /* SdkInitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577141ED25B0749900AD5DEF /* SdkInitView.swift */; };
 		577142AB25B1BB9E00AD5DEF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577142AA25B1BB9E00AD5DEF /* MapView.swift */; };
 		57B3C64425B47BA600F09A37 /* MyStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B3C64325B47BA600F09A37 /* MyStyleProvider.swift */; };
-		57B4C76526DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C76426DE5FA900A9E650 /* HEREMapsURLProtocol.swift */; };
-		57B4C76626DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C76426DE5FA900A9E650 /* HEREMapsURLProtocol.swift */; };
-		57B4C76726DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4C76426DE5FA900A9E650 /* HEREMapsURLProtocol.swift */; };
 		57B4C76926DE5FCC00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C76826DE5FCC00A9E650 /* HERESatelliteStyle.json */; };
 		57B4C76A26DE5FCC00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C76826DE5FCC00A9E650 /* HERESatelliteStyle.json */; };
 		57B4C76B26DE5FCC00A9E650 /* HERESatelliteStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 57B4C76826DE5FCC00A9E650 /* HERESatelliteStyle.json */; };
@@ -47,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		277CCADCF4B0978A79D41FDE /* Pods_AccuterraSampleAppSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccuterraSampleAppSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE22A9E297EB78D00603BAA /* ApkHereMapClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApkHereMapClass.swift; sourceTree = "<group>"; };
+		2EE22AA0297EB80400603BAA /* DemoIdentityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoIdentityManager.swift; sourceTree = "<group>"; };
 		5771418225B0712700AD5DEF /* AccuterraSampleAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccuterraSampleAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5771418525B0712700AD5DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5771418725B0712700AD5DEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		577141ED25B0749900AD5DEF /* SdkInitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkInitView.swift; sourceTree = "<group>"; };
 		577142AA25B1BB9E00AD5DEF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		57B3C64325B47BA600F09A37 /* MyStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStyleProvider.swift; sourceTree = "<group>"; };
-		57B4C76426DE5FA900A9E650 /* HEREMapsURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEREMapsURLProtocol.swift; sourceTree = "<group>"; };
 		57B4C76826DE5FCC00A9E650 /* HERESatelliteStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HERESatelliteStyle.json; sourceTree = "<group>"; };
 		5998E134062F4DE044C51B3A /* Pods-TestSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-TestSwiftUI/Pods-TestSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		5F04C4C77DB07EC5952DB21A /* Pods-TestSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-TestSwiftUI/Pods-TestSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +147,7 @@
 				577141ED25B0749900AD5DEF /* SdkInitView.swift */,
 				577142AA25B1BB9E00AD5DEF /* MapView.swift */,
 				57B3C64325B47BA600F09A37 /* MyStyleProvider.swift */,
+				2EE22AA0297EB80400603BAA /* DemoIdentityManager.swift */,
 			);
 			path = AccuterraSampleAppSwiftUI;
 			sourceTree = "<group>";
@@ -180,8 +181,8 @@
 		57B4C76326DE5F9300A9E650 /* HERE */ = {
 			isa = PBXGroup;
 			children = (
-				57B4C76426DE5FA900A9E650 /* HEREMapsURLProtocol.swift */,
 				57B4C76826DE5FCC00A9E650 /* HERESatelliteStyle.json */,
+				2EE22A9E297EB78D00603BAA /* ApkHereMapClass.swift */,
 			);
 			path = HERE;
 			sourceTree = "<group>";
@@ -393,9 +394,10 @@
 				577142AB25B1BB9E00AD5DEF /* MapView.swift in Sources */,
 				57B3C64425B47BA600F09A37 /* MyStyleProvider.swift in Sources */,
 				577141EE25B0749900AD5DEF /* SdkInitView.swift in Sources */,
+				2EE22A9F297EB78D00603BAA /* ApkHereMapClass.swift in Sources */,
+				2EE22AA1297EB80400603BAA /* DemoIdentityManager.swift in Sources */,
 				5771418625B0712700AD5DEF /* AppDelegate.swift in Sources */,
 				5771418825B0712700AD5DEF /* SceneDelegate.swift in Sources */,
-				57B4C76526DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				5771418A25B0712700AD5DEF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B4C76626DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				5771419D25B0712A00AD5DEF /* TestSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +414,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B4C76726DE5FA900A9E650 /* HEREMapsURLProtocol.swift in Sources */,
 				577141A825B0712A00AD5DEF /* TestSwiftUIUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

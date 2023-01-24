@@ -18,9 +18,7 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>HERE_APPCODE</key>
-	<string></string>
-	<key>HERE_APPID</key>
+	<key>HERE_API_KEY</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

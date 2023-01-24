@@ -18,14 +18,13 @@ class SdkInitViewController: UIViewController {
             fatalError("WS_AUTH_URL is missing in info.plist")
         }
         let sdkEndpointConfig = SdkEndpointConfig(wsUrl: WS_BASE_URL, wsAuthUrl: WS_AUTH_URL)
-        URLProtocol.registerClass(HEREMapsURLProtocol.self)
         return ApkSdkConfig(
             sdkEndpointConfig: sdkEndpointConfig,
             mapConfig: MapConfig(
                 // providing nil value will load map token and style url from backend
                 accuTerraMapConfig: nil,
                 // custom imagery style
-                imageryMapConfig: ImageryMapConfig(styleURL: HEREMapsURLProtocol.styleURL)),
+                imageryMapConfig: ImageryMapConfig(styleURL: ApkHereMapClass.styleURL)),
             tripConfiguration: TripConfiguration(
                 // Just to demonstrate the upload network type constraint
                 uploadNetworkType: .CONNECTED,
@@ -38,7 +37,7 @@ class SdkInitViewController: UIViewController {
                 // Update trail User Data during SDK initialization
                 updateTrailUserDataDuringSdkInit: true
             ),
-            mapRequestInterceptor: HEREMapsURLProtocol.self
+            mapRequestInterceptor: ApkHereMapClass()
         )
     }()
 
@@ -49,8 +48,8 @@ class SdkInitViewController: UIViewController {
         
         SdkManager.shared.initSdkAsync(
                     config: appSdkConfig,
-                    accessProvider: DemoAccessManager.shared,
-                    identityProvider: DemoAccessManager.shared,
+                    accessProvider: DemoCredentialsAccessManager.shared,
+                    identityProvider: DemoIdentityManager.shared,
                     delegate: self,
                     dbEncryptConfigProvider: nil)
     }
@@ -62,6 +61,10 @@ extension SdkInitViewController : SdkInitDelegate {
         case .COMPLETED:
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "map", sender: nil)
+            }
+        case .FAILED(let error):
+            if let error = error {
+                debugPrint(error.localizedDescription)
             }
         default:
             break

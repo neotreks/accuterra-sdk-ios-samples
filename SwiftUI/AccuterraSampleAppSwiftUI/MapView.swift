@@ -205,5 +205,13 @@ extension MapView {
                 mapView.zoomToBounds(targetBounds: trailBounds)
             }
         }
+
+        func onMapLoadFailed(error: Error) {
+            debugPrint(error.localizedDescription)
+        }
+
+        func onStyleChangeFailed(error: Error) {
+            debugPrint(error.localizedDescription)
+        }
     }
 }

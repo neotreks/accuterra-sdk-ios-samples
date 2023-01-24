@@ -149,9 +149,8 @@ extension MapViewController : AccuTerraMapViewDelegate {
         let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction) in
         }
         alertVC.addAction(okAction)
-        
-        let viewController = UIApplication.shared.windows.first?.rootViewController
-        viewController?.present(alertVC, animated: true, completion: nil)
+
+        self.present(alertVC, animated: true, completion: nil)
     }
 
     private func handleTrailClicked(_ coordinate: CLLocationCoordinate2D) throws -> Bool {
@@ -187,9 +186,8 @@ extension MapViewController : AccuTerraMapViewDelegate {
             let okAction = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction) in
             }
             alertVC.addAction(okAction)
-            
-            let viewController = UIApplication.shared.windows.first?.rootViewController
-            viewController?.present(alertVC, animated: true, completion: nil)
+
+            self.present(alertVC, animated: true, completion: nil)
         }
     }
     
@@ -214,6 +212,14 @@ extension MapViewController : AccuTerraMapViewDelegate {
     }
     
     func onTrackingModeChanged(mode: TrackingOption) {
+    }
+
+    func onMapLoadFailed(error: Error) {
+
+    }
+
+    func onStyleChangeFailed(error: Error) {
+        
     }
 }
 
